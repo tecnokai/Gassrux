@@ -1,0 +1,28 @@
+// ==UserScript==
+// @name        Gassrux B24
+// @namespace   Gass Script
+// @match       *://*.blog24.me/*
+// @match       *://aiimgvlog.fun/*
+// @grant       none
+// @version     0.1
+// @author      GassLeader
+// @icon        https://i.ibb.co/m5LqQ9D/b24.png
+// @description Pass b24 With hCaptcha Model
+// @run-at document-start
+// ==/UserScript==
+
+(function() { 'use strict';
+
+function getElement(selector) {return document.querySelector(selector);}
+function existElement(selector) {return getElement(selector) !== null;}
+document.addEventListener('DOMContentLoaded', function() {
+
+if (document.querySelector('.h-captcha')) {document.title = 'hCaptcha';
+  var form = document.querySelector('.h-captcha').closest('userform');
+  var check = setInterval(function() {
+if (window.hcaptcha.getResponse().length > 0) {window.setTimeout(function() { form.submit(); }, 3000); clearInterval(check);}}, 1000);} else {
+  var sab = document.querySelector('input[value="NEXT STEP"]');
+  var er = sab.form;
+  var count = window.setInterval(function() {
+  var s = er.style.display;
+if (s === 'block'){clearInterval(count); window.setTimeout(function(){ sab.click(); }, 10000);}}, 1000);}});})();
