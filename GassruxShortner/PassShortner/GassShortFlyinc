@@ -1,0 +1,42 @@
+// ==UserScript==
+// @name        Gassrux Fly.inc
+// @namespace   Gass scripts
+// @include     /^(https?:\/\/)(.+)?(shoesonic|boardgamechick|basketballsavvy|techedifier|phineypet|talkforfitness|batmanfactor|laptopfinest|hauntingrealm|gametechreviewer|edonmanor|advertisingexcel|vegan4k|gearsadviser|vrtier|healthyfollicles|tunebug|pluginmixer)(\.com)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|midebalonu)(\.net)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(englishwritingsite|seory)(\.xyz)(\/.*)/
+// @match       *://misterio.ro/*
+// @match       *://mejoresperfumes.club/*
+// @match       *://chat-groups.cam/*
+// @match       *://alightmotionlatest.com/*
+// @match       *://chefknives.expert/*
+// @grant       none
+// @icon        https://i.ibb.co/k94PVqQ/Fly-by-Woosh.jpg
+// @version     0.1
+// @author      GassLeader
+// @description Singkat fly.inc
+// @run-at      document-body
+// ==/UserScript==
+
+(function(){
+'use strict'
+
+Object.defineProperty(HTMLFormElement.prototype, 'submit', { writable: false });
+Object.defineProperty(document, 'querySelector', { value: document.querySelector, configurable: false, writable: false });
+Object.defineProperty(window, 'adsBlocked', { configurable : false });
+
+function docReady(fn){ if (document.readyState === "complete" || document.readyState === "interactive") {setTimeout(fn, 3000);} else {document.addEventListener("DOMContentLoaded", fn);}};
+function flypass(){const h = new URL(location.href);function recaptcha(selector, timeInSec = 1, funcName = 'setTimeout') {
+  if (existo(selector)) {window[funcName](function() {submit(selector);}, timeInSec * 3000);}};
+function submit(selector) {existo(selector).submit();}if (h.pathname === '/adblock.html' || h.pathname === '/bypass.html'){ location.href = h.host + '?redirect_to=random' }const existo = selector => document.querySelector(selector);recaptcha("form.text-center", 2);
+  const _recaptcha_s = (selector, wait_of_time = 1) => {
+  const t= window.setInterval( function() {
+  if (window.grecaptcha && !!window.grecaptcha.getResponse()) { selector.submit(); clearInterval(t);}}, wait_of_time * 3000);};
+  const _turnstile = (selector, wait_of_time = 1) => {
+  const t= window.setInterval( function() {
+  if (window.turnstile.getResponse()) { selector.submit(); clearInterval(t);}}, wait_of_time * 2000);};
+  const _elemento_s = (selector, wait_of_time = 1) => { window.setTimeout(function() { selector.submit();}, wait_of_time * 3000);};
+  var formstotal = document.forms.length; for (var f=0; f<formstotal;f++){
+  var form = document.getElementsByTagName("form")[f];
+  var sipaso = form.getAttribute("action");if (sipaso==='/adblock.html' || sipaso==='/bypass.html' ){console.log('flybite');}
+  else {console.log('flypass ok');
+  if (existo(".g-recaptcha")) { _recaptcha_s(form, 2); break;}else { _elemento_s(form, 5); break;}}};} docReady(flypass);})();
