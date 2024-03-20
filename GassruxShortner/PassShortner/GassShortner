@@ -732,7 +732,7 @@
       ClickIfExists('#method_free', 2);waitForElm('a.downloadbtn', cnu => redirect(cnu.href, false));}});
     SledingByGassLeader(/adclicker\.*/, function() {if (location.href.includes('url/')) {const adc = atob(atob(atob(location.hash.slice(1))));
       redirect(new URLSearchParams(adc).get('url'));} else {}});
-    SledingByGassLeader(/offers4crypto.xyz|ewall.biz/, function() {
+    SledingByGassLeader(/offerwall.me|ewall.biz/, function() {
        if (elementExists('.g-recaptcha')) {let ofc = setInterval(() => {if (Captchacheck()) {clearInterval(ofc);
             ClickIfExists('#submitBtn');}}, 1 * 1000);} else {}});
     SledingByGassLeader(/bitcotasks.com/, function() {
