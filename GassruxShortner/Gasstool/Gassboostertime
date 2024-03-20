@@ -1,0 +1,57 @@
+// ==UserScript==
+// @name        Gassrux Booster Timer
+// @namespace   Gass Scripts
+// @include     /^(https?:\/\/)(.+)?(shoesonic|basketballsavvy|bitsusdt|techedifier|phineypet|talkforfitness|batmanfactor|laptopfinest|hauntingrealm|gametechreviewer|edonmanor|advertisingexcel|vegan4k|gearsadviser|vrtier|miner-sim|healthyfollicles)(\.com)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|midebalonu)(\.net)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(englishwritingsite|seory)(\.xyz)(\/.*)/
+// @match       *://misterio.ro/*
+// @match       *://mejoresperfumes.club/*
+// @match       *://chat-groups.cam/*
+// @match       *://chefknives.expert/*
+// @match       *://mdn.lol/*
+// @match       *://awgrow.com/*
+// @match       *://rsstore.in/*
+// @match       *://worldtanr.xyz/*
+// @match       *://fadedfeet.com/*
+// @match       *://kenzo-flowertag.com/*
+// @match       *://homeculina.com/*
+// @match       *://lawyex.co/*
+// @match       *://yexolo.net/*
+// @match       *://ineedskin.com/*
+// @grant       none
+// @icon        https://i.ibb.co/4m3d6tY/Quicktime-Woosh.png
+// @version     0.1
+// @author      GassLeader
+// @description Membuat Timer Cepat di Shortner
+// @run-at       document-start
+// ==/UserScript==
+
+(function(){
+    function acelerador_SetInterval () {
+        const nameFunc = window.setInterval;
+        Object.defineProperty(window, 'setInterval', {
+            value: function (func, delay) {
+                if (delay === 1000) {
+                    delay = 50;
+                }
+                return nameFunc.apply(this, arguments);
+            }
+        });
+    }
+
+    function acelerador_SetTimeout () {
+        const nameFunc = window.setTimeout;
+        Object.defineProperty(window, 'setTimeout', {
+            value: function (func, delay) {
+                if (delay === 1000) {
+                    delay = 50;
+                }
+                return nameFunc.apply(this, arguments);
+            }
+        });
+    }
+
+    acelerador_SetTimeout();
+    acelerador_SetInterval();
+
+})()
