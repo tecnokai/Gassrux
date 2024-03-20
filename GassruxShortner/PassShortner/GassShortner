@@ -567,9 +567,6 @@
       $("a[target='_blank']").removeAttr("target");ClickIfExists('.btn-captcha.btn-danger.btn', 3);});
     SledingByGassLeader(/freebitco.in/, function() {if (elementExists('.h-captcha')) {let btc = setInterval(() => {
           if (Captchacheck()) {clearInterval(btc);ClickIfExists('#free_play_form_button');}}, 1 * 1000);} else {}});
-    SledingByGassLeader(/quesignifi.ca|tiktokcounter.net/, function() {
-      if (elementExists('.h-captcha')) {let ctrsh = setInterval(() => {if (Captchacheck()) {clearInterval(ctrsh);
-      ClickIfExists('#userform');}}, 1 * 1000);} else {ClickIfExists('#userform', 5, 'setInterval');}});
     SledingByGassLeader(/100puan.com/, function() {
       ClickIfExists('.big-text', 3);waitForElm('div.bb-sticky-el a', pbz => redirect(pbz.href, false));});
     SledingByGassLeader(/sub2get.com/, function() {
