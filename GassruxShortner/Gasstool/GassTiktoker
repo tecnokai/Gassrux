@@ -1,0 +1,49 @@
+// ==UserScript==
+// @name        Gassrux Titoker
+// @namespace   Gass Script
+// @match       https://sinonimos.de/*
+// @match       https://tiktokcounter.net/*
+// @grant       none
+// @version     0.1
+// @author      GasstLeader
+// @icon        https://i.ibb.co/z5zsjMq/Profit.png
+// @description Pass for Tiktoker
+// @run-at document-start
+// ==/UserScript==
+
+Object.defineProperty(window, 'isTimerCompleted', { value: true, writable: false, configurable: false});
+Object.defineProperty(window, 'isAdClickDone', { value: true, writable: false, configurable: false});
+Object.defineProperty(window, 'isFirstClickDone', { value: true, writable: false, configurable: false});
+Object.defineProperty(window, 'isHoverDone', { value: true, writable: false, configurable: false});
+
+document.addEventListener('DOMContentLoaded', function() {
+
+var a = document.querySelector('#cbt');
+a.className = 'Gassrux';
+a.id = 'Gassrux';
+
+var i = 0;
+var load = setInterval(function() {
+i = ++i % 4;
+a.textContent = 'Diantos Sakedap Kasep ' + Array(i + 1).join('.');
+}, 500);
+
+  if (document.querySelector('.h-captcha')) {
+
+    var c = window.setInterval(function() {
+      if (window.hcaptcha.getResponse().length > 0) {
+        window.setTimeout(function() {
+          a.click();
+        }, 2000);
+        clearInterval(c);
+      }
+    }, 1000);
+  }
+  else {
+    window.setTimeout(function() {
+      clearInterval(load);
+      a.textContent = 'Gassrux';
+      a.click();
+    }, 20*1000);
+  }
+});
