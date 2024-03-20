@@ -1,0 +1,40 @@
+// ==UserScript==
+// @name        Gassrux Transformer
+// @namespace   Gass Scripts
+// @match       https://whoopyrewards.com/links
+// @match       https://banfaucet.com/links
+// @match       https://cashbux.work/links
+// @match       https://flycrypto.tn/member/shortlinks
+// @grant       window.close
+// @icon        https://i.ibb.co/sVsGxcc/Transformers.png
+// @version     0.1
+// @author      GassLeader
+// @description Just For Autoclick Shortner in site
+// ==/UserScript==
+var botones;
+var pasan;
+if (window.location.hostname === 'whoopyrewards.com') {
+botones = [...document.querySelectorAll('a.btn.btn-primary.waves-effect.waves-light')];
+pasan = botones.filter((el) => /66|65|16|88|113|99|103|102|101|100|114|98|86|104|87|78|79|77|76|68|63/.test(el.href) );
+}
+else if (window.location.hostname === 'cashbux.work') {
+botones = [...document.querySelectorAll('a.btn.btn-primary.waves-effect.waves-light')];
+pasan = botones.filter((el) => /59|15|29|1|58|43|42|41|37|24|2|21|18|61|57|62|13|14|33|30|9|6|4/.test(el.href) );
+}
+else if (window.location.hostname === 'banfaucet.com') {
+botones = [...document.querySelectorAll('a.btn-one')];
+pasan = botones.filter((el) => /34/.test(el.href) );	//SL yang dipilih;
+}
+else if (window.location.hostname === 'flycrypto.tn') {
+botones = [...document.querySelectorAll('a.tg-btn-1.text-white')];
+pasan = botones.filter((el) => /138/.test(el.href) );	//SL yang dipilih;
+}
+
+if (botones) {
+//var link = botones.shift();	 //jika solve Semua SL;
+var link = pasan.shift();	//Jika Solve SL Tertentu;
+setTimeout(() => { window.open(link.href); window.close();}, Math.floor((Math.random() * 3000) + 6000));
+}
+else {
+alert('No hay links para hacer');
+}
