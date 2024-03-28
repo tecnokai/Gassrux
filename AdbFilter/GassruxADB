@@ -36,33 +36,33 @@ bitcotasks.com##+js(nano-sib, timer)
 file.urbanpincode.com,hosty.tipsloanusa.com,rtxkeeda.com,offerwallmedia.com,hereofamily.com,go2.freetrx.fun,bitcotasks.com,read4btc.com,admediaflex.com,izseo.net,datacheap.io,phimne.com,sportweb.info,wpcheap.net,tinycmd.com,bitcrypto.info,cdrab.com,tinybc.com,offerinfo.net,cryptfaucet.com,quanngon.org,adcrypto.net,izseo.net,admediaflex.com,daycash.net,ecq.info,savego.org##+js(nano-sib, timer)
 file.urbanpincode.com,m.novelquote.com,cryptovertz.com,bitsteps.pro,moonboom.net,dailytech-news.eu##+js(nano-sib)
 plantsguide.net,coinscap.info,cryptowidgets.net,insurancegold.in,wiki-topia.com,carsmania.net,carstopia.net,coinsvalue.net,cookinguide.net,freeoseocheck.com,makeupguide.net,whoopyrewards.com##+js(rmnt, script, adblock)
-/invoke.js$script,redirect-rule=noop.js,domain=ad-doge.com|faucetfly.in|rfaucet.com|flycrypto.tn
-||cryptocoinsad.com/ads/js/popunder.js$script,redirect=noop.js,domain=ad-doge.com|faucetfly.in|rfaucet.com|flycrypto.tn
-||acceptable.a-ads.com^$frame,redirect-rule=noop.html,domain=ad-doge.com|faucetfly.in|rfaucet.com|flycrypto.tn
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##div.text-center[id]:style(height: 100px !important;)
-@@||static.surfe.pro/js/net.js$domain=ad-doge.com|faucetfly.in|rfaucet.com|flycrypto.tn
-@@||surfe.pro/net/teaser$xhr,domain=ad-doge.com|faucetfly.in|rfaucet.com|flycrypto.tn
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##+js(set, isRequestPresent, true)
+/invoke.js$script,redirect-rule=noop.js,domain=ad-doge.com|rfaucet.com|flycrypto.tn|wildfaucet.com
+||cryptocoinsad.com/ads/js/popunder.js$script,redirect=noop.js,domain=ad-doge.com|rfaucet.com|flycrypto.tn|wildfaucet.com
+||acceptable.a-ads.com^$frame,redirect-rule=noop.html,domain=ad-doge.com|rfaucet.com|flycrypto.tn|wildfaucet.com
 ||bmcdn6.com^$script,redirect-rule=noop.js
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##+js(set, document.hasFocus, trueFunc)
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##+js(no-fetch-if, /adoto|\/ads\/js/)
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##+js(aeld, load, htmls)
-@@||acceptable.a-ads.com/1^$xhr,domain=ad-doge.com|faucetfly.in|rfaucet.com|flycrypto.tn
-@@||googletagmanager.com/gtm.js$domain=ad-doge.com|faucetfly.in|rfaucet.com|flycrypto.tn
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##^script:has-text(htmls)
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##html, body:style(overflow: auto !important;)
+@@||static.surfe.pro/js/net.js$script,domain=multiclaim.net|gainbtc.click|ad-doge.com|rfaucet.com|flycrypto.tn|wildfaucet.com
+@@||static.surfe.pro/js/net.js$domain=ad-doge.com|rfaucet.com|flycrypto.tn|wildfaucet.com
+@@||surfe.pro/net/teaser$xhr,domain=ad-doge.com|rfaucet.com|flycrypto.tn|wildfaucet.com
+@@||acceptable.a-ads.com/1^$xhr,domain=ad-doge.com|rfaucet.com|flycrypto.tn|wildfaucet.com
+@@||googletagmanager.com/gtm.js$domain=ad-doge.com|rfaucet.com|flycrypto.tn|wildfaucet.com
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##+js(set, isRequestPresent, true)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##div.text-center[id]:style(height: 100px !important;)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##+js(set, document.hasFocus, trueFunc)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##+js(no-fetch-if, /adoto|\/ads\/js/)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##+js(aeld, load, htmls)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##^script:has-text(htmls)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##html, body:style(overflow: auto !important;)
 !#if !cap_html_filtering
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##+js(rmnt, script, htmls)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##+js(rmnt, script, htmls)
 !#endif
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##+js(acs, addEventListener, devtools)
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##+js(acs, document.getElementById, ads)
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##+js(acs, addEventListener, ads)
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##+js(nostif, offsetWidth)
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##.post > center > [href] > img
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com##+js(nowoif, ?key=)
-flycrypto.tn,rfaucet.com,faucetfly.in,blog24.me,aiimgvlog.fun,ad-doge.com,plantsguide.net,coinscap.info,cryptowidgets.net,insurancegold.in,wiki-topia.com,carsmania.net,carstopia.net,coinsvalue.net,cookinguide.net,freeoseocheck.com,makeupguide.net##+js(aost, onload, inlineScript)
-@@||static.surfe.pro/js/net.js$script,domain=multiclaim.net|gainbtc.click|ad-doge.com|faucetfly.in|rfaucet.com|flycrypto.tn
-flycrypto.tn,rfaucet.com,faucetfly.in,ad-doge.com,gainbtc.click,multiclaim.net##+js(no-xhr-if, surfe)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##+js(acs, addEventListener, devtools)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##+js(acs, document.getElementById, ads)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##+js(acs, addEventListener, ads)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##+js(nostif, offsetWidth)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##.post > center > [href] > img
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com##+js(nowoif, ?key=)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.om##+js(aost, onload, inlineScript)
+wildfaucet.com,flycrypto.tn,rfaucet.com,ad-doge.com,gainbtc.click,multiclaim.net##+js(no-xhr-if, surfe)
 fc-lc.xyz##+js(no-fetch-if, adsbygoogle)
 ||tophostingapp.com/dwn-$image
 ||i.gyazo.com^$domain=insurancexblog.blogspot.com
