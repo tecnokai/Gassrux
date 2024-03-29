@@ -25,10 +25,11 @@
 // @match       *://alightmotionlatest.com/*
 // @match       *://rsstore.in/*
 // @match       *://bitsusdt.com/*
+// @match       *://auntmanny.com/*
 // @grant       none
 // @icon        https://i.ibb.co/vvJRLXW/Earnow.jpg
-// @version     0.1
-// @author      GassLeader
+// @version     0.5
+// @author      SatSetLeader
 // @description Pass Shortner Earnow & CLKS
 // @run-at      document-start
 // ==/UserScript==
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.row.text-center').forEach((dtc) => dtc.parentNode.removeChild(dtc));
   if (l.hostname === 'blog.wiki-topia.com' || l.hostname === 'blog.cookinguide.net' || l.hostname === 'blog.carsmania.net') {woosh('#countdown', 35);} else {woosh('#countdown', 30);}}); break;
 
-case 'awgrow.com': case 'alightmotionlatest.com': case 'rsstore.in': case 'bitsusdt.com':
+case 'awgrow.com': case 'alightmotionlatest.com': case 'rsstore.in': case 'bitsusdt.com': case 'auntmanny.com' :
 document.addEventListener('DOMContentLoaded', function() {woosh('form', 10);}); break;
 case 'worldtanr.xyz': case 'fadedfeet.com': case 'yexolo.net': case 'kenzo-flowertag.com': case 'homeculina.com': case 'lawyex.co': case 'ineedskin.com': case 'mdn.lol':
 document.addEventListener('DOMContentLoaded', function() {woosh(getForm('clks'), 10);}); break;
