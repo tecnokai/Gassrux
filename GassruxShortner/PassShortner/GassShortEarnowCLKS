@@ -28,7 +28,7 @@
 // @match       *://auntmanny.com/*
 // @grant       none
 // @icon        https://i.ibb.co/vvJRLXW/Earnow.jpg
-// @version     0.5
+// @version     0.6
 // @author      SatSetLeader
 // @description Pass Shortner Earnow & CLKS
 // @run-at      document-start
