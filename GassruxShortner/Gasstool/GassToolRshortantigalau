@@ -1,0 +1,22 @@
+// ==UserScript==
+// @name        Gassrux Anti Galau RSSHORT
+// @namespace   Gassrux Scripts
+// @match       *://rsinsuranceinfo.com/*
+// @match       *://rssoftwareinfo.com/*
+// @match       *://rsfinanceinfo.com/*
+// @match       *://rseducationinfo.com/*
+// @match       *://rsadnetworkinfo.com/*
+// @match       *://rshostinginfo.com/*
+// @grant       none
+// @version     0.1
+// @icon        https://i.ibb.co/jGTQw0p/RS.png
+// @author      GassruxLeader
+// @description Manipulasi time
+// @run-at      document-end
+// ==/UserScript==
+(function() { 'use strict';
+     var ads = document.querySelectorAll('.a, .b, .c, .d, .e');
+                   for (var i = 0; i<ads.length; i++) {
+                     ads[i].style.display = 'none';
+                   }
+ })();
