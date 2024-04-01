@@ -28,7 +28,7 @@
 // @match       *://auntmanny.com/*
 // @grant       none
 // @icon        https://i.ibb.co/vvJRLXW/Earnow.jpg
-// @version     0.6
+// @version     0.7
 // @author      SatSetLeader
 // @description Pass Shortner Earnow & CLKS
 // @run-at      document-start
@@ -75,4 +75,4 @@ case 'worldtanr.xyz': case 'fadedfeet.com': case 'yexolo.net': case 'kenzo-flowe
 document.addEventListener('DOMContentLoaded', function() {woosh(getForm('clks'), 10);}); break;
 
 case 'tiktokcounter.net': if (/earnow|clks/.test(l.href)) {
-  var a = atob(l.searchParams.get('url9j')); location.href = a;} default: break;}})();
+  var a = atob(l.searchParams.get('url8j')); location.href = a;} default: break;}})();
