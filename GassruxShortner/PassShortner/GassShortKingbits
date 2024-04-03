@@ -1,0 +1,45 @@
+// ==UserScript==
+// @name        Gassrux ShortKingbits(Number)
+// @namespace   Gassrux Script
+// @match       *://news.blog24.me/*
+// @match       *://blog24.me/*
+// @match       *://aiimgvlog.fun/*
+// @grant       none
+// @version     0.1
+// @author      GassruxLeader
+// @icon        https://i.ibb.co/m5LqQ9D/b24.png
+// @description Pass ShortKingbits with Number Model
+// @run-at document-start
+// ==/UserScript==
+
+(function() { 'use strict';
+function getElement(selector) {return document.querySelector(selector);}
+function existElement(selector) {return getElement(selector) !== null;}
+
+document.addEventListener('DOMContentLoaded', function() {
+var l = new URL(window.location.href);
+  switch (l.hostname) {
+  case 'news.blog24.me':
+  var abot = document.querySelector('input[name=antibot_number_0]');
+  if (abot) {var x = Math.floor(Math.random()*1000000);
+  if (x<100000) {x+=100000;} abot.value = x; window.setTimeout(function() { abot.form.submit(); }, 2000);}
+  else {var sab = document.querySelector('input[value="NEXT STEP"]'); var er = sab.form; var count = window.setInterval(function() {var s = er.style.display;
+  if (s === 'block'){clearInterval(count); window.setTimeout(function(){ sab.click(); }, 13000);}}, 1000);}
+  break;
+  case 'blog24.me':
+  var abot = document.querySelector('input[name=antibot_number_0]');
+  if (abot) {var x = Math.floor(Math.random()*10000000);
+  if (x<1000000) {x+=1000000;} abot.value = x; window.setTimeout(function() { abot.form.submit(); }, 2000);}
+  else {var sab = document.querySelector('input[value="NEXT STEP"]'); var er = sab.form; var count = window.setInterval(function() {var s = er.style.display;
+  if (s === 'block'){clearInterval(count); window.setTimeout(function(){ sab.click(); }, 5000);}}, 1000);}
+  break;
+  case 'aiimgvlog.fun':
+  var abot = document.querySelector('input[name=antibot_number_0]');
+  if (abot) {var x = Math.floor(Math.random()*100);
+  if (x<10) {x+=10;} abot.value = x; window.setTimeout(function() { abot.form.submit(); }, 2000);}
+  else {var sab = document.querySelector('input[value="NEXT STEP"]'); var er = sab.form; var count = window.setInterval(function() {var s = er.style.display;
+  if (s === 'block'){clearInterval(count); window.setTimeout(function(){ sab.click(); }, 3000);}}, 1000);}
+  break;
+  default:
+  break;
+  }});})();
