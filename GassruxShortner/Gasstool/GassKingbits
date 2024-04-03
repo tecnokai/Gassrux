@@ -1,0 +1,38 @@
+// ==UserScript==
+// @name        Gassrux Auobot Kingbits
+// @namespace   Gassrux Scripts
+// @match       https://kingbit.co.in/*
+// @grant       none
+// @version     0.1
+// @author      Gassruxleader
+// @icon        https://i.ibb.co/gjkmqz0/Kingbit.jpg
+// @description Autobot Autoclick kingbit
+// @run-at document-end
+// ==/UserScript==
+
+if (location.pathname === '/dashboard') {
+  location.href = 'https://kingbit.co.in/links';
+}
+
+else if (location.pathname === '/firewall') {
+ if (document.getElementsByClassName('g-recaptcha').length !==0) {
+    let c = document.getElementsByClassName('g-recaptcha')[0].closest('form');
+    let t = window.setInterval(()=> {
+      if (window.grecaptcha.getResponse().length !==0) {
+        clearInterval(t);
+        window.setTimeout(()=>{ c.submit(); }, 3000);
+      }
+    }, 1000);
+  }
+}
+
+else if (location.pathname === '/links') {
+var botones;
+var pasan;
+
+botones = [...document.querySelectorAll('a.btn.btn-success')];
+
+if (botones) { var link = 'https://kingbit.co.in/links/go/14'; //botones.shift();
+               window.setTimeout(() => { window.open(link, '_self');}, Math.floor((Math.random() * 5000) + 5000));
+             }
+}
