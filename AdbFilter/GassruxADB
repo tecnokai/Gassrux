@@ -286,6 +286,24 @@ bitcosite.com##^script:has-text(/eval[\s\S]*?decodeURIComponent/)
 bitcosite.com,bitzite.com#@#+js(rmnt, script, alert, condition, adblock)
 ||adskeeper.com^$script,domain=bitcosite.com|bitzite.com,redirect=noopjs
 ||arc.io/arc-sw.js$script,domain=bitcosite.com|bitzite.com,redirect-rule=noopjs
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com#@#+js(aeld, /contextmenu|devtoolschange/)
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com#@#+js(set, document.onkeydown, null)
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com#@#+js(nowoif)
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com#@#+js(set, console.clear, undefined)
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com#@#+js(set, isRequestPresent, true)
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com#@#+js(rmnt, script, adblock)
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com#@#table.d,table.c
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com#@#+js(noeval-if, /chp_?ad/)
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com##+js(rpnt, script, });, });var iframe = document.createElement('iframe');iframe.id = 'iframec';iframe.style.height = '0';iframe.style.width = '0';iframe.style.border = '0';document.body.appendChild(iframe);var iframec = document.getElementById('iframec');iframec.focus();, condition, googletag, sedCount, 1)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xhr,domain=rsadnetworkinfo.com|rsinsuranceinfo.com|rsfinanceinfo.com|rsgamer.app|rssoftwareinfo.com|rshostinginfo.com|rseducationinfo.com
+@@*$ghide,domain=rsadnetworkinfo.com|rsinsuranceinfo.com|rsfinanceinfo.com|rsgamer.app|rssoftwareinfo.com|rshostinginfo.com|rseducationinfo.com
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com##+js(set-cookie, __gads, 1)
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com##+js(aopw, window.onload)
+coin-profits.xyz##+js(noeval-if, /chp_?ad/)
+rseducationinfo.com,rsinsuranceinfo.com,rsadnetworkinfo.com,rsfinanceinfo.com,rshostinginfo.com,rssoftwareinfo.com#@#+js(set, document.hasFocus, trueFunc)
+rseducationinfo.com,rsinsuranceinfo.com,rsadnetworkinfo.com,rsfinanceinfo.com,rshostinginfo.com,rssoftwareinfo.com##.a, .b, .c, .d, .e, .f, .g
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com##form > div[id]:style(display: block !important;)
+rsadnetworkinfo.com,rsinsuranceinfo.com,rsfinanceinfo.com,rsgamer.app,rssoftwareinfo.com,rshostinginfo.com,rseducationinfo.com#@#btn-:style(display: block !important;)
 dailytime.store##+js(aopr, adsBlocked)
 dailytime.store##.text-left
 dailytime.store##.banner-inner
