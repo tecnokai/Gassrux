@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gassrux Iconcaptcha PTC
 // @namespace    Gass scripts
-// @version      0.1
+// @version      0.2
 // @description  Solves Icon Captcha PTC in the site
 // @author       GassLeader
 // @include      /^(https?:\/\/)(.+)?(faucetbeast|minijobwork|lunarcrush|engine.presearch|qashbits|claimbit|presearch|funcryptofaucet|coinadster|rushbitcoin|offerwallmedia|dripoffers|bitcointricks|bitcotasks)(\.com)(\/.*)/
@@ -23,6 +23,7 @@
 // @match        https://*/*/surf2.php*
 // @match        https://*/shortlinks.html*
 // @match        https://*/shortlinks/*
+// @match        https://*/*
 // @run-at       document-start
 // @icon         https://i.ibb.co/sK7Wqfv/icon-captcha.png
 // @require      https://unpkg.com/jimp@0.5.2/browser/lib/jimp.min.js
