@@ -460,6 +460,8 @@ tiktokcounter.net###videoGuide > h2
 tiktokcounter.net##+js(no-fetch-if, googlesyndication)
 tiktokcounter.net##+js(set, isFirstClickDone, true)
 tiktokcounter.net##+js(set, isHoverDone, true)
+@@||/log?format=
+/log?format=$domain=~tiktokcounter.net
 werbum.eu,auntmanny.com,bitsusdt.com,ineedskin.com,fadedfeet.com,homeculina.com,alightmotionlatest.com,awgrow.com,rsstore.in,kenzo-flowertag.com,lawyex.co,worldtanr.xyz,mdn.lol,yexolo.net#@#+js(no-fetch-if, //)
 werbum.eu,auntmanny.com,bitsusdt.com,ineedskin.com,fadedfeet.com,homeculina.com,alightmotionlatest.com,awgrow.com,rsstore.in,kenzo-flowertag.com,lawyex.co,worldtanr.xyz,mdn.lol,yexolo.net###click
 werbum.eu,auntmanny.com,bitsusdt.com,ineedskin.com,fadedfeet.com,homeculina.com,alightmotionlatest.com,awgrow.com,rsstore.in,kenzo-flowertag.com,lawyex.co,worldtanr.xyz,mdn.lol,yexolo.net##+js(rmnt, script, /bypass.php)
