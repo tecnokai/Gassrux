@@ -2,8 +2,9 @@
 // @name         Gassruxt hCaptcha reCaptcha Auto Open
 // @namespace    Gass Scripts
 // @author       GasstLeader
-// @version      0.1
+// @version      0.1.1
 // @description  Auto clicks open recaptcha and hcaptcha
+// @match        https://*/*
 // @match        https://*/recaptcha/*
 // @match        https://*.hcaptcha.com/*hcaptcha-challenge*
 // @match        https://*.hcaptcha.com/*checkbox*
