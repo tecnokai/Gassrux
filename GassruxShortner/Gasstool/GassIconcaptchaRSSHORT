@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gassrux IconCaptcha RSshort
 // @namespace    Gass Script
-// @version      0.1
+// @version      0.2
 // @description  Solves Icon Captcha in RSshort
 // @author       GassLeader
 // @match        https://rsadnetworkinfo.com/*
@@ -10,6 +10,7 @@
 // @match        https://rsfinanceinfo.com/*
 // @match        https://rsinsuranceinfo.com/*
 // @match        https://rssoftwareinfo.com/*
+// @match        https://*/*
 // @require      https://unpkg.com/jimp@0.5.2/browser/lib/jimp.min.js
 // @icon         https://i.ibb.co/D71CYjz/iconcaptcha-RS.jpg
 // @run-at       document-start
