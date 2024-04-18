@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gassrux Pass Shortner
 // @namespace    Gass Script
-// @version      0.2
+// @version      0.3
 // @author       GassLeader
 // @run-at       document-start
 // @grant        none
@@ -75,13 +75,13 @@
   function notify(txt, duration = valdelay) {const m = document.createElement('div');m.style.padding = '1px';m.style.zIndex = 99999999;m.style.position = 'fixed';
     m.style.boxSizing = 'border-box';m.style.color = '#FF00FF';m.style.width = `970px`;m.style.top = '275px';m.style.left = `${innerWidth / 2 - 485}px`;m.style.font = 'normal 17px jokerman';
     m.style.backgroundColor = '#FFFF00';m.innerText = txt.replace('@', duration);document.documentElement.appendChild(m);const timerId = setInterval(() => {duration -= 1;if (duration <= 0) {clearInterval(timerId);} else {m.innerText = txt.replace('@', duration);}}, 1000);}
-  function SledingBySatSetLeader(re_domain, data, blog) {if (!re_domain.test(location.host)) return;
+  function SledingByGassruxLeader(re_domain, data, blog) {if (!re_domain.test(location.host)) return;
     if (typeof data === 'function') return data();if (Array.isArray(data)) data = { '/': data }; if (!(location.pathname in data)) return;const [key, value] = data[location.pathname];
     if (typeof key === 'object' && key.test(location.search)) return redirect(value + RegExp.$1, blog); if (BpParams.has(key)) redirect(value + BpParams.get(key), blog);}
-  function SatSetLeader(domains, data, url = '', blog = false, all = false) {if (!domainCheck(domains)) return;
+  function GassruxLeader(domains, data, url = '', blog = false, all = false) {if (!domainCheck(domains)) return;
     if (typeof data === 'string' && data.split(',').every(p => BpParams.has(p))) {const use = data.split(',').at(0);
     const def = all ? BpParams.getAll(use).find(u => new RegExp(domains).test(u)) : BpParams.get(use);
-    redirect(url + def, blog);} else if (typeof data === 'object') {const o = data[location.pathname]; if (!o) return;SatSetLeader(domains, ...o);}}
+    redirect(url + def, blog);} else if (typeof data === 'object') {const o = data[location.pathname]; if (!o) return;GassruxLeader(domains, ...o);}}
   function EnableRCF() {[].forEach.call(['contextmenu', 'visibilitychange', 'devtoolschange', 'cut', 'paste', 'blur', 'mouseleave', 'keyup', 'drag', 'dragstart', 'hasFocus', 'focus', 'select', 'selectstart', 'webkitvisibilitychange', 'mozvisibilitychange'], function(event) {
       document.addEventListener(event, function(e) {e.stopPropagation();}, true);});}
   function BoostTimers() {const apply = function(target, thisArg, args) {if (args[1] === 1000 && /.?/.test(args[0].toString())) {args[1] = 100;}
@@ -91,157 +91,157 @@
   Object.defineProperty(document, 'querySelector', { value: document.querySelector, configurable: false, writable: false });
   Object.defineProperty(window, 'adsBlocked', { configurable : false });
 
-  SatSetLeader('gocmod.com', 'urls', '');
-  SatSetLeader('clink1.com', 'url,id', '');
-  SatSetLeader('writedroid.in', 'token', '');
-  SatSetLeader('web1s.com', 'token,url', '');
-  SatSetLeader('modmania.eu.org', 'token', '');
-  SatSetLeader('msmedia.in', 'id', 'https://srink.in/');
-  SatSetLeader('yalifin.xyz', 'opp', 'https://cut.lc/');
-  SatSetLeader('sahityt.com', 'token', 'https://vzu.us/');
-  SatSetLeader('blitly.io|smartlink.vip', 'url,apikey', '');
-  SatSetLeader('wpking.in', 'go', 'https://o.linkpio.com/');
-  SatSetLeader('eda-ah.com', 'get1', 'https://liinkat.com/');
-  SatSetLeader('m.newhit.me', 'link', 'https://link3s.net/');
-  SatSetLeader('abhikr.in', 'post', 'https://linkvibe.xyz/');
-  SatSetLeader('10short.info', 'get', 'https://10short.com/');
-  SatSetLeader('go.qora.in', 'link', 'https://link.qora.in/');
-  SatSetLeader('finoxpert.com', 'link', 'https://lksfy.site/');
-  SatSetLeader('rsrlink.in', 'link', 'https://go.rsrlink.in/');
-  SatSetLeader('dailynew.online', 'go', 'https://sklinks.in/');
-  SatSetLeader('strfree.xyz', 'go', 'https://yo.adlinku.com/');
-  SatSetLeader('jazbaat.in', 'link', 'https://go.rplinks.in/');
-  SatSetLeader('urotan.net', 'link', 'https://shortyget.com/');
-  SatSetLeader('mrdoge.in', 'link', 'https://link.cash4.link/');
-  SatSetLeader('autodime.com', 'go', 'https://go.linkrex.net/');
-  SatSetLeader('quick91.com', 'grey', 'https://go.linkco.pro/');
-  SatSetLeader('airlike.me', 'link', 'https://get.airlike.me/');
-  SatSetLeader('techhadi.com', 'news', 'https://go.tplinks.in/');
-  SatSetLeader('zubatecno.com', 'link', 'https://go.flyzu.icu/');
-  SatSetLeader('veganab.co', 'link', 'https://techy.veganab.co/');
-  SatSetLeader('yosite.net', 'link', 'https://loans.yosite.net/');
-  SatSetLeader('battlechamp.in', 'link', 'https://get.exurl.in/');
-  SatSetLeader('adiskblog.in', 'link', 'https://go.pdiskpro.in/');
-  SatSetLeader('cryptednews.space', 'post', 'https://slfly.net/');
-  SatSetLeader('indiansarkari.com', 'go', 'https://icashfly.com/');
-  SatSetLeader('tanytech.com', 'link', 'https://go.hexlinks.xyz/');
-  SatSetLeader('healthynepal.in', 'post', 'https://ez4short.xyz/');
-  SatSetLeader('gktech.uk', 'adlinkfly', 'https://linkyearn.com/');
-  SatSetLeader('vslinks.online', 'link', 'https://ad.vslinks.in/');
-  SatSetLeader('factsdunya.com', 'go', 'https://driveupload.net/');
-  SatSetLeader('1apple.xyz', 'link', 'https://link.turkdown.com/');
-  SatSetLeader('missreview.info', 'link', 'https://g.linkvor.pw/');
-  SatSetLeader('videolyrics.in', 'p', 'https://ser3.crazyblog.in/');
-  SatSetLeader('blog.topfaucet.us', 'token', 'https://sl1.x10.mx/');
-  SatSetLeader('housezquick.com', 'link', 'https://ad.ushort.xyz/');
-  SatSetLeader('flashlinks.online', 'dk', 'https://flashlinks.in/');
-  SatSetLeader('siteblog.in', 'link', 'https://go.droplink.co.in/');
-  SatSetLeader('shortsnob.in', 'token', 'https://short.earnmoj.in/');
-  SatSetLeader('apna-blog.in', 'token', 'https://apnashortener.in/');
-  SatSetLeader('ignitesmm.com', 'link', 'https://f.omnifly.in.net/');
-  SatSetLeader('fileku.net', 'adlinkfly', 'https://get.fileku.net/');
-  SatSetLeader('nisnisin.com', 'link', 'https://link.ezlinkad.com/');
-  SatSetLeader('coinsward.com', 'adlinkfly', 'https://adbitfly.com/');
-  SatSetLeader('povathemes.com|escobarvip.cf|golinki.com', 'url', '');
-  SatSetLeader('upload.veganab.co', 'go', 'https://driveupload.net/');
-  SatSetLeader('anonbar.com', 'link', 'https://go.moviepagol.my.id/');
-  SatSetLeader('tamilhit.tech', 'link', 'https://get.tamilhit.tech/');
-  SatSetLeader('suntechu.in', 'post', 'https://web.urllinkshort.in/');
-  SatSetLeader('cryptokaro.co.in', 'adlinkfly', 'https://tarabox.in/');
-  SatSetLeader('foxbugg.com', 'adlinkfly', 'https://ads.foxbugg.com/');
-  SatSetLeader('tremamnon.com', 'adlinkfly', 'https://dash-free.com/');
-  SatSetLeader('market.finclub.in', 'link', 'https://go.tnshort.net/');
-  SatSetLeader('hostadviser.net', 'token', 'https://go.hipsonyc.com/');
-  SatSetLeader('bantenexis.com', 'link', 'https://link.youshort.net/');
-  SatSetLeader('techkeshri.com', 'link', 'https://go.paisakamalo.in/');
-  SatSetLeader('indirasari.com', 'link', 'https://link.paid4link.com/');
-  SatSetLeader('wikitraveltips.com', 'link', 'https://adrinolinks.in/');
-  SatSetLeader('smallinfo.in', 'link', 'https://filmypoints.in/?link=');
-  SatSetLeader('pglink.online', 'adlinkfly', 'https://link.pglink.in/');
-  SatSetLeader('mvplaylink.in.net', 'post', 'https://mplaylink.com/s/');
-  SatSetLeader('techyinfo.in', 'post', 'https://loan.techyinfo.in/?go=');
-  SatSetLeader('gyanitheme.com', 'token', 'https://go.hostadviser.net/');
-  SatSetLeader('ww1.linktrims.com', 'link', 'https://go.linktrims.com/');
-  SatSetLeader('djqunjab.in', 'link', 'https://go.greymatterslinks.in/');
-  SatSetLeader('healthynepal.in', 'link', 'https://go.tgshortener.com/');
-  SatSetLeader('missionhight.in', 'link', 'https://playdisk.url2go.in/');
-  SatSetLeader('tech.techwhom.com', 'jeton', 'https://we.techwhom.com/');
-  SatSetLeader('encurtaclik.com', 'link', 'https://go.encurtaclik.com/');
-  SatSetLeader('appkamods.com', 'link', 'https://go.shorturllinks.com/');
-  SatSetLeader('cybertechng.com', 'link', 'https://go.cybertechng.com/');
-  SatSetLeader('conghuongtu.net', 'adlinkfly', 'https://bitlinks.site/');
-  SatSetLeader('loan.filmypoints.in', 'link', 'https://link.e2share.in/');
-  SatSetLeader('niinga.com', 'get', 'https://eigsense.eda-ah.com/?get1=');
-  SatSetLeader('cinemapettai.in', 'post', 'https://getlink.sxslink.com/');
-  SatSetLeader('market.gorating.in', 'link', 'https://go.onepagelink.in/');
-  SatSetLeader('lrncook.xyz', 'a', 'https://yalifin.xyz/contact-us/?opp=');
-  SatSetLeader('blog.anywho-com.com', 'go', 'https://blog.shrinkme.link/');
-  SatSetLeader('videoslyrics.com', 'postid', 'https://ser3.crazyblog.in/');
-  SatSetLeader('earn.tensailab.com', 'adlinkfly', 'https://go.snaply.in/');
-  SatSetLeader('postazap.com', 'link', 'https://encurtador.postazap.com/');
-  SatSetLeader('mamahawa.com', 'get', 'https://forextrader.site/SkipLink/');
-  SatSetLeader('prakasheditingtamizhan.com', 'link', 'https://kpslink.in/');
-  SatSetLeader('mmdrive.xyz', 'link', 'https://techleets.xyz/no.php?link=');
-  SatSetLeader('reminimod.co', 'land', 'https://insurance.techymedies.com/');
-  SatSetLeader('keralalotteryresult.co', 'adlinkfly', 'https://skdlink.in/');
-  SatSetLeader('tech.filmypoints.in', 'go', 'https://finance.smallinfo.in/');
-  SatSetLeader('dpbossreal.com', 'adlinkfly', 'https://short.adslinko.com/');
-  SatSetLeader('tbhlabsnews.com', 'link', 'https://getlink.tbhlabsnews.com/');
-  SatSetLeader('interestingfactsare.com', 'link', 'https://m.urlbharat.xyz/');
-  SatSetLeader('dealprice.co', 'adlinkfly', 'https://cryptorotator.website/');
-  SatSetLeader('djnonstopmusic.in', 'link', 'https://gadgets.ishortify.com/');
-  SatSetLeader('10short.co', 'get', 'https://10short.info/CarSkip3.php/?get=');
-  SatSetLeader('tech.filohappy.in', 'link', 'https://happyfiles.dtglinks.in/');
-  SatSetLeader('vietnamtravelguide.top', 'post', 'https://bestshortlink.top/');
-  SatSetLeader('viralsinfo.com', 'token', 'https://getslinks.online/download/');
-  SatSetLeader('insuranceinfos.in', 'post', 'https://tech.smallinfo.in/Gadget/');
-  SatSetLeader('www.filmypoints.in', 'post', 'https://tech.filmypoints.in/?go=');
-  SatSetLeader('cafe.warrenrahul.in', 'adlinkfly', 'https://go.warrenrahul.in/');
-  SatSetLeader('blogsward.com', 'adlinkfly', 'https://coinsward.com/?adlinkfly=');
-  SatSetLeader('truevpnlover.com', 'grey', 'https://quick91.com/insure.php?grey=');
-  SatSetLeader('battleroyal.online', 'link', 'https://zubatecno.com/safe.php?link=');
-  SatSetLeader('techyblogs.in|techyinfo.in', 'go', 'https://insurance.techyinfo.in/');
-  SatSetLeader('highkeyfinance.com', 'landhere', 'https://insurance.techymedies.com/');
-  SatSetLeader('apasih.my.id|healthydad.my.id', 'link', 'https://link.get4llink.com/');
-  //SatSetLeader('financeyogi.net', 'link', 'https://market.finclub.in/safe2.php?link=');
-  SatSetLeader('iphoto.site', 'post', 'https://vietnamtravelguide.top/token.php?post=');
-  SatSetLeader('copy-paste-fonts.com', 'post', 'https://cryptednews.space/token.php?post=');
-  SatSetLeader('techloadz.com|sportsmediaz.com', 'link', 'https://link.cloudshrinker.com//');
-  SatSetLeader('(kienthucrangmieng|chinhnhacoban|tremamnon|coin-free).com|fanclup.info', 'wpsafelink', '');
-  SatSetLeader('(manga2day|gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia|blog.disheye).com', 'link', '');
-  SledingBySatSetLeader(/earnify.pro/, function() {RemoveRef('go.linksfly.link');});
-  SledingBySatSetLeader(/aprovax.com/, {'/': [RexBp, 'https://paylinnk.com/'],}, false);
-  SledingBySatSetLeader(/lootcash.vip/, {'/verify/': [RexBp, 'http://ads.lootcash.vip/'],}, false);
-  SledingBySatSetLeader(/mixrootmods.com/, function() {EnableRCF();window.checkStatus = window.off;});
-  SledingBySatSetLeader(/duplichecke.com/, {'/verify/': [RexBp, 'http://blog.dclink.site/'],}, false);
-  SledingBySatSetLeader(/dreamistore.com/, {'/verify/': [RexBp, 'http://final.eductin.com/'],}, false);
-  SledingBySatSetLeader(/mcafee-com.com/, {'/verify/': [RexBp, 'http://blog.shrinkme.link/'],}, false);
-  SledingBySatSetLeader(/uploadsoon.com/, {'/safe.php': ['link', 'https://shrinkforearn.in/'],}, false);
-  SledingBySatSetLeader(/techyadjectives.com/, {'/check/': [RexBp, 'https://demo.pvidly.in/'],}, false);
-  SledingBySatSetLeader(/cyberstockofficial.in/, {'/cook.php': [RexBp, 'http://cyberurl.in/'],}, false);
-  SledingBySatSetLeader(/mkvflix.org/, {'/verify/': [RexBp, 'http://go.superfastdownloads.net/'],}, false);
-  SledingBySatSetLeader(/link.bicolink.net/, function() {location = location.href.replace('link', 'go');});
-  SledingBySatSetLeader(/link.vipurl.in/, function() {location = location.href.replace('link', 'count');});
-  SledingBySatSetLeader(/infinityskull.com/, {'/safe.php': ['link', 'https://go.publicearn.com/'],}, false);
-  SledingBySatSetLeader(/sakarnewz.com/, {'/multi/': [RexBp, 'http://multiquality.xyz/download/'],}, false);
-  SledingBySatSetLeader(/link.linksfire.co/, function() {location = location.href.replace('link', 'blog');});
-  SledingBySatSetLeader(/short.dash-free.com/, function() {location = location.href.replace('short.', '');});
-  SledingBySatSetLeader(/speedynews.xyz/, {'/blog/verify/': [RexBp, 'https://links.speedynews.xyz/'],}, false);
-  SledingBySatSetLeader(/viralxns.com/, {'/safe.php': ['link', 'https://uploadsoon.com/safe.php?link='],}, false);
-  SledingBySatSetLeader(/studyuo.com/, {'/pro2/verify/': [RexBp, 'https://speedynews.xyz/blog/verify/?'],}, false);
-  SledingBySatSetLeader(/go.link4rev.site|go.urlcash.site/, function() {location = location.href.replace('go.', '');});
-  SledingBySatSetLeader(/techyinfo.in|techyblogs.in/, {'/verify/': [RexBp, 'http://loans.techyinfo.in/?go='],}, false);
-  SledingBySatSetLeader(/revcut.net|urlcut.pro|faho.us|bitad.org|cutlink.xyz|c2g.at/, function() {window.console.log = false;});
-  SledingBySatSetLeader(/olhonagrana.com/, {'/verify/': [RexBp, 'http://paylinnk.com/'],'/': [RexBp, 'https://syflink.com/']}, false);
-  SledingBySatSetLeader(/dutchycorp.space/, function() {if (BpParams.has('code')) {location = BpParams.getAll('code') + '?verif=0';}});
-  SledingBySatSetLeader(/link.birdurls.com|link.owllink.net|link.illink.net/, function() {location = location.href.replace('link.', '');});
-  SledingBySatSetLeader(/gdtot.cfd/, function() {if (location.href.includes('/file/')) {location = location.href.replace('file/', '/ddl/');}});
-  SledingBySatSetLeader(/desbloquea.me/, function() {if (BpParams.has('i')) {let Decipher = DecodeBase64(BpParams.get('i'), 5); let dbq = Decrypter(Decipher).split('|')[0];redirect(dbq,false);} else {}});
-  SledingBySatSetLeader(/(teachsansar|technicalatg|foodxor).com/, () => waitForElm("#wpsafegenerate > #wpsafe-link > a[href]", safe => redirect(safe.href,false)));
-  SledingBySatSetLeader(/facebook.com/, function() {let fb = location.href.includes('/l.php') || location.href.includes('/flx/warn') && BpParams.has('u'); if (fb) {location = decodeURIComponent(BpParams.get('u'));}});
-  SledingBySatSetLeader(/ouo.io/, function() {if (BpParams.has('s') && location.href.includes('link.nevcoins.club')) {location = 'https://' + BpParams.getAll('s');} else if (BpParams.has('s')) {location = BpParams.getAll('s');}});
-  SledingBySatSetLeader(/linkbox.to/, function() {Listener(function(object) {if (object.url.includes('api/file/detail?itemId')) {console.log(object.responseText);const {data: {itemInfo}} = JSON.parse(object.responseText);console.log(itemInfo); redirect(itemInfo.url, false);}});});
-  SledingBySatSetLeader(/adbtc.top/, function() {let count = 0; setInterval(function() {if (bp("div.col.s4> a") && !bp("div.col.s4> a").className.includes("hide")) {count = 0;
+  GassruxLeader('gocmod.com', 'urls', '');
+  GassruxLeader('clink1.com', 'url,id', '');
+  GassruxLeader('writedroid.in', 'token', '');
+  GassruxLeader('web1s.com', 'token,url', '');
+  GassruxLeader('modmania.eu.org', 'token', '');
+  GassruxLeader('msmedia.in', 'id', 'https://srink.in/');
+  GassruxLeader('yalifin.xyz', 'opp', 'https://cut.lc/');
+  GassruxLeader('sahityt.com', 'token', 'https://vzu.us/');
+  GassruxLeader('blitly.io|smartlink.vip', 'url,apikey', '');
+  GassruxLeader('wpking.in', 'go', 'https://o.linkpio.com/');
+  GassruxLeader('eda-ah.com', 'get1', 'https://liinkat.com/');
+  GassruxLeader('m.newhit.me', 'link', 'https://link3s.net/');
+  GassruxLeader('abhikr.in', 'post', 'https://linkvibe.xyz/');
+  GassruxLeader('10short.info', 'get', 'https://10short.com/');
+  GassruxLeader('go.qora.in', 'link', 'https://link.qora.in/');
+  GassruxLeader('finoxpert.com', 'link', 'https://lksfy.site/');
+  GassruxLeader('rsrlink.in', 'link', 'https://go.rsrlink.in/');
+  GassruxLeader('dailynew.online', 'go', 'https://sklinks.in/');
+  GassruxLeader('strfree.xyz', 'go', 'https://yo.adlinku.com/');
+  GassruxLeader('jazbaat.in', 'link', 'https://go.rplinks.in/');
+  GassruxLeader('urotan.net', 'link', 'https://shortyget.com/');
+  GassruxLeader('mrdoge.in', 'link', 'https://link.cash4.link/');
+  GassruxLeader('autodime.com', 'go', 'https://go.linkrex.net/');
+  GassruxLeader('quick91.com', 'grey', 'https://go.linkco.pro/');
+  GassruxLeader('airlike.me', 'link', 'https://get.airlike.me/');
+  GassruxLeader('techhadi.com', 'news', 'https://go.tplinks.in/');
+  GassruxLeader('zubatecno.com', 'link', 'https://go.flyzu.icu/');
+  GassruxLeader('veganab.co', 'link', 'https://techy.veganab.co/');
+  GassruxLeader('yosite.net', 'link', 'https://loans.yosite.net/');
+  GassruxLeader('battlechamp.in', 'link', 'https://get.exurl.in/');
+  GassruxLeader('adiskblog.in', 'link', 'https://go.pdiskpro.in/');
+  GassruxLeader('cryptednews.space', 'post', 'https://slfly.net/');
+  GassruxLeader('indiansarkari.com', 'go', 'https://icashfly.com/');
+  GassruxLeader('tanytech.com', 'link', 'https://go.hexlinks.xyz/');
+  GassruxLeader('healthynepal.in', 'post', 'https://ez4short.xyz/');
+  GassruxLeader('gktech.uk', 'adlinkfly', 'https://linkyearn.com/');
+  GassruxLeader('vslinks.online', 'link', 'https://ad.vslinks.in/');
+  GassruxLeader('factsdunya.com', 'go', 'https://driveupload.net/');
+  GassruxLeader('1apple.xyz', 'link', 'https://link.turkdown.com/');
+  GassruxLeader('missreview.info', 'link', 'https://g.linkvor.pw/');
+  GassruxLeader('videolyrics.in', 'p', 'https://ser3.crazyblog.in/');
+  GassruxLeader('blog.topfaucet.us', 'token', 'https://sl1.x10.mx/');
+  GassruxLeader('housezquick.com', 'link', 'https://ad.ushort.xyz/');
+  GassruxLeader('flashlinks.online', 'dk', 'https://flashlinks.in/');
+  GassruxLeader('siteblog.in', 'link', 'https://go.droplink.co.in/');
+  GassruxLeader('shortsnob.in', 'token', 'https://short.earnmoj.in/');
+  GassruxLeader('apna-blog.in', 'token', 'https://apnashortener.in/');
+  GassruxLeader('ignitesmm.com', 'link', 'https://f.omnifly.in.net/');
+  GassruxLeader('fileku.net', 'adlinkfly', 'https://get.fileku.net/');
+  GassruxLeader('nisnisin.com', 'link', 'https://link.ezlinkad.com/');
+  GassruxLeader('coinsward.com', 'adlinkfly', 'https://adbitfly.com/');
+  GassruxLeader('povathemes.com|escobarvip.cf|golinki.com', 'url', '');
+  GassruxLeader('upload.veganab.co', 'go', 'https://driveupload.net/');
+  GassruxLeader('anonbar.com', 'link', 'https://go.moviepagol.my.id/');
+  GassruxLeader('tamilhit.tech', 'link', 'https://get.tamilhit.tech/');
+  GassruxLeader('suntechu.in', 'post', 'https://web.urllinkshort.in/');
+  GassruxLeader('cryptokaro.co.in', 'adlinkfly', 'https://tarabox.in/');
+  GassruxLeader('foxbugg.com', 'adlinkfly', 'https://ads.foxbugg.com/');
+  GassruxLeader('tremamnon.com', 'adlinkfly', 'https://dash-free.com/');
+  GassruxLeader('market.finclub.in', 'link', 'https://go.tnshort.net/');
+  GassruxLeader('hostadviser.net', 'token', 'https://go.hipsonyc.com/');
+  GassruxLeader('bantenexis.com', 'link', 'https://link.youshort.net/');
+  GassruxLeader('techkeshri.com', 'link', 'https://go.paisakamalo.in/');
+  GassruxLeader('indirasari.com', 'link', 'https://link.paid4link.com/');
+  GassruxLeader('wikitraveltips.com', 'link', 'https://adrinolinks.in/');
+  GassruxLeader('smallinfo.in', 'link', 'https://filmypoints.in/?link=');
+  GassruxLeader('pglink.online', 'adlinkfly', 'https://link.pglink.in/');
+  GassruxLeader('mvplaylink.in.net', 'post', 'https://mplaylink.com/s/');
+  GassruxLeader('techyinfo.in', 'post', 'https://loan.techyinfo.in/?go=');
+  GassruxLeader('gyanitheme.com', 'token', 'https://go.hostadviser.net/');
+  GassruxLeader('ww1.linktrims.com', 'link', 'https://go.linktrims.com/');
+  GassruxLeader('djqunjab.in', 'link', 'https://go.greymatterslinks.in/');
+  GassruxLeader('healthynepal.in', 'link', 'https://go.tgshortener.com/');
+  GassruxLeader('missionhight.in', 'link', 'https://playdisk.url2go.in/');
+  GassruxLeader('tech.techwhom.com', 'jeton', 'https://we.techwhom.com/');
+  GassruxLeader('encurtaclik.com', 'link', 'https://go.encurtaclik.com/');
+  GassruxLeader('appkamods.com', 'link', 'https://go.shorturllinks.com/');
+  GassruxLeader('cybertechng.com', 'link', 'https://go.cybertechng.com/');
+  GassruxLeader('conghuongtu.net', 'adlinkfly', 'https://bitlinks.site/');
+  GassruxLeader('loan.filmypoints.in', 'link', 'https://link.e2share.in/');
+  GassruxLeader('niinga.com', 'get', 'https://eigsense.eda-ah.com/?get1=');
+  GassruxLeader('cinemapettai.in', 'post', 'https://getlink.sxslink.com/');
+  GassruxLeader('market.gorating.in', 'link', 'https://go.onepagelink.in/');
+  GassruxLeader('lrncook.xyz', 'a', 'https://yalifin.xyz/contact-us/?opp=');
+  GassruxLeader('blog.anywho-com.com', 'go', 'https://blog.shrinkme.link/');
+  GassruxLeader('videoslyrics.com', 'postid', 'https://ser3.crazyblog.in/');
+  GassruxLeader('earn.tensailab.com', 'adlinkfly', 'https://go.snaply.in/');
+  GassruxLeader('postazap.com', 'link', 'https://encurtador.postazap.com/');
+  GassruxLeader('mamahawa.com', 'get', 'https://forextrader.site/SkipLink/');
+  GassruxLeader('prakasheditingtamizhan.com', 'link', 'https://kpslink.in/');
+  GassruxLeader('mmdrive.xyz', 'link', 'https://techleets.xyz/no.php?link=');
+  GassruxLeader('reminimod.co', 'land', 'https://insurance.techymedies.com/');
+  GassruxLeader('keralalotteryresult.co', 'adlinkfly', 'https://skdlink.in/');
+  GassruxLeader('tech.filmypoints.in', 'go', 'https://finance.smallinfo.in/');
+  GassruxLeader('dpbossreal.com', 'adlinkfly', 'https://short.adslinko.com/');
+  GassruxLeader('tbhlabsnews.com', 'link', 'https://getlink.tbhlabsnews.com/');
+  GassruxLeader('interestingfactsare.com', 'link', 'https://m.urlbharat.xyz/');
+  GassruxLeader('dealprice.co', 'adlinkfly', 'https://cryptorotator.website/');
+  GassruxLeader('djnonstopmusic.in', 'link', 'https://gadgets.ishortify.com/');
+  GassruxLeader('10short.co', 'get', 'https://10short.info/CarSkip3.php/?get=');
+  GassruxLeader('tech.filohappy.in', 'link', 'https://happyfiles.dtglinks.in/');
+  GassruxLeader('vietnamtravelguide.top', 'post', 'https://bestshortlink.top/');
+  GassruxLeader('viralsinfo.com', 'token', 'https://getslinks.online/download/');
+  GassruxLeader('insuranceinfos.in', 'post', 'https://tech.smallinfo.in/Gadget/');
+  GassruxLeader('www.filmypoints.in', 'post', 'https://tech.filmypoints.in/?go=');
+  GassruxLeader('cafe.warrenrahul.in', 'adlinkfly', 'https://go.warrenrahul.in/');
+  GassruxLeader('blogsward.com', 'adlinkfly', 'https://coinsward.com/?adlinkfly=');
+  GassruxLeader('truevpnlover.com', 'grey', 'https://quick91.com/insure.php?grey=');
+  GassruxLeader('battleroyal.online', 'link', 'https://zubatecno.com/safe.php?link=');
+  GassruxLeader('techyblogs.in|techyinfo.in', 'go', 'https://insurance.techyinfo.in/');
+  GassruxLeader('highkeyfinance.com', 'landhere', 'https://insurance.techymedies.com/');
+  GassruxLeader('apasih.my.id|healthydad.my.id', 'link', 'https://link.get4llink.com/');
+  //GassruxLeader('financeyogi.net', 'link', 'https://market.finclub.in/safe2.php?link=');
+  GassruxLeader('iphoto.site', 'post', 'https://vietnamtravelguide.top/token.php?post=');
+  GassruxLeader('copy-paste-fonts.com', 'post', 'https://cryptednews.space/token.php?post=');
+  GassruxLeader('techloadz.com|sportsmediaz.com', 'link', 'https://link.cloudshrinker.com//');
+  GassruxLeader('(kienthucrangmieng|chinhnhacoban|tremamnon|coin-free).com|fanclup.info', 'wpsafelink', '');
+  GassruxLeader('(manga2day|gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia|blog.disheye).com', 'link', '');
+  SledingByGassruxLeader(/earnify.pro/, function() {RemoveRef('go.linksfly.link');});
+  SledingByGassruxLeader(/aprovax.com/, {'/': [RexBp, 'https://paylinnk.com/'],}, false);
+  SledingByGassruxLeader(/lootcash.vip/, {'/verify/': [RexBp, 'http://ads.lootcash.vip/'],}, false);
+  SledingByGassruxLeader(/mixrootmods.com/, function() {EnableRCF();window.checkStatus = window.off;});
+  SledingByGassruxLeader(/duplichecke.com/, {'/verify/': [RexBp, 'http://blog.dclink.site/'],}, false);
+  SledingByGassruxLeader(/dreamistore.com/, {'/verify/': [RexBp, 'http://final.eductin.com/'],}, false);
+  SledingByGassruxLeader(/mcafee-com.com/, {'/verify/': [RexBp, 'http://blog.shrinkme.link/'],}, false);
+  SledingByGassruxLeader(/uploadsoon.com/, {'/safe.php': ['link', 'https://shrinkforearn.in/'],}, false);
+  SledingByGassruxLeader(/techyadjectives.com/, {'/check/': [RexBp, 'https://demo.pvidly.in/'],}, false);
+  SledingByGassruxLeader(/cyberstockofficial.in/, {'/cook.php': [RexBp, 'http://cyberurl.in/'],}, false);
+  SledingByGassruxLeader(/mkvflix.org/, {'/verify/': [RexBp, 'http://go.superfastdownloads.net/'],}, false);
+  SledingByGassruxLeader(/link.bicolink.net/, function() {location = location.href.replace('link', 'go');});
+  SledingByGassruxLeader(/link.vipurl.in/, function() {location = location.href.replace('link', 'count');});
+  SledingByGassruxLeader(/infinityskull.com/, {'/safe.php': ['link', 'https://go.publicearn.com/'],}, false);
+  SledingByGassruxLeader(/sakarnewz.com/, {'/multi/': [RexBp, 'http://multiquality.xyz/download/'],}, false);
+  SledingByGassruxLeader(/link.linksfire.co/, function() {location = location.href.replace('link', 'blog');});
+  SledingByGassruxLeader(/short.dash-free.com/, function() {location = location.href.replace('short.', '');});
+  SledingByGassruxLeader(/speedynews.xyz/, {'/blog/verify/': [RexBp, 'https://links.speedynews.xyz/'],}, false);
+  SledingByGassruxLeader(/viralxns.com/, {'/safe.php': ['link', 'https://uploadsoon.com/safe.php?link='],}, false);
+  SledingByGassruxLeader(/studyuo.com/, {'/pro2/verify/': [RexBp, 'https://speedynews.xyz/blog/verify/?'],}, false);
+  SledingByGassruxLeader(/go.link4rev.site|go.urlcash.site/, function() {location = location.href.replace('go.', '');});
+  SledingByGassruxLeader(/techyinfo.in|techyblogs.in/, {'/verify/': [RexBp, 'http://loans.techyinfo.in/?go='],}, false);
+  SledingByGassruxLeader(/revcut.net|urlcut.pro|faho.us|bitad.org|cutlink.xyz|c2g.at/, function() {window.console.log = false;});
+  SledingByGassruxLeader(/olhonagrana.com/, {'/verify/': [RexBp, 'http://paylinnk.com/'],'/': [RexBp, 'https://syflink.com/']}, false);
+  SledingByGassruxLeader(/dutchycorp.space/, function() {if (BpParams.has('code')) {location = BpParams.getAll('code') + '?verif=0';}});
+  SledingByGassruxLeader(/link.birdurls.com|link.owllink.net|link.illink.net/, function() {location = location.href.replace('link.', '');});
+  SledingByGassruxLeader(/gdtot.cfd/, function() {if (location.href.includes('/file/')) {location = location.href.replace('file/', '/ddl/');}});
+  SledingByGassruxLeader(/desbloquea.me/, function() {if (BpParams.has('i')) {let Decipher = DecodeBase64(BpParams.get('i'), 5); let dbq = Decrypter(Decipher).split('|')[0];redirect(dbq,false);} else {}});
+  SledingByGassruxLeader(/(teachsansar|technicalatg|foodxor).com/, () => waitForElm("#wpsafegenerate > #wpsafe-link > a[href]", safe => redirect(safe.href,false)));
+  SledingByGassruxLeader(/facebook.com/, function() {let fb = location.href.includes('/l.php') || location.href.includes('/flx/warn') && BpParams.has('u'); if (fb) {location = decodeURIComponent(BpParams.get('u'));}});
+  SledingByGassruxLeader(/ouo.io/, function() {if (BpParams.has('s') && location.href.includes('link.nevcoins.club')) {location = 'https://' + BpParams.getAll('s');} else if (BpParams.has('s')) {location = BpParams.getAll('s');}});
+  SledingByGassruxLeader(/linkbox.to/, function() {Listener(function(object) {if (object.url.includes('api/file/detail?itemId')) {console.log(object.responseText);const {data: {itemInfo}} = JSON.parse(object.responseText);console.log(itemInfo); redirect(itemInfo.url, false);}});});
+  SledingByGassruxLeader(/adbtc.top/, function() {let count = 0; setInterval(function() {if (bp("div.col.s4> a") && !bp("div.col.s4> a").className.includes("hide")) {count = 0;
     bp("div.col.s4> a").click();} else {count = count + 1;}}, 5000); window.onbeforeunload = function() {if (unsafeWindow.myWindow) {unsafeWindow.myWindow.close();}
       if (unsafeWindow.coinwin) {let popc = unsafeWindow.coinwin; unsafeWindow.coinwin = {}; popc.close();}};});
 
@@ -316,10 +316,10 @@
       var form = $('form[id=go-link]');$.ajax({type: 'POST', async: true, url: form.attr('action'),data: form.serialize(),dataType: 'json',
         success: function(data) {redirect(data.url);}});} else if (elementExists('form[id=go-link]')) {$('form[id=go-link]').unbind().submit(function(e) {e.preventDefault();
         var form = $(this);var url = form.attr('action');const pesan = form.find('button'); const notforsale = $(".navbar-collapse.collapse");const woosh = $(".main-header");const blogger = $(".col-sm-6.hidden-xs");
-        $.ajax({type: "POST", url: url, data: form.serialize(), beforeSend: function(xhr) {pesan.attr("disabled", "disabled");$('a.get-link').text('Sleding by SatSetLeader');
-            notforsale.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Trims Untuk Menggunakan Skrip ini , salam : SatSetLeader</b></button>');
-            woosh.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Trims Untuk Menggunakan Skrip ini , salam : SatSetLeader</b></button>');
-            blogger.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Trims Untuk Menggunakan Skrip ini , salam : SatSetLeader</b></button>');},
+        $.ajax({type: "POST", url: url, data: form.serialize(), beforeSend: function(xhr) {pesan.attr("disabled", "disabled");$('a.get-link').text('Sleding by GassruxLeader');
+            notforsale.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Trims Untuk Menggunakan Skrip ini , salam : GassruxLeader</b></button>');
+            woosh.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Trims Untuk Menggunakan Skrip ini , salam : GassruxLeader</b></button>');
+            blogger.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Trims Untuk Menggunakan Skrip ini , salam : GassruxLeader</b></button>');},
           success: function(result, status, xhr) {if (xhr.responseText.match('insfly.pw|Insfly.pw|freecrypto.top|oscut.space|mdiskshortner.link|promo-visits.site|oscut.fun|bigbtc.win|gainl.ink|earnify.pro|clockads.in|cashlinko.com|exashorts.fun|linksly.pw')) {location.href = result.url;} else {location.href = respect + result.url;}}});});}
     const bas = (h => {const b = h.pathname === '/verify/' && /^\?([^&]+)/.test(h.search); const result = {isNotifyNeeded: false,redirectDelay: 0,link: undefined};
       switch (h.host) {
@@ -370,477 +370,478 @@
         default: break;}})(new URL(location.href)); if (bas) {const {isNotifyNeeded, redirectDelay, link} = bas;
       if (isNotifyNeeded) {notify(`Diantos Sakedap tik..tok..tik..tok @ Detik Tadaaaaaaaaa. Tetap Tersenyum dan Selalu Berbahagia , Hatur Nuhun`);}
       setTimeout(() => {location.href = link;}, redirectDelay * 1000);}
-    SledingBySatSetLeader(/upload.ee/, function() {ClickIfExists('#d_l', 2);});
-    SledingBySatSetLeader(/appdrive.me/, function() {ClickIfExists('#drc', 2);});
-    SledingBySatSetLeader(/1ink.cc/, function() {ClickIfExists('#countingbtn', 1);});
-    SledingBySatSetLeader(/keeplinks.org/, function() {ClickIfExists('#btnchange', 2);});
-    SledingBySatSetLeader(/1short.io/, function() {SubmitIfExists('#countDownForm', 7);});
-    SledingBySatSetLeader(/earnlink.io/, function() {ClickIfExists('.btn-secondary', 3);});
-    SledingBySatSetLeader(/mkomsel.com/, function() {ClickIfExists('#downloadfile', 12);});
-    SledingBySatSetLeader(/onimports.com.br/, function() {ClickIfExists('#finalLink', 2);});
-    SledingBySatSetLeader(/1shortlink.com/, function() {ClickIfExists('#redirect-link', 3);});
-    SledingBySatSetLeader(/rapidshort.lat/, function() {SubmitIfExists('#form-continue', 2);});
-    SledingBySatSetLeader(/short.earnfeyonline.online/, function() {SubmitIfExists('#form-continue', 2);});
-    SledingBySatSetLeader(/adincent.site/, function() {SubmitIfExists('#form-continue', 2);});
-    SledingBySatSetLeader(/surflink.pro/, function() {SubmitIfExists('#form-continue', 2);});
-    SledingBySatSetLeader(/dddrive.me/, function() {ClickIfExists('.btn-outline-primary', 2);});
-    SledingBySatSetLeader(/jameeltips.us/, function() {ClickIfExists('#continue_button_1', 1);});
-    SledingBySatSetLeader(/post.copydev.com/, function() {ClickIfExists('.btn-success.btn', 6);});
-    SledingBySatSetLeader(/uppit.com/, function() {ClickIfExists('.btn-primary.btn-xl.btn', 2);});
-    SledingBySatSetLeader(/krakenfiles.com/, function() {ClickIfExists('.download-now-text', 2);});
-    SledingBySatSetLeader(/linegee.net/, function() {ClickIfExists('.btn-xs.btn-primary.btn', 2);});
-    SledingBySatSetLeader(/gofile.io/, function() {waitForElm('a.me-1', gf => redirect(gf.href));});
-    SledingBySatSetLeader(/karanpc.com/, function() {SubmitIfExists('#downloadButton > form', 2);});
-    SledingBySatSetLeader(/pro.sh/, function() {ClickIfExists('.btn-secondary', 3, 'setInterval');});
-    SledingBySatSetLeader(/file-upload.net/, function() {ClickIfExists('#downbild.g-recaptcha', 2);});
-    SledingBySatSetLeader(/userscloud.com|dosya.co/, function() {ClickIfExists('#btn_download', 2);});
-    SledingBySatSetLeader(/hexupload.net/, function() {ClickIfExists('.btn-success.btn-lg.btn', 1);});
-    SledingBySatSetLeader(/exeo.app|exego.app/, function() {ClickIfExists('#submit-button', 2);});
-    SledingBySatSetLeader(/rapidgator.net/, function() {ClickIfExists('.btn-free.act-link.link', 2);});
-    SledingBySatSetLeader(/dbree.me/, function() {ClickIfExists('.center-block.btn-default.btn', 2);});
-    SledingBySatSetLeader(/proappapk.com|meclipstudy.in/, function() {ClickIfExists('#gotolink', 5);});
-    SledingBySatSetLeader(/wrbloggers.com/, function() {ClickIfExists('a#nextpagelink button.btn', 5);});
-    SledingBySatSetLeader(/1bitspace.com/, function() {ClickIfExists('.button-element-verification',3);});
-    SledingBySatSetLeader(/lets.5get.net/, function() {ClickIfExists('.jump_link > a:nth-child(1)', 2);});
-    SledingBySatSetLeader(/cshort.org/, function() {ClickIfExists('.timer.redirect', 3, 'setInterval');});
-    SledingBySatSetLeader(/megaupto.com/, function() {ClickIfExists('#direct_link > a:nth-child(1)', 2);});
-    SledingBySatSetLeader(/(blogscare|blogtechh).com|oko.sh/, function() {SubmitIfExists('#getmylink', 3);});
-    SledingBySatSetLeader(/linkpay.cc/, function() {parent.open = BpBlock(); SubmitIfExists('#link-view', 1);});
-    SledingBySatSetLeader(/cooklike.info|model-tas-terbaru.com/, {'/': ['link', 'https://yousm.link/'],}, false);
-    SledingBySatSetLeader(/delishwell.com|artiskini.com/, {'/': ['link', 'https://link.paid4link.net/'],}, false);
-    SledingBySatSetLeader(/bildirim.in|bildirim.eu|bildirim.link/, function() {ClickIfExists('#btnPermission', 1);});
-    SledingBySatSetLeader(/enlacito.com/, function() {setTimeout(() => {redirect(window.DYykkzwP,false);}, 2 * 1000);});
-    SledingBySatSetLeader(/webhostingtips.club/, {'/safe.php': ['link', 'https://jrlinks.in/safe2.php?link='],}, false);
-    SledingBySatSetLeader(/render-state.to/, function() {if (BpParams.has('link')) {meta(atob(BpParams.get('link')));}});
-    SledingBySatSetLeader(/itscybertech.com/, function() {if (BpParams.has('data')) {meta(atob(BpParams.get('data')));}});
-    SledingBySatSetLeader(/michaelemad.com|7misr4day.com/, () => waitForElm('a.s-btn-f', mld => redirect(mld.href, false)));
-    SledingBySatSetLeader(/shareus.io/, function() {if (BpParams.has('sid')) {ReadytoClick('button.MuiButtonBase-root', 2);}});
-    SledingBySatSetLeader(/adtival.network/, function() {if (BpParams.has('shortid')) {meta(atob(BpParams.get('shortid')));}});
-    SledingBySatSetLeader(/dilink.net/, function() {if (typeof(window.url_done) !== 'string') return; redirect(window.url_done);});
-    SledingBySatSetLeader(/shortener.goldcontent.site/, function() {if (BpParams.has('dest')) {meta(atob(BpParams.get('dest')));}});
-    SledingBySatSetLeader(/newsbawa.com/, function() {ClickIfExists('#Verify-click-btn', 2);ClickIfExists('a#footer-btn.verify-btn', 3);});
-    SledingBySatSetLeader(/askpaccosi.com|paylinks.cloud|healthmart.link|kisalt.com/, function() {SubmitIfExists('.box-body > form', 2);});
-    //SledingBySatSetLeader(/blog24.me/, function() {EnableRCF();window.addEventListener('DOMContentLoaded', () => {BypassAI('nth-of-type(3)', 25);});});
-    SledingBySatSetLeader(/ontechhindi.com/, function() {EnableRCF();waitForElm('#rtg-generate21 > a', oth => redirect(oth.href, false));});
-    SledingBySatSetLeader(/mhma12.tech|hasri.xyz|soft3arbi.com/, function() {ClickIfExists('#btn6', 2);ClickIfExists('#yuidea-btmbtn', 3);});
-    SledingBySatSetLeader(/sfl.gl/, function() {if (location.href.includes('/ready') && BpParams.has('u')) {meta(atob(BpParams.get('u')));}});
-    SledingBySatSetLeader(/megaup.net/, function() {waitForElm('a.btn.btn-default', muBtn => muBtn.click());ClickIfExists('#btndownload', 7);});
-    SledingBySatSetLeader(/gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online/, function() {ClickIfExists('#mdt', 3);});
-    SledingBySatSetLeader(/techanalyzer.eu|gameblog.in|impact24.us|article24.online|infonerd.org|coingraph.us|trendzilla.it|horoscop.info|writeprofit.org/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpsafe-link] > a", 30);});
-    SledingBySatSetLeader(/cryptoad.org/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpsafe-link] > a", 30);});
-    SledingBySatSetLeader(/buzz.cryptoad.org|wow.cryptoad.org/, function() {EnableRCF();SubmitBp('input[type=hidden]', 40);ClickIfExists("div[id^=wpsafe-link] > a", 70);});
-    SledingBySatSetLeader(/infotrends.co|reintroducing.us/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpsafe-link1] > a", 30);});
-    //SledingBySatSetLeader(/bitzite.com/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpsafe-link27] > a", 30);});
-    //SledingBySatSetLeader(/trendzilla.it|horoscop.info/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpsafe-link3] > a", 30);});
-    //SledingBySatSetLeader(/hostratgeber.de|(miner-sim|networkhint).com/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpp1] > a", 30);});
-    SledingBySatSetLeader(/hostratgeber.de|(miner-sim|networkhint).com/, function() {let hostrat = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(hostrat.value)).linkr,false);}, 120 * 1000);});
-    SledingBySatSetLeader(/mcrypto.club/, function() {let hostrat = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(hostrat.value)).linkr,false);}, 30 * 1000);});
-    SledingBySatSetLeader(/bitzite.com/, function() {EnableRCF();SubmitBp('input[type=hidden]', 35);ClickIfExists("div[id^=wpsafe-link27] > a", 40);});
-    //SledingBySatSetLeader(/rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo/, function() {EnableRCF();SubmitBp('input[type=hidden]', 3);ClickIfExists("div[id^=btn-] > a", 3);});
-    SledingBySatSetLeader(/rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo/, function() {EnableRCF();SubmitBp('input[nth-of-type(2)]', 3);ClickIfExists("div[id^=btn-] > a", 3);});
-    //SledingBySatSetLeader(/horoscop.info|writeprofit.org/, function() {let Alcatraz = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(Alcatraz.value)).linkk,false);}, 120 * 1000);});
-    SledingBySatSetLeader(/twitter.com/, function() {let twitter = location.href.includes('/safety') && BpParams.has('unsafe_link'); if (twitter) {location = decodeURIComponent(BpParams.get('unsafe_link'));}});
-    SledingBySatSetLeader(/tiktok.com/, function() {if (BpParams.has('aid') && BpParams.has('lang') && BpParams.has('scene') && BpParams.has('target')) {location = decodeURIComponent(BpParams.get('target'));} else {}});
-    SledingBySatSetLeader(/(tinycmd|tinybc).com/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `handleClick('`, `', '_self')`), false));});
-    SledingBySatSetLeader(/vk.com/, function() {if (BpParams.has('to') && location.href.includes('/away.php')) {location = decodeURIComponent(BpParams.get('to'));} else {}});
-    SledingBySatSetLeader(/(blackleadr|shortcuthigh|newztalkies).com|hubdrive.me/, function() {if (BpParams.has('r')) {meta(atob(BpParams.get('r')));}});
-    SledingBySatSetLeader(/sharetext.me/, function() {if (location.href.includes('/redirect') && BpParams.has('url')) {meta(atob(BpParams.get('url')));}});
-    SledingBySatSetLeader(/btcsatoshi.net/, async function() {EnableRCF();window.check2();window.check3();ClickIfExists('button.btn.btn-primary.btn-lg');});
-    SledingBySatSetLeader(/(cutado|cutyurls).com|(cutt|cutsy|cutlink|cutnet).net|(cutty|exego).app/, function() {ClickIfExists('#submit-button', 5, 'setInterval');});
-    SledingBySatSetLeader(/comohoy.com/, function() {if (location.href.includes('/grab/out.html') && BpParams.has('url')) {meta(atob(BpParams.get('url')));}});
-    SledingBySatSetLeader(/oxy\.*/, function() {if (elementExists('#divdownload')) {let oxy = bp('.ocdsf233').getAttribute('data-source_url');redirect(oxy, false);}});
-    SledingBySatSetLeader(/4fnet.org/, function() {if (location.href.includes('/goto')) {let fnet = location.href.split('/').slice(-1);redirect(atob(fnet),false);}});
-    SledingBySatSetLeader(/ctr.sh/, function() {if (/^\/(.+)/.test(location.pathname) && !BpParams.has('token')) {location = 'https://sinonimos.de/?url8j=' + location.href;}});
-    SledingBySatSetLeader(/easycut.io/, function() {if (/^\/(.+)/.test(location.pathname) && !BpParams.has('token')) {location = 'https://quesignifi.ca/?url8j=' + location.href;}});
-    SledingBySatSetLeader(/programasvirtualespc.net/, function() {if (location.href.includes('out/')) {const pvc = location.href.split('?')[1]; redirect(atob(pvc),false);} else {}});
-    SledingBySatSetLeader(/hiharshit.in/, function() {waitForElm('#rtg-snp21', hsBtn => hsBtn.click());waitForElm('div.rtg-text-center > center > a', hhs => redirect(hhs.href, false));});
-    SledingBySatSetLeader(/trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net/, function() {ClickIfExists('#yuidea', 2);ClickIfExists('#monetiza', 2);ClickIfExists('#btn6', 3);});
-    //SledingBySatSetLeader(/techanalyzer.eu/, function() {EnableRCF();SubmitIfExists("form[name='dsb']", 3);ClickIfExists('#wpsafe-link > a', 4);});
-    SledingBySatSetLeader(/(askpaccosi|neverdims).com|cryptomonitor.in|2the.space|imbb.online/, function() {EnableRCF();SubmitIfExists("form[name='dsb']", 3);ClickIfExists('#wpsafe-link > a', 4);});
-    SledingBySatSetLeader(/(10short|lollty).pro|mamahawa.com/, function() {ReadytoClick('center > .btn-success.btn', 3);waitForElm('a#makingdifferenttimer', st1 => redirect(st1.href, false));waitForElm('a#proceed', st2 => redirect(st2.href, false));});
-    SledingBySatSetLeader(/nullscript.info|freebinance.top/, function() {waitForElm('div#wpsafe-link > a', function(element) {const regex = /redirect=(.*)',/;const m = regex.exec(element.onclick.toString())[1];location.href = JSON.parse(atob(m)).safelink;});});
-    SledingBySatSetLeader(/(cryptosparatodos|placementsmela).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|bitcrypto.info|paidinsurance.in/, () => waitForElm('#wpsafe-link a', bti => redirect(strBetween(bti.onclick.toString(), `window.open('`, `', '_self')`), false)));
-    SledingBySatSetLeader(/mynewsmedia.co|(netflixrelease|mangareleasedate|kojnews|freemodapp|cryptoprolife|revadvert|diethim|techsotta|zutiza|lndianews|newsjov|instantloan5|hitjankari|phixshop|mp4news).com|(rontymobile|myfirstname|snapseedmod|djrajurjm|disking|ignoupur).in/, function() {ClickIfExists('#VerifyBtn', 3);ClickIfExists('#NextBtn', 5, 'setInterval');});
-    SledingBySatSetLeader(/(crypto2u|bestcoinsites).xyz/, function() {if (/^\/shortlink\/([^\/]+)/.test(location.pathname)) {waitForElm('a#btn.btn.btn-success', c2u => redirect(c2u.href, false));} else if (elementExists('.shadow.card')) {waitForElm('a.btn.btn-lg.btn-success.px-4', c2u2 => redirect(c2u2.href, false));}});
-    SledingBySatSetLeader(/fansonlinehub.com/, async function() {setInterval(() => {window.scrollBy(0, 1);window.scrollTo(0,-1);ReadytoClick('.active.btn > span');}, 3 * 1000);});
-    SledingBySatSetLeader(/(howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista).com/, () => {ClickIfExists('#getlink', 3);});
-    SledingBySatSetLeader(/ouo.io|ouo.press/, async function() {await sleep(4000);ReadytoClick('button#btn-main.btn.btn-main');});
-    SledingBySatSetLeader(/largestpanel.in|earnme.club|usanewstoday.club/, function() {ClickIfExists('#tp-snp2', 1);});
-    SledingBySatSetLeader(/paste1s.com|note1s.com/, function() {ClickIfExists('.btn-lg.btn-primary.btn', 2);});
-    SledingBySatSetLeader(/dataupload.net/, async function() {await sleep(5000);ReadytoClick('.downloadbtn');});
-    SledingBySatSetLeader(/douploads.net/, function() {ClickIfExists('.btn-primary.btn-lg.btn-block.btn', 2);});
-    SledingBySatSetLeader(/terabox.fun/, async function() {await sleep(3000);ReadytoClick('.active.btn');});
-    SledingBySatSetLeader(/linkerload.com/, function() {
+    SledingByGassruxLeader(/upload.ee/, function() {ClickIfExists('#d_l', 2);});
+    SledingByGassruxLeader(/appdrive.me/, function() {ClickIfExists('#drc', 2);});
+    SledingByGassruxLeader(/1ink.cc/, function() {ClickIfExists('#countingbtn', 1);});
+    SledingByGassruxLeader(/keeplinks.org/, function() {ClickIfExists('#btnchange', 2);});
+    SledingByGassruxLeader(/1short.io/, function() {SubmitIfExists('#countDownForm', 7);});
+    SledingByGassruxLeader(/earnlink.io/, function() {ClickIfExists('.btn-secondary', 3);});
+    SledingByGassruxLeader(/mkomsel.com/, function() {ClickIfExists('#downloadfile', 12);});
+    SledingByGassruxLeader(/onimports.com.br/, function() {ClickIfExists('#finalLink', 2);});
+    SledingByGassruxLeader(/1shortlink.com/, function() {ClickIfExists('#redirect-link', 3);});
+    SledingByGassruxLeader(/rapidshort.lat/, function() {SubmitIfExists('#form-continue', 2);});
+    SledingByGassruxLeader(/short.earnfeyonline.online/, function() {SubmitIfExists('#form-continue', 2);});
+    SledingByGassruxLeader(/adincent.site/, function() {SubmitIfExists('#form-continue', 2);});
+    SledingByGassruxLeader(/surflink.pro/, function() {SubmitIfExists('#form-continue', 2);});
+    SledingByGassruxLeader(/dddrive.me/, function() {ClickIfExists('.btn-outline-primary', 2);});
+    SledingByGassruxLeader(/jameeltips.us/, function() {ClickIfExists('#continue_button_1', 1);});
+    SledingByGassruxLeader(/post.copydev.com/, function() {ClickIfExists('.btn-success.btn', 6);});
+    SledingByGassruxLeader(/uppit.com/, function() {ClickIfExists('.btn-primary.btn-xl.btn', 2);});
+    SledingByGassruxLeader(/krakenfiles.com/, function() {ClickIfExists('.download-now-text', 2);});
+    SledingByGassruxLeader(/linegee.net/, function() {ClickIfExists('.btn-xs.btn-primary.btn', 2);});
+    SledingByGassruxLeader(/gofile.io/, function() {waitForElm('a.me-1', gf => redirect(gf.href));});
+    SledingByGassruxLeader(/karanpc.com/, function() {SubmitIfExists('#downloadButton > form', 2);});
+    SledingByGassruxLeader(/pro.sh/, function() {ClickIfExists('.btn-secondary', 3, 'setInterval');});
+    SledingByGassruxLeader(/file-upload.net/, function() {ClickIfExists('#downbild.g-recaptcha', 2);});
+    SledingByGassruxLeader(/userscloud.com|dosya.co/, function() {ClickIfExists('#btn_download', 2);});
+    SledingByGassruxLeader(/hexupload.net/, function() {ClickIfExists('.btn-success.btn-lg.btn', 1);});
+    SledingByGassruxLeader(/exeo.app|exego.app/, function() {ClickIfExists('#submit-button', 2);});
+    SledingByGassruxLeader(/rapidgator.net/, function() {ClickIfExists('.btn-free.act-link.link', 2);});
+    SledingByGassruxLeader(/dbree.me/, function() {ClickIfExists('.center-block.btn-default.btn', 2);});
+    SledingByGassruxLeader(/proappapk.com|meclipstudy.in/, function() {ClickIfExists('#gotolink', 5);});
+    SledingByGassruxLeader(/wrbloggers.com/, function() {ClickIfExists('a#nextpagelink button.btn', 5);});
+    SledingByGassruxLeader(/1bitspace.com/, function() {ClickIfExists('.button-element-verification',3);});
+    SledingByGassruxLeader(/lets.5get.net/, function() {ClickIfExists('.jump_link > a:nth-child(1)', 2);});
+    SledingByGassruxLeader(/cshort.org/, function() {ClickIfExists('.timer.redirect', 3, 'setInterval');});
+    SledingByGassruxLeader(/megaupto.com/, function() {ClickIfExists('#direct_link > a:nth-child(1)', 2);});
+    SledingByGassruxLeader(/linkpay.cc/, function() {parent.open = BpBlock(); SubmitIfExists('#link-view', 1);});
+    SledingByGassruxLeader(/cooklike.info|model-tas-terbaru.com/, {'/': ['link', 'https://yousm.link/'],}, false);
+    SledingByGassruxLeader(/delishwell.com|artiskini.com/, {'/': ['link', 'https://link.paid4link.net/'],}, false);
+    SledingByGassruxLeader(/bildirim.in|bildirim.eu|bildirim.link/, function() {ClickIfExists('#btnPermission', 1);});
+    SledingByGassruxLeader(/enlacito.com/, function() {setTimeout(() => {redirect(window.DYykkzwP,false);}, 2 * 1000);});
+    SledingByGassruxLeader(/webhostingtips.club/, {'/safe.php': ['link', 'https://jrlinks.in/safe2.php?link='],}, false);
+    SledingByGassruxLeader(/render-state.to/, function() {if (BpParams.has('link')) {meta(atob(BpParams.get('link')));}});
+    SledingByGassruxLeader(/itscybertech.com/, function() {if (BpParams.has('data')) {meta(atob(BpParams.get('data')));}});
+    SledingByGassruxLeader(/michaelemad.com|7misr4day.com/, () => waitForElm('a.s-btn-f', mld => redirect(mld.href, false)));
+    SledingByGassruxLeader(/shareus.io/, function() {if (BpParams.has('sid')) {ReadytoClick('button.MuiButtonBase-root', 2);}});
+    SledingByGassruxLeader(/adtival.network/, function() {if (BpParams.has('shortid')) {meta(atob(BpParams.get('shortid')));}});
+    SledingByGassruxLeader(/dilink.net/, function() {if (typeof(window.url_done) !== 'string') return; redirect(window.url_done);});
+    SledingByGassruxLeader(/shortener.goldcontent.site/, function() {if (BpParams.has('dest')) {meta(atob(BpParams.get('dest')));}});
+    SledingByGassruxLeader(/newsbawa.com/, function() {ClickIfExists('#Verify-click-btn', 2);ClickIfExists('a#footer-btn.verify-btn', 3);});
+    SledingByGassruxLeader(/askpaccosi.com|paylinks.cloud|healthmart.link|kisalt.com/, function() {SubmitIfExists('.box-body > form', 2);});
+    //SledingByGassruxLeader(/blog24.me/, function() {EnableRCF();window.addEventListener('DOMContentLoaded', () => {BypassAI('nth-of-type(3)', 25);});});
+    SledingByGassruxLeader(/ontechhindi.com/, function() {EnableRCF();waitForElm('#rtg-generate21 > a', oth => redirect(oth.href, false));});
+    SledingByGassruxLeader(/mhma12.tech|hasri.xyz|soft3arbi.com/, function() {ClickIfExists('#btn6', 2);ClickIfExists('#yuidea-btmbtn', 3);});
+    SledingByGassruxLeader(/sfl.gl/, function() {if (location.href.includes('/ready') && BpParams.has('u')) {meta(atob(BpParams.get('u')));}});
+    SledingByGassruxLeader(/megaup.net/, function() {waitForElm('a.btn.btn-default', muBtn => muBtn.click());ClickIfExists('#btndownload', 7);});
+    SledingByGassruxLeader(/gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online/, function() {ClickIfExists('#mdt', 3);});
+    SledingByGassruxLeader(/techanalyzer.eu|gameblog.in|impact24.us|article24.online|infonerd.org|coingraph.us|trendzilla.it|horoscop.info|writeprofit.org/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpsafe-link] > a", 30);});
+    SledingByGassruxLeader(/cryptoad.org/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpsafe-link] > a", 30);});
+    SledingByGassruxLeader(/buzz.cryptoad.org|wow.cryptoad.org/, function() {EnableRCF();SubmitBp('input[type=hidden]', 40);ClickIfExists("div[id^=wpsafe-link] > a", 70);});
+    SledingByGassruxLeader(/infotrends.co|reintroducing.us/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpsafe-link1] > a", 30);});
+    //SledingByGassruxLeader(/bitzite.com/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpsafe-link27] > a", 30);});
+    //SledingByGassruxLeader(/trendzilla.it|horoscop.info/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpsafe-link3] > a", 30);});
+    //SledingByGassruxLeader(/hostratgeber.de|(miner-sim|networkhint).com/, function() {EnableRCF();SubmitBp('input[type=hidden]', 30);ClickIfExists("div[id^=wpp1] > a", 30);});
+    SledingByGassruxLeader(/hostratgeber.de|(miner-sim|networkhint).com/, function() {let hostrat = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(hostrat.value)).linkr,false);}, 120 * 1000);});
+    SledingByGassruxLeader(/mcrypto.club/, function() {let hostrat = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(hostrat.value)).linkr,false);}, 30 * 1000);});
+    SledingByGassruxLeader(/bitzite.com/, function() {EnableRCF();SubmitBp('input[type=hidden]', 35);ClickIfExists("div[id^=wpsafe-link27] > a", 40);});
+    //SledingByGassruxLeader(/rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo/, function() {EnableRCF();SubmitBp('input[type=hidden]', 3);ClickIfExists("div[id^=btn-] > a", 3);});
+    SledingByGassruxLeader(/rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo/, function() {EnableRCF();SubmitBp('input[nth-of-type(2)]', 3);ClickIfExists("div[id^=btn-] > a", 3);});
+    //SledingByGassruxLeader(/horoscop.info|writeprofit.org/, function() {let Alcatraz = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(Alcatraz.value)).linkk,false);}, 120 * 1000);});
+    SledingByGassruxLeader(/twitter.com/, function() {let twitter = location.href.includes('/safety') && BpParams.has('unsafe_link'); if (twitter) {location = decodeURIComponent(BpParams.get('unsafe_link'));}});
+    SledingByGassruxLeader(/tiktok.com/, function() {if (BpParams.has('aid') && BpParams.has('lang') && BpParams.has('scene') && BpParams.has('target')) {location = decodeURIComponent(BpParams.get('target'));} else {}});
+    SledingByGassruxLeader(/(tinycmd|tinybc).com/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `handleClick('`, `', '_self')`), false));});
+    SledingByGassruxLeader(/vk.com/, function() {if (BpParams.has('to') && location.href.includes('/away.php')) {location = decodeURIComponent(BpParams.get('to'));} else {}});
+    SledingByGassruxLeader(/(blackleadr|shortcuthigh|newztalkies).com|hubdrive.me/, function() {if (BpParams.has('r')) {meta(atob(BpParams.get('r')));}});
+    SledingByGassruxLeader(/sharetext.me/, function() {if (location.href.includes('/redirect') && BpParams.has('url')) {meta(atob(BpParams.get('url')));}});
+    SledingByGassruxLeader(/btcsatoshi.net/, async function() {EnableRCF();window.check2();window.check3();ClickIfExists('button.btn.btn-primary.btn-lg');});
+    SledingByGassruxLeader(/(cutado|cutyurls).com|(cutt|cutsy|cutlink|cutnet).net|(cutty|exego).app/, function() {ClickIfExists('#submit-button', 5, 'setInterval');});
+    SledingByGassruxLeader(/comohoy.com/, function() {if (location.href.includes('/grab/out.html') && BpParams.has('url')) {meta(atob(BpParams.get('url')));}});
+    SledingByGassruxLeader(/oxy\.*/, function() {if (elementExists('#divdownload')) {let oxy = bp('.ocdsf233').getAttribute('data-source_url');redirect(oxy, false);}});
+    SledingByGassruxLeader(/4fnet.org/, function() {if (location.href.includes('/goto')) {let fnet = location.href.split('/').slice(-1);redirect(atob(fnet),false);}});
+    SledingByGassruxLeader(/ctr.sh/, function() {if (/^\/(.+)/.test(location.pathname) && !BpParams.has('token')) {location = 'https://sinonimos.de/?url8j=' + location.href;}});
+    SledingByGassruxLeader(/easycut.io/, function() {if (/^\/(.+)/.test(location.pathname) && !BpParams.has('token')) {location = 'https://quesignifi.ca/?url8j=' + location.href;}});
+    SledingByGassruxLeader(/programasvirtualespc.net/, function() {if (location.href.includes('out/')) {const pvc = location.href.split('?')[1]; redirect(atob(pvc),false);} else {}});
+    SledingByGassruxLeader(/hiharshit.in/, function() {waitForElm('#rtg-snp21', hsBtn => hsBtn.click());waitForElm('div.rtg-text-center > center > a', hhs => redirect(hhs.href, false));});
+    SledingByGassruxLeader(/trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net/, function() {ClickIfExists('#yuidea', 2);ClickIfExists('#monetiza', 2);ClickIfExists('#btn6', 3);});
+    //SledingByGassruxLeader(/techanalyzer.eu/, function() {EnableRCF();SubmitIfExists("form[name='dsb']", 3);ClickIfExists('#wpsafe-link > a', 4);});
+    SledingByGassruxLeader(/(askpaccosi|neverdims).com|cryptomonitor.in|2the.space|imbb.online/, function() {EnableRCF();SubmitIfExists("form[name='dsb']", 3);ClickIfExists('#wpsafe-link > a', 4);});
+    SledingByGassruxLeader(/(10short|lollty).pro|mamahawa.com/, function() {ReadytoClick('center > .btn-success.btn', 3);waitForElm('a#makingdifferenttimer', st1 => redirect(st1.href, false));waitForElm('a#proceed', st2 => redirect(st2.href, false));});
+    SledingByGassruxLeader(/nullscript.info|freebinance.top/, function() {waitForElm('div#wpsafe-link > a', function(element) {const regex = /redirect=(.*)',/;const m = regex.exec(element.onclick.toString())[1];location.href = JSON.parse(atob(m)).safelink;});});
+    SledingByGassruxLeader(/(cryptosparatodos|placementsmela).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|bitcrypto.info|paidinsurance.in/, () => waitForElm('#wpsafe-link a', bti => redirect(strBetween(bti.onclick.toString(), `window.open('`, `', '_self')`), false)));
+    SledingByGassruxLeader(/mynewsmedia.co|(netflixrelease|mangareleasedate|kojnews|freemodapp|cryptoprolife|revadvert|diethim|techsotta|zutiza|lndianews|newsjov|instantloan5|hitjankari|phixshop|mp4news).com|(rontymobile|myfirstname|snapseedmod|djrajurjm|disking|ignoupur).in/, function() {ClickIfExists('#VerifyBtn', 3);ClickIfExists('#NextBtn', 5, 'setInterval');});
+    SledingByGassruxLeader(/(crypto2u|bestcoinsites).xyz/, function() {if (/^\/shortlink\/([^\/]+)/.test(location.pathname)) {waitForElm('a#btn.btn.btn-success', c2u => redirect(c2u.href, false));} else if (elementExists('.shadow.card')) {waitForElm('a.btn.btn-lg.btn-success.px-4', c2u2 => redirect(c2u2.href, false));}});
+    SledingByGassruxLeader(/fansonlinehub.com/, async function() {setInterval(() => {window.scrollBy(0, 1);window.scrollTo(0,-1);ReadytoClick('.active.btn > span');}, 3 * 1000);});
+    SledingByGassruxLeader(/(howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista).com/, () => {ClickIfExists('#getlink', 3);});
+    SledingByGassruxLeader(/ouo.io|ouo.press/, async function() {await sleep(4000);ReadytoClick('button#btn-main.btn.btn-main');});
+    SledingByGassruxLeader(/largestpanel.in|earnme.club|usanewstoday.club/, function() {ClickIfExists('#tp-snp2', 1);});
+    SledingByGassruxLeader(/paste1s.com|note1s.com/, function() {ClickIfExists('.btn-lg.btn-primary.btn', 2);});
+    SledingByGassruxLeader(/dataupload.net/, async function() {await sleep(5000);ReadytoClick('.downloadbtn');});
+    SledingByGassruxLeader(/douploads.net/, function() {ClickIfExists('.btn-primary.btn-lg.btn-block.btn', 2);});
+    SledingByGassruxLeader(/terabox.fun/, async function() {await sleep(3000);ReadytoClick('.active.btn');});
+    SledingByGassruxLeader(/linkerload.com/, function() {
       ClickIfExists("#download form input[id='button1']", 2);});
-    SledingBySatSetLeader(/ayelads.com/, function() {
+    SledingByGassruxLeader(/ayelads.com/, function() {
       ClickIfExists('.btn-bl.btn-primary.btn', 5, 'setInterval');});
-    SledingBySatSetLeader(/karyawan.co.id/, function() {
+    SledingByGassruxLeader(/karyawan.co.id/, function() {
       ClickIfExists('button#btn.bg-blue-100.text-blue-600', 3);});
-    SledingBySatSetLeader(/icerik.site/, function() {
+    SledingByGassruxLeader(/icerik.site/, function() {
       ClickIfExists('#csubmit', 2);ClickIfExists('#get_link_btn', 2);});
-    SledingBySatSetLeader(/clink1.com/, function() {
+    SledingByGassruxLeader(/clink1.com/, function() {
       waitForElm('span#compteur > b > a', clin => redirect(clin.href));});
-    SledingBySatSetLeader(/ponselharian.com/, function() {
+    SledingByGassruxLeader(/ponselharian.com/, function() {
       if (elementExists('#link-view')) {window.scrollTo(0, 9999);}});
-    SledingBySatSetLeader(/mp4upload.com/, function() {
+    SledingByGassruxLeader(/mp4upload.com/, function() {
       ClickIfExists('#todl', 2);SubmitIfExists("form[name='F1']", 1);});
-    SledingBySatSetLeader(/tonanmedia.my.id/, function() {
+    SledingByGassruxLeader(/tonanmedia.my.id/, function() {
       ClickIfExists('#idnGetLink', 2);ClickIfExists('#gotolink', 3);});
-    SledingBySatSetLeader(/assettoworld.com/, function() {
+    SledingByGassruxLeader(/assettoworld.com/, function() {
       ClickIfExists('.text-capitalize.btn-outline-success.btn', 3);});
-    SledingBySatSetLeader(/adfoc.us/, function() {
+    SledingByGassruxLeader(/adfoc.us/, function() {
       if (elementExists('#skip')) {let adf = bp('.skip').href; redirect(adf);}});
-    SledingBySatSetLeader(/drop.download/, function() {
+    SledingByGassruxLeader(/drop.download/, function() {
       ClickIfExists('#method_free', 2);ClickIfExists('.btn-download', 2);});
-    SledingBySatSetLeader(/yoshare.net|olhonagrana.com/, function() {
+    SledingByGassruxLeader(/yoshare.net|olhonagrana.com/, function() {
       SubmitIfExists('#yuidea', 2);ClickIfExists('#btn6', 2);});
-    SledingBySatSetLeader(/workupload.com/, function() {
+    SledingByGassruxLeader(/workupload.com/, function() {
       if (elementExists('#download')) {ClickIfExists('.btn-prio.btn', 2);}});
-    SledingBySatSetLeader(/oii.io/, function() {parent.open = BpBlock();
+    SledingByGassruxLeader(/oii.io/, function() {parent.open = BpBlock();
       ClickIfExists('button.g-recaptcha.btn.btn-primary', 2);});
-    SledingBySatSetLeader(/cryptonetos.ru/, function() {
+    SledingByGassruxLeader(/cryptonetos.ru/, function() {
       ClickIfExists('#butt', 2, 'setInterval');ClickIfExists('#someId', 5);});
-    SledingBySatSetLeader(/cpu-miner.leaks.work/, function() {
+    SledingByGassruxLeader(/cpu-miner.leaks.work/, function() {
       ClickIfExists('.xbtt.btn-primary.btn-lg.btn', 3, 'setInterval');});
-    SledingBySatSetLeader(/mrproblogger.com|themezon.net/, function() {
+    SledingByGassruxLeader(/mrproblogger.com|themezon.net/, function() {
       waitForElm('#btn2.tp-btn', mrBp => mrBp.click());
       waitForElm('div.center-link-items a', thz => redirect(thz.href, false));});
-    SledingBySatSetLeader(/forex-golds.com|forex-trnd.com/, function() {
+    SledingByGassruxLeader(/forex-golds.com|forex-trnd.com/, function() {
       parent.open = BpBlock();ClickIfExists('.g-recaptcha', 2);});
-    SledingBySatSetLeader(/1link.club/, function() {
+    SledingByGassruxLeader(/1link.club/, function() {
       $("a[target='_blank']").removeAttr("target");ClickIfExists('#download', 1);});
-    SledingBySatSetLeader(/1mlink.vip/, function() {
+    SledingByGassruxLeader(/1mlink.vip/, function() {
       ClickIfExists('#invisibleCaptchaShortlink', 2);
       ClickIfExists('.get-link.btn-lg.btn-success.btn', 4);});
-    SledingBySatSetLeader(/zegtrends.com/, function() {SubmitIfExists('#cln', 5);
+    SledingByGassruxLeader(/zegtrends.com/, function() {SubmitIfExists('#cln', 5);
       ClickIfExists('#bt1', 5);ClickIfExists('#go', 5);});
-    SledingBySatSetLeader(/techmny.com/, function() {SubmitIfExists('#landing', 2);
+    SledingByGassruxLeader(/techmny.com/, function() {SubmitIfExists('#landing', 2);
       ClickIfExists('#verify_button', 2);ClickIfExists('#two_steps_btn', 10);});
-    SledingBySatSetLeader(/send.cm/, function() {
+    SledingByGassruxLeader(/send.cm/, function() {
       if (elementExists('#fileinfo')) {ClickIfExists('#downloadbtn', 1);} else {}});
-    SledingBySatSetLeader(/racaty.io/, function() {
+    SledingByGassruxLeader(/racaty.io/, function() {
       if (elementExists('#getExtoken')) {ClickIfExists('#downloadbtn', 1);} else {}});
-    SledingBySatSetLeader(/coincroco.com|surflink.tech/, function() {
+    SledingByGassruxLeader(/coincroco.com|surflink.tech/, function() {
       waitForElm('.mb-sm-0.mt-3.btnBgRed', ccBtn => ccBtn.click());});
-    SledingBySatSetLeader(/mega4up.org/, function() {
+    SledingByGassruxLeader(/mega4up.org/, function() {
       ClickIfExists('input.btn.btn-info.btn-sm', 2);ClickIfExists('.btn-dark.btn', 2);});
-    SledingBySatSetLeader(/automotur.club|sanoybonito.club/, function() {
+    SledingByGassruxLeader(/automotur.club|sanoybonito.club/, function() {
       ClickIfExists('.g-recaptcha', 3);SubmitIfExists('#page2', 1);});
-    SledingBySatSetLeader(/litexblog.com/, function() {
+    SledingByGassruxLeader(/litexblog.com/, function() {
       if (elementExists('.g-recaptcha')) {} else {ClickIfExists('.bg-primary.btn', 5);}});
-    SledingBySatSetLeader(/app.wapka.id/, function() {
+    SledingByGassruxLeader(/app.wapka.id/, function() {
       SubmitIfExists('#btget > form', 5);ClickIfExists('button.mt-4', 3, 'setInterval');});
-    SledingBySatSetLeader(/docs.google.com/, function() {
+    SledingByGassruxLeader(/docs.google.com/, function() {
       if (elementExists('#uc-dl-icon')) {SubmitIfExists('#downloadForm', 1);} else {}});
-    SledingBySatSetLeader(/bcvc.xyz|bcvc.ink/, function() {
+    SledingByGassruxLeader(/bcvc.xyz|bcvc.ink/, function() {
       ClickIfExists('.js-scroll-trigger.btn-xl.btn-outline.btn', 3, 'setInterval');});
-    SledingBySatSetLeader(/uploadhaven.com/, function() {
+    SledingByGassruxLeader(/uploadhaven.com/, function() {
       ClickIfExists('.alert > a:nth-child(1)', 2);SubmitIfExists('#form-download', 1);});
-    SledingBySatSetLeader(/forex-articles.com|fx-22.com|ster-blog.xyz/, function() {
+    SledingByGassruxLeader(/forex-articles.com|fx-22.com|ster-blog.xyz/, function() {
       ClickIfExists('.oto > a:nth-child(1)', 1);});
-    SledingBySatSetLeader(/racedepartment.com/, function() {
+    SledingByGassruxLeader(/racedepartment.com/, function() {
       $("a[target='_blank']").removeAttr("target");ClickIfExists('.button--cta', 2);});
-    SledingBySatSetLeader(/proviralhost.com/, function() {
+    SledingByGassruxLeader(/proviralhost.com/, function() {
       ClickIfExists('#wait1button', 3);ClickIfExists('#wait2button', 5, 'setInterval');});
-    SledingBySatSetLeader(/bitcoinfaucet.fun|freebitcoin.win/, function() {
+    SledingByGassruxLeader(/bitcoinfaucet.fun|freebitcoin.win/, function() {
       ClickIfExists('#continue2', 3, 'setInterval');ClickIfExists('#continue', 4, 'setInterval');});
-    SledingBySatSetLeader(/bestadvise4u.com/, function() {ClickIfExists('.rd_btn', 1);
+    SledingByGassruxLeader(/bestadvise4u.com/, function() {ClickIfExists('.rd_btn', 1);
       waitForElm('.rd_btn', ba4 => redirect(ba4.href, false));});
-    SledingBySatSetLeader(/altblogger.net/, function() {
+    SledingByGassruxLeader(/altblogger.net/, function() {
       ClickIfExists('.form-send.m-2.btn-captcha.btn-outline-primary.btn', 3, 'setInterval');});
-    SledingBySatSetLeader(/linkspy.cc/, function() {
+    SledingByGassruxLeader(/linkspy.cc/, function() {
       if (elementExists('.skipButton')) {let lsp = bp('.skipButton').href;redirect(lsp, false);}});
-    SledingBySatSetLeader(/hxfile.co|ex-load.com|megadb.net/, function() {
+    SledingByGassruxLeader(/hxfile.co|ex-load.com|megadb.net/, function() {
       ClickIfExists('.btn-dow.btn', 2);SubmitIfExists("form[name='F1']", 1);});
-    SledingBySatSetLeader(/(webhostingpost|tophostingapp|digitalmarktrend).com/, function() {
+    SledingByGassruxLeader(/(webhostingpost|tophostingapp|digitalmarktrend).com/, function() {
       SubmitIfExists('form.text-center', 3);ClickIfExists('#surl', 5, 'setInterval');});
-    SledingBySatSetLeader(/blog.miuiflash.com/, function() {
+    SledingByGassruxLeader(/blog.miuiflash.com/, function() {
       SubmitIfExists('#reform', 3);waitForElm('#anonIt', bmf => redirect(bmf.src, false));});
-    SledingBySatSetLeader(/apkmody.io/, function() {
+    SledingByGassruxLeader(/apkmody.io/, function() {
       if (elementExists('div.wp-block-buttons > div')) {location = location.href + '/download/mod';}});
-    SledingBySatSetLeader(/ac.totsugeki.com/, function() {
+    SledingByGassruxLeader(/ac.totsugeki.com/, function() {
       $("a[target='_blank']").removeAttr("target");ClickIfExists('.btn-lg.btn-success.btn', 2);});
-    SledingBySatSetLeader(/(chooyomi|blogmado|kredilerim|insuranceleadsinfo).com/, function() {
+    SledingByGassruxLeader(/(chooyomi|blogmado|kredilerim|insuranceleadsinfo).com/, function() {
       let bm = setInterval(() => {if (Captchacheck()) {clearInterval(bm); ClickIfExists('button.btn');}}, 1 * 1000);
       waitForElm('a.get-link.disabled a', cho => redirect(cho.href, false));});
-    SledingBySatSetLeader(/kiktu.com/, function() {let kkt = setInterval(() => {
+    SledingByGassruxLeader(/kiktu.com/, function() {let kkt = setInterval(() => {
         if (Checkvisibility(bp('.tick.wgicon'))) {clearInterval(kkt); ReadytoClick('.bottom_btn');}}, 1 * 1000);});
-    SledingBySatSetLeader(/fexkomin.xyz/, function() {
+    SledingByGassruxLeader(/fexkomin.xyz/, function() {
       $("a[target='_blank']").removeAttr("target");ClickIfExists('.btn-captcha.btn-danger.btn', 3);});
-    SledingBySatSetLeader(/freebitco.in/, function() {if (elementExists('.h-captcha')) {let btc = setInterval(() => {
+    SledingByGassruxLeader(/freebitco.in/, function() {if (elementExists('.h-captcha')) {let btc = setInterval(() => {
           if (Captchacheck()) {clearInterval(btc);ClickIfExists('#free_play_form_button');}}, 1 * 1000);} else {}});
-    SledingBySatSetLeader(/quesignifi.ca|tiktokcounter.net/, function() {
+    SledingByGassruxLeader(/quesignifi.ca|tiktokcounter.net/, function() {
       if (elementExists('.h-captcha')) {let ctrsh = setInterval(() => {if (Captchacheck()) {clearInterval(ctrsh);
       ClickIfExists('#userform');}}, 1 * 1000);} else {ClickIfExists('#userform', 5, 'setInterval');}});
-    SledingBySatSetLeader(/100puan.com/, function() {
+    SledingByGassruxLeader(/100puan.com/, function() {
       ClickIfExists('.big-text', 3);waitForElm('div.bb-sticky-el a', pbz => redirect(pbz.href, false));});
-    SledingBySatSetLeader(/sub2get.com/, function() {
+    SledingByGassruxLeader(/sub2get.com/, function() {
       if (elementExists('#butunlock')) {let subt = bp('#butunlock > a:nth-child(1)').href;redirect(subt);}});
-    SledingBySatSetLeader(/forexrw7.com/, function() {
+    SledingByGassruxLeader(/forexrw7.com/, function() {
       $("a #button1[disabled='disabled']").removeAttr("disabled");ClickIfExists('#button1', 2);});
-    SledingBySatSetLeader(/newassets.hcaptcha.com/, async function() {await sleep(3000) && cfg.get('hCaptcha');
+    SledingByGassruxLeader(/newassets.hcaptcha.com/, async function() {await sleep(3000) && cfg.get('hCaptcha');
       if (cfg.get('hCaptcha') == true) {ReadytoClick('#checkbox');} else {}});
-    SledingBySatSetLeader(/www.google.com|recaptcha.net/, async function() {await sleep(3000) && cfg.get('reCAPTCHA');
+    SledingByGassruxLeader(/www.google.com|recaptcha.net/, async function() {await sleep(3000) && cfg.get('reCAPTCHA');
       if (cfg.get('reCAPTCHA') == true) {ReadytoClick('.recaptcha-checkbox-border');} else {}});
-    SledingBySatSetLeader(/(fc-lc|loaninsurehub).com|fc-lc.xyz|tmail.io/, function() {ClickIfExists('#invisibleCaptchaShortlink', 3);
+    SledingByGassruxLeader(/(fc-lc|loaninsurehub).com|fc-lc.xyz|tmail.io/, function() {ClickIfExists('#invisibleCaptchaShortlink', 3);
       ClickIfExists('#getlink', 3);ClickIfExists('#glink', 4);ClickIfExists('#surl', 5);});
-    SledingBySatSetLeader(/promo-visits.site/, function() {
+    SledingByGassruxLeader(/promo-visits.site/, function() {
       if (elementExists('#test')) {let pvs = setInterval(() => {if (Captchacheck()) {ClickIfExists('button#btn.btn.btn-primary');
             }}, 1 * 1000);} else {SubmitIfExists('div.col-md-12 form', 4);}});
-    SledingBySatSetLeader(/mneyvip.com/, function() {
+    SledingByGassruxLeader(/mneyvip.com/, function() {
       ClickIfExists('.get-link.btn-lg.btn-success.btn', 6);SubmitIfExists('.box-main > form:nth-child(1)', 1);});
-    SledingBySatSetLeader(/mixdrop.co/, () => {ClickIfExists('.download-btn', 2);
+    SledingByGassruxLeader(/mixdrop.co/, () => {ClickIfExists('.download-btn', 2);
       setTimeout(() => {let md = bp('.download-btn').href;redirect(md);}, 4 * 1000);});
-    SledingBySatSetLeader(/jobform.in/, function() {ClickIfExists('#scanURL', 1);
+    SledingByGassruxLeader(/jobform.in/, function() {ClickIfExists('#scanURL', 1);
       ClickIfExists('#topClickButton', 1);ClickIfExists('#bottomClickButton', 27);});
-    SledingBySatSetLeader(/go.shareus.in/, function() {
+    SledingByGassruxLeader(/go.shareus.in/, function() {
       if (BpParams.has('shortid') && BpParams.has('link')) {meta(atob(BpParams.get('link')));}});
-    SledingBySatSetLeader(/playpaste.com/, function() {
+    SledingByGassruxLeader(/playpaste.com/, function() {
       let pps = setInterval(() => {if (Captchacheck()) {clearInterval(pps);ClickIfExists('button.btn');}}, 1 * 1000);});
-    SledingBySatSetLeader(/modcombo.com/, function() {
+    SledingByGassruxLeader(/modcombo.com/, function() {
       if (location.href.includes('download/')) {waitForElm('div.item.item-apk a', mc => redirect(mc.href, false));
         ClickIfExists('a.btn.btn-submit', 6);} else {ClickIfExists('a.btn.btn-red.btn-icon.btn-download.br-50', 2);}});
-    SledingBySatSetLeader(/takefile.link/, function() {
+    SledingByGassruxLeader(/takefile.link/, function() {
       if (elementExists('#F1')) {SubmitIfExists('div.no-gutter:nth-child(2) > form:nth-child(1)', 1);} else {}});
-    SledingBySatSetLeader(/suratresmi.id/, function() {
+    SledingByGassruxLeader(/suratresmi.id/, function() {
       ClickIfExists('button#hmn.btn-more', 3, 'setInterval');ClickIfExists('a#hmn.btn-more', 3, 'setInterval');});
-    SledingBySatSetLeader(/examkhata.com|gamelopte.com/, function() {
+    SledingByGassruxLeader(/examkhata.com|gamelopte.com/, function() {
       ClickIfExists('#btn6', 3);waitForElm('a.yu-btn.yu-blue', exa => redirect(exa.href, false));});
-    SledingBySatSetLeader(/rancah.com|menjelajahi.com|shortly.xyz|nyawang.com/, function() {
+    SledingByGassruxLeader(/rancah.com|menjelajahi.com|shortly.xyz|nyawang.com/, function() {
       ClickIfExists('.get-link.btn-lg.btn-success.btn', 5, 'setInterval');});
-    SledingBySatSetLeader(/cryptotracker.space/, function() {
+    SledingByGassruxLeader(/cryptotracker.space/, function() {
       let cts = setInterval(() => {if (Captchacheck()) {clearInterval(cts);SubmitIfExists('#form-continue');}}, 1 * 1000);});
-    SledingBySatSetLeader(/appsblaze.com/, function() {
+    SledingByGassruxLeader(/appsblaze.com/, function() {
       if (elementExists('#box-0')) {waitForElm("input[name='slink']", abl => redirect(abl.href, false));} else {}});
-    SledingBySatSetLeader(/gocmod.com/, function() {
+    SledingByGassruxLeader(/gocmod.com/, function() {
       if (elementExists('.view-app')) {bp('#no-link').removeAttribute('target');ClickIfExists('.download-line-title', 2);}});
-    SledingBySatSetLeader(/djxmaza.in/, function() {ClickIfExists('#dlbtn', 1);
+    SledingByGassruxLeader(/djxmaza.in/, function() {ClickIfExists('#dlbtn', 1);
       ClickIfExists('#downloadbtnf', 2);ClickIfExists('#downloadbtn', 3, 'setInterval');});
-    SledingBySatSetLeader(/1fichier.com/, function() {
+    SledingByGassruxLeader(/1fichier.com/, function() {
       if (elementExists('#pass')) {} else {ClickIfExists('.btn-orange.btn-general.ok', 1);SubmitIfExists('.alc', 1);}});
-    SledingBySatSetLeader(/dev.miuiflash.com/, function() {
+    SledingByGassruxLeader(/dev.miuiflash.com/, function() {
       SubmitIfExists('.code-block-1.code-block > form', 1);ClickIfExists('.mb-4.btn-block.btn-primary.btn', 2);});
-    SledingBySatSetLeader(/stfly.me/, function() {
+    SledingByGassruxLeader(/stfly.me/, function() {
       if (elementExists('.g-recaptcha')) {} else {ClickIfExists('.form-send.m-2.btn-captcha.btn-outline-primary.btn', 3);}});
-    SledingBySatSetLeader(/khaddavi.net|contentmenarik.com/, function() {parent.open = BpBlock();
+    SledingByGassruxLeader(/khaddavi.net|contentmenarik.com/, function() {parent.open = BpBlock();
       setInterval(function() {if (Captchacheck()) {ClickIfExists('#slu-btn');}}, 500);});
-    SledingBySatSetLeader(/leitup.com/, function() {
+    SledingByGassruxLeader(/leitup.com/, function() {
       if (elementExists('#button_timer')) {waitForElm('input.form-control', leit => redirect(leit.placeholder, false));}});
-    SledingBySatSetLeader(/offeroc.com/, function() {let ofr = setInterval(() => {
+    SledingByGassruxLeader(/offeroc.com/, function() {let ofr = setInterval(() => {
         if (Captchacheck()) {clearInterval(ofr);ClickIfExists('.mt-2.btn-success.btn');}}, 1 * 1000);});
-    SledingBySatSetLeader(/anonym.ninja/, function() {
+    SledingByGassruxLeader(/anonym.ninja/, function() {
       if (location.href.includes('download/')) {var fd = window.location.href.split('/').slice(-1)[0];
       redirect(`https://anonym.ninja/download/file/request/${fd}`);} else {}});
-    SledingBySatSetLeader(/azmath.info/, () => {if (elementExists('#megaurl-verified-captcha')) {
+    SledingByGassruxLeader(/azmath.info/, () => {if (elementExists('#megaurl-verified-captcha')) {
       ClickIfExists('button.h-captcha', 3);} else {SubmitIfExists('#megaurl-banner-page', 2);}});
-    SledingBySatSetLeader(/(nregajobcard|pradhanmantriupdates).in/, function() {
+    SledingByGassruxLeader(/(nregajobcard|pradhanmantriupdates).in/, function() {
       setInterval(() => {ReadytoClick('#topButton.shrs_btn', 1); ReadytoClick('#bottomButton.shrs_btn', 2);}, 3 * 1000);});
-    SledingBySatSetLeader(/shortearn.net/, function() {parent.open = BpBlock();
+    SledingByGassruxLeader(/shortearn.net/, function() {parent.open = BpBlock();
       ClickIfExists('#appBtn', 1);ClickIfExists('#adBtn', 3, 'setInterval');ClickIfExists('#extensionBtn', 5, 'setInterval');});
-    SledingBySatSetLeader(/ez4mods.com|tech5s.co/, function() {SubmitIfExists('div.text-center form', 2);
+    SledingByGassruxLeader(/ez4mods.com|tech5s.co/, function() {SubmitIfExists('div.text-center form', 2);
       waitForElm('a#go_d.submitBtn.btn.btn-primary', ez => redirect(ez.href, false));
       waitForElm('a#go_d2.submitBtn.btn.btn-primary', ez2 => redirect(ez2.href, false));});
-    SledingBySatSetLeader(/creditsalah.com/, function() {ClickIfExists('#notarobot', 2, 'setInterval');
+    SledingByGassruxLeader(/creditsalah.com/, function() {ClickIfExists('#notarobot', 2, 'setInterval');
       let csh = setInterval(() => {if (Captchacheck()) {clearInterval(csh);ClickIfExists('#safesub');}}, 1 * 1000);
       waitForElm('a.safeb', csBtn => csBtn.click());});
-    SledingBySatSetLeader(/k2s.cc/, function() {ClickIfExists('.button-download-slow', 2);
+    SledingByGassruxLeader(/k2s.cc/, function() {ClickIfExists('.button-download-slow', 2);
       waitForElm('a.link-to-file', k2s => redirect(k2s.href, false));});
-    SledingBySatSetLeader(/freepreset.net/, function() {
+    SledingByGassruxLeader(/freepreset.net/, function() {
       if (elementExists('#button_download')) {waitForElm('a#button_download', fpr => redirect(fpr.href, false));} else {}});
-    SledingBySatSetLeader(/fileresources.net/, function() {
+    SledingByGassruxLeader(/fileresources.net/, function() {
       if (elementExists('.download-timer')) {waitForElm('a.btn.btn-default', fpr => redirect(fpr.href, false));} else {}});
-    SledingBySatSetLeader(/alivedesktop.com/, function() {
+    SledingByGassruxLeader(/alivedesktop.com/, function() {
       if (elementExists('#captcha-form')) {let alv = bp("input[name^='als']").value;
         let ald = bp("input[name^='safe']").value;redirect('https://rshrt.com/' + alv + '?api=' + ald, false);} else {}});
-    SledingBySatSetLeader(/(120898|141989|161989|131989|121989|151989|546512|845265|489651).xyz|redirect.techanalyzer.eu/, function() {if (elementExists('.g-recaptcha')) {let bitad = setInterval(() => {
+    SledingByGassruxLeader(/(120898|141989|161989|131989|121989|151989|546512|845265|489651).xyz|redirect.techanalyzer.eu/, function() {if (elementExists('.g-recaptcha')) {let bitad = setInterval(() => {
       if (Captchacheck()) {clearInterval(bitad);SubmitIfExists('.mt-4');}}, 1 * 1000);} else {}});
-    SledingBySatSetLeader(/doodrive.com/, function() {ClickIfExists('.tm-button-download.uk-button-primary.uk-button', 3);
+    SledingByGassruxLeader(/doodrive.com/, function() {ClickIfExists('.tm-button-download.uk-button-primary.uk-button', 3);
       waitForElm('.uk-container > div > .uk-button-primary.uk-button', ddr => redirect(ddr.href, false));});
-    SledingBySatSetLeader(/lootlinks.co|linksloot.net/, function() {let lln = bp('body > script');
+    SledingByGassruxLeader(/lootlinks.co|linksloot.net/, function() {let lln = bp('body > script');
       let lls = strBetween(lln.text, `= '`, `,'`).split("'").slice(50, -5); setTimeout(() => {redirect(lls,false);}, 2 * 1000);});
-    SledingBySatSetLeader(/shorterall.com/, function() {if (!elementExists('input[name=awnswer]') && !elementExists('#link-view')) {SubmitIfExists('div.col-md-12 form', 3);}
+    SledingByGassruxLeader(/shorterall.com/, function() {if (!elementExists('input[name=awnswer]') && !elementExists('#link-view')) {SubmitIfExists('div.col-md-12 form', 3);}
       if (elementExists('input[name=awnswer]')) {let strl = bp('input[name=awnswer]').getAttribute('placeholder').split('=')[0]; bp('input[name=awnswer]').value = BpCalc(strl); SubmitIfExists('div.col-md-12 form', 3);}
       if (elementExists('#link-view')) {let srl = setInterval(() => {if (Captchacheck()) {ReadytoClick('#invisibleCaptchaShortlink');}}, 1 * 1000);}});
-    SledingBySatSetLeader(/sharemods.com/, function() {SubmitIfExists('#dForm', 2);
+    SledingByGassruxLeader(/sharemods.com/, function() {SubmitIfExists('#dForm', 2);
       if (elementExists('.download-file-holder')) {waitForElm('a#downloadbtn.btn.btn-primary', smd => redirect(smd.href, false));} else {}});
-    SledingBySatSetLeader(/shortearn.net/, function() {parent.open = BpBlock();ClickIfExists('#adBtn', 3, 'setInterval');
+    SledingByGassruxLeader(/shortearn.net/, function() {parent.open = BpBlock();ClickIfExists('#adBtn', 3, 'setInterval');
       ClickIfExists('#appBtn', 1);ClickIfExists('button.btn.btn-primary.btn-block.btn-lg', 3);ClickIfExists('#extensionBtn', 5, 'setInterval');});
-    SledingBySatSetLeader(/leechpub.com/, function() {
+    SledingByGassruxLeader(/leechpub.com/, function() {
       if (elementExists('.text-center.py-6')) {waitForElm('a.btn.btn-lg.btn-success.mb-1.px-6.lh-10', lpub => redirect(lpub.href, false));} else {}});
-    SledingBySatSetLeader(/rawlazy.si/, function() {
+    SledingByGassruxLeader(/rawlazy.si/, function() {
       if (elementExists('#captcha_form')) {ClickIfExists('.go-to-captcha-form', 2);} else {waitForElm('.color-btn', rlz => redirect(rlz.href, false));}});
-    SledingBySatSetLeader(/modsbase.com/, function() {
+    SledingByGassruxLeader(/modsbase.com/, function() {
       if (elementExists('.file-panel')) {ClickIfExists('.download-file-btn', 2);waitForElm('#downloadbtn > a', mba => redirect(mba.href, false));} else {}});
-    SledingBySatSetLeader(/(coinsward|blogsward).com|imbb.online/, async function() {if (elementExists('.g-recaptcha')) {var bw = bp("input[name=newwpsafelink]");
+    SledingByGassruxLeader(/(coinsward|blogsward).com|imbb.online/, async function() {if (elementExists('.g-recaptcha')) {var bw = bp("input[name=newwpsafelink]");
       redirect(JSON.parse(atob(bw.value)).linkr, false);} else {window.incrementRedirectCount(); await sleep(2000); window.handleButtonClick();}});
-    SledingBySatSetLeader(/1bit.space|mgnet.xyz/, function() {let bsp = setInterval(() => {if (captcha_solved) {ReadytoClick('button.button');clearInterval(bsp);}}, 2000);
+    SledingByGassruxLeader(/1bit.space|mgnet.xyz/, function() {let bsp = setInterval(() => {if (captcha_solved) {ReadytoClick('button.button');clearInterval(bsp);}}, 2000);
       let mgn = setInterval(() => {if (captcha_solved && bp('button.button').innerText.includes('Get Link')) {ReadytoClick('button.button');clearInterval(mgn);}}, 2000);});
-    SledingBySatSetLeader(/bigbtc.win/, function() {if (elementExists('.h-captcha')) {let bb = setInterval(() => {
+    SledingByGassruxLeader(/bigbtc.win/, function() {if (elementExists('.h-captcha')) {let bb = setInterval(() => {
           if (Captchacheck()) {clearInterval(bb);ReadytoClick('#claimbutn');}}, 1 * 1000);} else {ClickIfExists('#clickhere', 2);}});
-    SledingBySatSetLeader(/firefaucet.win/, function() {if (elementExists('#captcha-hcaptcha') || elementExists('#captcha-recaptcha') || elementExists('#captcha-turnstile')) {
+    SledingByGassruxLeader(/firefaucet.win/, function() {if (elementExists('#captcha-hcaptcha') || elementExists('#captcha-recaptcha') || elementExists('#captcha-turnstile')) {
         let ff = setInterval(() => {if (Captchacheck()) {ClickIfExists('#get_reward_button');
             ClickIfExists('button.btn.waves-effect.waves-light.earn-btns.gr');}}, 2 * 1000);} else {ClickIfExists('#get_reward_button', 1);}});
-    SledingBySatSetLeader(/shortlinkto.info|brbushare.info|uptobhai.ink|uplinkto.hair|shortlinkto.xyz/, function() {
+    SledingByGassruxLeader(/shortlinkto.info|brbushare.info|uptobhai.ink|uplinkto.hair|shortlinkto.xyz/, function() {
       ClickIfExists('.btn-block.btn-primary.btn', 2);});
-    SledingBySatSetLeader(/(leaveadvice|mensventure).com/, function() {let lav = setInterval(() => {
+    SledingByGassruxLeader(/(leaveadvice|mensventure).com/, function() {let lav = setInterval(() => {
         if (bp('#timer').innerText == '0') {ReadytoClick('#method_free.free-download-btn.download-btn');
           clearInterval(lav); if (!elementExists('.h-captcha')) window.openLink();}}, 2000);});
-    SledingBySatSetLeader(/jiotech.net|jameeltips.us|cryptonworld.space/, function() {
+    SledingByGassruxLeader(/jiotech.net|jameeltips.us|cryptonworld.space/, function() {
       ClickIfExists('#alf_continue', 3, 'setInterval');});
-    SledingBySatSetLeader(/vosan.co/, function() {bp('.elementor-size-lg').removeAttribute('target');
+    SledingByGassruxLeader(/vosan.co/, function() {bp('.elementor-size-lg').removeAttribute('target');
       ClickIfExists('.elementor-size-lg', 2);ClickIfExists('.wpdm-download-link', 2);});
-    SledingBySatSetLeader(/uploadrar.com|uptomega.me/, function() {ClickIfExists('.mngez-free-download', 2);
+    SledingByGassruxLeader(/uploadrar.com|uptomega.me/, function() {ClickIfExists('.mngez-free-download', 2);
       ClickIfExists('#direct_link > a:nth-child(1)', 2);$('#downloadbtn').click();});
-    SledingBySatSetLeader(/hynews.biz|chamcuuhoc.com/, function() {
+    SledingByGassruxLeader(/hynews.biz|chamcuuhoc.com/, function() {
       var bypasslinks = atob(`aH${bp("#landing [name='go']").value.split("aH").slice(1).join("aH")}`);redirect(bypasslinks);});
-    SledingBySatSetLeader(/upload-4ever.com|up-4ever.net/, function() {
+    SledingByGassruxLeader(/upload-4ever.com|up-4ever.net/, function() {
       ClickIfExists("input[name='method_free']", 2);ClickIfExists('#downLoadLinkButton', 5);
       let up4 = setInterval(() => {if (Captchacheck()) {clearInterval(up4);ClickIfExists('#downloadbtn');}}, 1 * 1000);});
-    SledingBySatSetLeader(/tii.la/, function() {if (elementExists('#link-view')) {
+    SledingByGassruxLeader(/tii.la/, function() {if (elementExists('#link-view')) {
         let sbf = setInterval(function() {if (Captchacheck()) {clearInterval(sbf);ClickIfExists('#continue');}}, 500);}});
-    SledingBySatSetLeader(/skiplink.me/, function() {
+    SledingByGassruxLeader(/skiplink.me/, function() {
       ClickIfExists('#alf_continue_captcha', 2);ClickIfExists('#alf_continue', 3, 'setInterval');});
-    SledingBySatSetLeader(/apanmusic.in/, function() {waitForElm('a#notarobot.button', ams => redirect(ams.href, false));
+    SledingByGassruxLeader(/apanmusic.in/, function() {waitForElm('a#notarobot.button', ams => redirect(ams.href, false));
       ClickIfExists('#getlink', 3, 'setInterval');ClickIfExists('#gotolink', 30);});
-    SledingBySatSetLeader(/usersdrive.com|ddownload.com/, function() {
+    SledingByGassruxLeader(/usersdrive.com|ddownload.com/, function() {
       let ud = setInterval(function() {if (Captchacheck()) {ClickIfExists('#downloadbtn');}}, 500);
       ClickIfExists('.btn-download.btn', 1);});
-    SledingBySatSetLeader(/o-pro.online/, function() {waitForElm('#newbutton > a', opo => redirect(opo.href, false));
+    SledingByGassruxLeader(/o-pro.online/, function() {waitForElm('#newbutton > a', opo => redirect(opo.href, false));
       waitForElm('a.btn.btn-default.btn-sm', opo2 => redirect(opo2.href, false));});
-    SledingBySatSetLeader(/busthings.site/, function() {waitForElm('a.button.buttonsize', bst => redirect(bst.href, false));
+    SledingByGassruxLeader(/busthings.site/, function() {waitForElm('a.button.buttonsize', bst => redirect(bst.href, false));
       waitForElm('a.w3-button.w3-red', bst2 => redirect(bst2.href, false));});
-    SledingBySatSetLeader(/(travelironguide|businesssoftwarehere|softwaresolutionshere|freevpshere).com/, function() {
+    SledingByGassruxLeader(/(travelironguide|businesssoftwarehere|softwaresolutionshere|freevpshere).com/, function() {
       if (elementExists('.g-recaptcha')) {let trg = setInterval(() => {if (Captchacheck()) {clearInterval(trg);
             SubmitIfExists('#lview > form');}}, 1 * 1000);} else {waitForElm('.get-link > a', tig => redirect(tig.href, false));}});
-    SledingBySatSetLeader(/easyworldbusiness.com/, function() {
+    SledingByGassruxLeader(/easyworldbusiness.com/, function() {
       if (elementExists('.g-recaptcha')) {waitForElm('a.yu-btn.yu-blue', ewb => redirect(ewb.href, false));} else {ClickIfExists('.yu-blue.yu-btn', 15);}});
-    SledingBySatSetLeader(/getzen.cash/, function() {if (elementExists('#form-claim-zen')) {let gzc = setInterval(() => {
+    SledingByGassruxLeader(/getzen.cash/, function() {if (elementExists('#form-claim-zen')) {let gzc = setInterval(() => {
           if (Captchacheck()) {clearInterval(gzc);ClickIfExists('.btn-claim');}}, 1 * 1000);} else {}});
-    SledingBySatSetLeader(/(kongutoday|proappapk|hipsonyc|teamtechnews).com|finsurances.co|yotrickslog.tech|animalwallpapers.online/, function() {
+    SledingByGassruxLeader(/(kongutoday|proappapk|hipsonyc|teamtechnews).com|finsurances.co|yotrickslog.tech|animalwallpapers.online/, function() {
       if (BpParams.has('safe')) {meta(atob(BpParams.get('safe')));}});
-    SledingBySatSetLeader(/deportealdia.live|noweconomy.live|techgeek.digital/, function() {SubmitIfExists('div.text-center div form', 2);
+    SledingByGassruxLeader(/deportealdia.live|noweconomy.live|techgeek.digital/, function() {SubmitIfExists('div.text-center div form', 2);
       waitForElm('a#surl1.btn-main.get-link', dep => redirect(dep.href, false));});
-    SledingBySatSetLeader(/nishankhatri.xyz/, function() {waitForElm('#my-btn', nsk => redirect(nsk.href, false));
+    SledingByGassruxLeader(/nishankhatri.xyz/, function() {waitForElm('#my-btn', nsk => redirect(nsk.href, false));
       ClickIfExists('#pro-continue', 3);ClickIfExists('#pro-btn', 5, 'setInterval');});
-    SledingBySatSetLeader(/writedroid.eu.org|modmania.eu.org|writedroid.in|mytop5.club/, function() {
+    SledingByGassruxLeader(/writedroid.eu.org|modmania.eu.org|writedroid.in|mytop5.club/, function() {
       ClickIfExists('#shortPostLink', 3);waitForElm("#shortGoToLink", dro => redirect(dro.href, false));});
-    SledingBySatSetLeader(/dailyuploads.net/, function() {let du = setInterval(() => {
+    SledingByGassruxLeader(/dailyuploads.net/, function() {let du = setInterval(() => {
         if (Captchacheck()) {clearInterval(du);ClickIfExists('#downloadBtnClickOrignal');}}, 500);ClickIfExists('.inner > a', 2);});
-    SledingBySatSetLeader(/computerpedia.in/, function() {ClickIfExists('.tp-blue.tp-btn-2', 3);
+    SledingByGassruxLeader(/computerpedia.in/, function() {ClickIfExists('.tp-blue.tp-btn-2', 3);
       let komp = setInterval(function() {if (Captchacheck()) {clearInterval(komp);ClickIfExists('#tp-snp2');}}, 500);});
-    SledingBySatSetLeader(/finance.uploadsoon.com/, function() {ClickIfExists('#tp-snp2.tp-blue.tp-btn', 2);
+    SledingByGassruxLeader(/finance.uploadsoon.com/, function() {ClickIfExists('#tp-snp2.tp-blue.tp-btn', 2);
       ClickIfExists('#btn1.tp-blue.tp-btn', 3);ClickIfExists('#btn2.tp-blue.tp-btn', 4, 'setInterval');});
-    SledingBySatSetLeader(/clickndownload.org|clicknupload\.*/, function() {if (elementExists('.download')) {ClickIfExists('span.downloadbtn', 10);
+    SledingByGassruxLeader(/clickndownload.org|clicknupload\.*/, function() {if (elementExists('.download')) {ClickIfExists('span.downloadbtn', 10);
       ClickIfExists('#method_free', 2);waitForElm('a.downloadbtn', cnu => redirect(cnu.href, false));}});
-    SledingBySatSetLeader(/adclicker\.*/, function() {if (location.href.includes('url/')) {const adc = atob(atob(atob(location.hash.slice(1))));
+    SledingByGassruxLeader(/adclicker\.*/, function() {if (location.href.includes('url/')) {const adc = atob(atob(atob(location.hash.slice(1))));
       redirect(new URLSearchParams(adc).get('url'));} else {}});
-    SledingBySatSetLeader(/offerwall.me|ewall.biz/, function() {
+    SledingByGassruxLeader(/offerwall.me|ewall.biz/, function() {
        if (elementExists('.g-recaptcha')) {let ofc = setInterval(() => {if (Captchacheck()) {clearInterval(ofc);
             ClickIfExists('#submitBtn');}}, 1 * 1000);} else {}});
-    SledingBySatSetLeader(/bitcotasks.com/, function() {
+    SledingByGassruxLeader(/bitcotasks.com/, function() {
        if (elementExists('#iconcaptcha')) {let btt = setInterval(() => {if (Captchacheck()) {clearInterval(btt);
             ClickIfExists('continueClicked()');}}, 1 * 1000);} else {}});
-    SledingBySatSetLeader(/dl.lk21static.xyz/, function() {
+    SledingByGassruxLeader(/dl.lk21static.xyz/, function() {
       if (!location.href.includes('get/') && location.pathname != '/') {location = location.href.replace('yz/', 'yz/get/');}});
-    SledingBySatSetLeader(/easylink.gamingwithtr.com/, function() {ClickIfExists('#countdown', 2);
+    SledingByGassruxLeader(/easylink.gamingwithtr.com/, function() {ClickIfExists('#countdown', 2);
       waitForElm('a#pagelinkhref.btn.btn-lg.btn-success.my-4.px-3.text-center', gtr => redirect(gtr.href, false));});
-    SledingBySatSetLeader(/chedrives.com/, function() {ClickIfExists('.downloadbtn', 3, 'setInterval');
+    SledingByGassruxLeader(/chedrives.com/, function() {ClickIfExists('.downloadbtn', 3, 'setInterval');
       ClickIfExists('.mngez-free-download', 2);waitForElm('span#direct_link a', cd => redirect(cd.href, false));});
-    SledingBySatSetLeader(/copy-paste-fonts.com|cryptednews.space/, function() {
+    SledingByGassruxLeader(/copy-paste-fonts.com|cryptednews.space/, function() {
       if (elementExists('.g-recaptcha')) {let cpf = setInterval(() => {if (Captchacheck()) {clearInterval(cpf);
             ClickIfExists('form center button');}}, 1 * 1000);} else {setTimeout(() => {ClickIfExists('form center button');}, 11 * 1000);}});
-    SledingBySatSetLeader(/theconomy.me|(imagenesderopaparaperros|linclik|up4cash|smoner).com|happy-living.online|galaxy-link.space|oke.io|bitss.sbs/, function() {
+    SledingByGassruxLeader(/theconomy.me|(imagenesderopaparaperros|linclik|up4cash|smoner).com|happy-living.online|galaxy-link.space|oke.io|bitss.sbs/, function() {
       if (elementExists('#link-view')) {let srl = setInterval(() => {if (Captchacheck()) {ClickIfExists('#invisibleCaptchaShortlink');}}, 1 * 1000);}});
-    SledingBySatSetLeader(/solarchaine.com/, function() {
+    SledingByGassruxLeader(/(blogscare|blogtechh|host2loan).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la/, function() {ClickIfExists('button.btn.btn-primary', 2);SubmitIfExists('#nextpage', 2);
+      SubmitIfExists('#getmylink', 3);let enit = setInterval(function() {if (Captchacheck()) {clearInterval(enit);ClickIfExists('.btn-captcha.btn-primary.btn');}}, 500);});
+    SledingByGassruxLeader(/solarchaine.com/, function() {
       if (elementExists('#captchaShortlink')) {ClickIfExists('button.btn:nth-child(4)', 2);let sch = setInterval(() => {if (Captchacheck()) {clearInterval(sch);
             ClickIfExists('#invisibleCaptchaShortlink');}}, 1 * 1000);} else {SubmitIfExists('.box-body > form:nth-child(2)', 1);}});
-    SledingBySatSetLeader(/(remixsounds|helpowi|helpdeep|thinksrace|tipsloanusa|findgptprompts).com|(remixone|webseriesreel).in|uprwssp.org|securitywaittimes.us/, function() {EnableRCF();
+    SledingByGassruxLeader(/(remixsounds|helpowi|helpdeep|thinksrace|tipsloanusa|findgptprompts).com|(remixone|webseriesreel).in|uprwssp.org|securitywaittimes.us/, function() {EnableRCF();
       ClickIfExists('.m-2.btn-captcha.btn-outline-primary.btn', 2);ClickIfExists("#tp98 button[class^='bt']", 3); SubmitIfExists("form[name='tp']", 3); ClickIfExists('#btn6', 4); ClickIfExists('#btnfianl', 4);});
-    SledingBySatSetLeader(/shrinke.me|(shrinke|shrinkme).us|shrinkme.info|shrinkme.pro|shrinkme.site|pwrpa.cc|shrinkme.org|paylinks.cloud|(linkvhoriz|paid4link).com|bicolink.net|wordcounter.icu|forextrader.site|nightfaucet.me|short.earnfeyonline.online|surflink.pro|adincent.site|linkzfly.xyz/, function() {let shk = setInterval(() => {
+    SledingByGassruxLeader(/shrinke.me|(shrinke|shrinkme).us|shrinkme.info|shrinkme.pro|shrinkme.site|pwrpa.cc|shrinkme.org|paylinks.cloud|(linkvhoriz|paid4link).com|bicolink.net|wordcounter.icu|forextrader.site|nightfaucet.me|short.earnfeyonline.online|surflink.pro|adincent.site|linkzfly.xyz/, function() {let shk = setInterval(() => {
         if (Captchacheck()) {clearInterval(shk);ReadytoClick('#invisibleCaptchaShortlink');}}, 1 * 1000);});
-    SledingBySatSetLeader(/revly.click/, function() {
+    SledingByGassruxLeader(/revly.click/, function() {
       if (elementExists('#link-view')) {let srl = setInterval(() => {if (Captchacheck()) {SubmitIfExists('#link-view');}}, 1 * 1000);} else {SubmitIfExists('div.col-md-12 form', 2);}});
-    SledingBySatSetLeader(/theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id/, function() {
+    SledingByGassruxLeader(/theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id/, function() {
       var tform = bp('#landing');redirect(JSON.parse(atob(tform.newwpsafelink.value)).linkr, false);});
-    SledingBySatSetLeader(/enit.in|clk.wiki/, function() {parent.open = BpBlock();
+    SledingByGassruxLeader(/enit.in|clk.wiki/, function() {parent.open = BpBlock();
       let enit = setInterval(function() {if (Captchacheck()) {clearInterval(enit);ClickIfExists('.btn-captcha.btn-primary.btn');}}, 500);});
-    SledingBySatSetLeader(/techyreviewx.com|desiupload.co/, function() {ClickIfExists('.downloadbtn.btn-block.btn-primary.btn', 2);
+    SledingByGassruxLeader(/techyreviewx.com|desiupload.co/, function() {ClickIfExists('.downloadbtn.btn-block.btn-primary.btn', 2);
       waitForElm('a.btn.btn-primary.btn-block.mb-4', rex => redirect(rex.href, false));});
-    SledingBySatSetLeader(/uploadev.org/, function() {let ude = setInterval(function() {if (Captchacheck()) {ClickIfExists('#downloadbtn');}}, 500);
+    SledingByGassruxLeader(/uploadev.org/, function() {let ude = setInterval(function() {if (Captchacheck()) {ClickIfExists('#downloadbtn');}}, 500);
       ClickIfExists('#dspeed > input:nth-child(3)', 1);ClickIfExists('.directl', 1);});
-    SledingBySatSetLeader(/(calmgram|adbitfly|blogsward).com|adbitfly.in/, function() {
+    SledingByGassruxLeader(/(calmgram|adbitfly|blogsward).com|adbitfly.in/, function() {
       waitForElm('#continueBtn', afBtn => afBtn.click());ClickIfExists('#captcha-btn', 4, 'setInterval');
       ClickIfExists('.btn-captcha.btn-primary.btn', 8, 'setInterval');});
-    SledingBySatSetLeader(/filedm.com/, function() {
+    SledingByGassruxLeader(/filedm.com/, function() {
       if (elementExists('#dlbutton')) {waitForElm('#dlbutton', fdm => redirect('http://cdn.directfiledl.com/getfile?id=' + fdm.href.split('_')[1], false));} else {}});
-    SledingBySatSetLeader(/(exactpay|dinheirocrypto).online|videoclip.info|sproutworkers.co|claimfreetrx.online|chillfaucet.in/, function() {EnableRCF();window.onscroll = BpBlock();window.check2();if (elementExists('#verify')) {
+    SledingByGassruxLeader(/(exactpay|dinheirocrypto).online|videoclip.info|sproutworkers.co|claimfreetrx.online|chillfaucet.in/, function() {EnableRCF();window.onscroll = BpBlock();window.check2();if (elementExists('#verify')) {
         $('.blog-details').text('Please Answer the Maths Questions First ,Wait until Progress bar end, then Click the Red X Manually');
         elementReady('[name="answer"]').then(function(element) {element.addEventListener('change', window.check3);});}});
-    SledingBySatSetLeader(/(crypto4yu|manofadan|wiour).com|btcbitco.in|readbitcoin.org/, async function() {
+    SledingByGassruxLeader(/(crypto4yu|manofadan|wiour).com|btcbitco.in|readbitcoin.org/, async function() {
       EnableRCF();await sleep(2000);window.check2();window.check3();ClickIfExists('button.btn.btn-primary.btn-lg');});
-    SledingBySatSetLeader(/(btcpany|zombiebtc|claimfey|panyhealth|thefastpost).com|(battleroyal|panytourism|statepany).online|mobilost.website/, function() {
+    SledingByGassruxLeader(/(btcpany|zombiebtc|claimfey|panyhealth|thefastpost).com|(battleroyal|panytourism|statepany).online|mobilost.website/, function() {
       parent.open = BpBlock();SubmitIfExists('#link1s-form', 1);ClickIfExists('#next-step-button', 3);});
-    SledingBySatSetLeader(/9xupload.asia/, function() {
+    SledingByGassruxLeader(/9xupload.asia/, function() {
       ClickIfExists('#container > table:nth-child(15) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) > a:nth-child(1)', 2);
       SubmitIfExists("form[name='F1']", 1);});
-    SledingBySatSetLeader(/playnano.online/, function() {ClickIfExists('#watch-link', 2);
+    SledingByGassruxLeader(/playnano.online/, function() {ClickIfExists('#watch-link', 2);
       ClickIfExists('.watch-next-btn.btn-primary.button', 2);ClickIfExists('button.button.btn-primary.watch-next-btn', 5, 'setInterval');});
-    SledingBySatSetLeader(/mega4upload.com/, function() {
+    SledingByGassruxLeader(/mega4upload.com/, function() {
       let mu = setInterval(function() {if (Captchacheck()) {ClickIfExists('#downloadbtn');}}, 500);
       ClickIfExists('.btn-sm.btn-info.btn', 1);ClickIfExists('.btn-dark.btn-sm.btn', 1);});
-    SledingBySatSetLeader(/dropgalaxy.com/, function() {ClickIfExists('#method_free', 2);
+    SledingByGassruxLeader(/dropgalaxy.com/, function() {ClickIfExists('#method_free', 2);
       ClickIfExists('#downloadBtnClick', 3, 'setInterval');waitForElm('a.btn.btn-block.btn-lg.btn-primary', dg => redirect(dg.href, false));});
-    SledingBySatSetLeader(/uploady.io/, function() {
+    SledingByGassruxLeader(/uploady.io/, function() {
       let udy = setInterval(function() {if (Captchacheck()) {ClickIfExists('#downloadbtn');}}, 500);
       ClickIfExists('.fa-turtle.fas', 2);ClickIfExists('.mb-4.btn-block.btn-primary.btn', 2);});
-    SledingBySatSetLeader(/donia2tech.com|blog.techeysub.online/, function() {
+    SledingByGassruxLeader(/donia2tech.com|blog.techeysub.online/, function() {
       var form = document.getElementById('wpsafelink-landing');redirect(JSON.parse(atob(form.newwpsafelink.value)).linkr);});
-    SledingBySatSetLeader(/rekonise.com/, () => {let xhr = new XMLHttpRequest();
+    SledingByGassruxLeader(/rekonise.com/, () => {let xhr = new XMLHttpRequest();
       xhr.onload = () => redirect(JSON.parse(xhr.responseText).url);
       xhr.open("GET", "https://api.rekonise.com/social-unlocks" + location.pathname, true);xhr.send();});
-    SledingBySatSetLeader(/acortalink.me/, () => {let acorta = setInterval(() => {let script = bp('body > script');
+    SledingByGassruxLeader(/acortalink.me/, () => {let acorta = setInterval(() => {let script = bp('body > script');
         if (script) {let text = script.text.trim(); let lines = text.split('\n'); let i = lines.findIndex(x => x.includes('acortalink.me'));
           let link = lines[i + 2].trim().split(',')[6].trim(); if (window[link]) {clearInterval(acorta); redirect(window[link]);}}}, 100);});
-    SledingBySatSetLeader(/adoc.pub/, function() {ClickIfExists('.btn-block.btn-success.btn', 2);
+    SledingByGassruxLeader(/adoc.pub/, function() {ClickIfExists('.btn-block.btn-success.btn', 2);
       let adp = setInterval(() => {if (Captchacheck()) {clearInterval(adp);ClickIfExists('.mt-15.btn-block.btn-success.btn-lg.btn');}}, 1 * 1000);});
-    SledingBySatSetLeader(/teknosimple.com|besargaji.com/, function() {parent.open = BpBlock();ClickIfExists('#slu-link', 3);
+    SledingByGassruxLeader(/teknosimple.com|besargaji.com/, function() {parent.open = BpBlock();ClickIfExists('#slu-link', 3);
       let tek = setInterval(function() {if (Captchacheck()) {clearInterval(tek);ClickIfExists('#slu-continue');}}, 500);});
-    SledingBySatSetLeader(/bloginkz.com/, function() {let bi = setInterval(function() {if (Captchacheck()) {clearInterval(bi);ClickIfExists('button.btn');}}, 500);
+    SledingByGassruxLeader(/bloginkz.com/, function() {let bi = setInterval(function() {if (Captchacheck()) {clearInterval(bi);ClickIfExists('button.btn');}}, 500);
       waitForElm('a.get-link.disabled a', bli => redirect(bli.href));});
-    SledingBySatSetLeader(/pdfcoffee.com/, function() {ClickIfExists('.btn-block.btn-success.btn', 2);
+    SledingByGassruxLeader(/pdfcoffee.com/, function() {ClickIfExists('.btn-block.btn-success.btn', 2);
       let pdf = setInterval(() => {if (Captchacheck()) {clearInterval(pdf);ClickIfExists('.my-2.btn-block.btn-primary.btn-lg.btn');}}, 1 * 1000);});
-    SledingBySatSetLeader(/bastinews.xyz/, function() {waitForElm('div#wpsafe-snp center a.btn-vip.bbtn-vip', bast => redirect(bast.href, false));
+    SledingByGassruxLeader(/bastinews.xyz/, function() {waitForElm('div#wpsafe-snp center a.btn-vip.bbtn-vip', bast => redirect(bast.href, false));
       waitForElm('div#main-content.mh-content center a', basti => redirect(basti.href, false));});
-    SledingBySatSetLeader(/autodime.com/, function() {
+    SledingByGassruxLeader(/autodime.com/, function() {
       let atd = setInterval(function() {if (Captchacheck()) {clearInterval(atd);ClickIfExists('#button1');}}, 500);
       waitForElm('a.btn-hover.color-1.btn-captcha', odim => redirect(odim.href, false));});
-    SledingBySatSetLeader(/amritadrino.com/, function() {
+    SledingByGassruxLeader(/amritadrino.com/, function() {
       if (elementExists('.g-recaptcha')) {waitForElm('body > b:nth-child(10) > center:nth-child(4) > a:nth-child(64)', amd => redirect(amd.href, false));} else {waitForElm('#tp-snp2', amBtn => amBtn.click());}});
-    SledingBySatSetLeader(/youtube.com/, function() {if (elementExists('#redirect-main-text')) {waitForElm('a#invalid-token-redirect-goto-site-button', yt => redirect(yt.href, false));} else {}});
-    SledingBySatSetLeader(/mexa.sh/, function() {parent.open = BpBlock();ClickIfExists('#Downloadfre', 2);ClickIfExists('#direct_link', 2);
+    SledingByGassruxLeader(/youtube.com/, function() {if (elementExists('#redirect-main-text')) {waitForElm('a#invalid-token-redirect-goto-site-button', yt => redirect(yt.href, false));} else {}});
+    SledingByGassruxLeader(/mexa.sh/, function() {parent.open = BpBlock();ClickIfExists('#Downloadfre', 2);ClickIfExists('#direct_link', 2);
       let mx = setInterval(() => {if (Captchacheck()) {clearInterval(mx);ClickIfExists('.downloadbtn');}}, 1 * 1000);});
-    SledingBySatSetLeader(/komikcast.moe|komikman.com|komikindo.org|kusonime.org|oploverz.org|neonime.lol/, function() {
+    SledingByGassruxLeader(/komikcast.moe|komikman.com|komikindo.org|kusonime.org|oploverz.org|neonime.lol/, function() {
       waitForElm('.bg-gb.dwto.sdw', kmBtn => kmBtn.click());waitForElm('a.sdw.dwto.bg-gb', kmk => redirect(kmk.href, false));});
-    SledingBySatSetLeader(/hunterkiller.me|surflink.tech/, function() {
+    SledingByGassruxLeader(/hunterkiller.me|surflink.tech/, function() {
       waitForElm('div#showw center a.btn.btn-danger.btn-captcha', hun => redirect(hun.href, false));
       waitForElm('div#wpsafe-snp center a', hunt => redirect(hunt.href, false));});
-    SledingBySatSetLeader(/coinhub.wiki/, function() {ClickIfExists('body > a:nth-child(1)', 2);
+    SledingByGassruxLeader(/coinhub.wiki/, function() {ClickIfExists('body > a:nth-child(1)', 2);
       ClickIfExists('#chl_cover', 2);ClickIfExists('#btn_verify', 4, 'setInterval');
       waitForElm('a.btn.btn-success', coi => redirect(coi.href, false));});
-    SledingBySatSetLeader(/lyricsbaazaar.com|ezeviral.com/, function() {
+    SledingByGassruxLeader(/lyricsbaazaar.com|ezeviral.com/, function() {
       let lyr = setInterval(function() {if (Captchacheck()) {clearInterval(lyr);ClickIfExists('#btn6');}}, 500);
       waitForElm('div.modal-content a', lyri => redirect(lyri.href, false));});
-    SledingBySatSetLeader(/userupload.net/, function() {
+    SledingByGassruxLeader(/userupload.net/, function() {
       let upl = setInterval(() => {if (Captchacheck()) {clearInterval(upl);ClickIfExists('#downloadbtn');}}, 1 * 1000);
       waitForElm('a.btn.btn-primary.btn-block.mb-4', upl2 => redirect(upl2.href, false));});
-    SledingBySatSetLeader(/(on-scroll|diudemy|maqal360).com/, function() {ClickIfExists('#tristana > :nth-child(1)', 5);
+    SledingByGassruxLeader(/(on-scroll|diudemy|maqal360).com/, function() {ClickIfExists('#tristana > :nth-child(1)', 5);
       ClickIfExists('#_append > :nth-child(1)', 9); waitForElm("form.text-center a", roll => redirect(roll.href, false));});
-    SledingBySatSetLeader(/file-upload.com/, function() {ClickIfExists('.mnbt1.btn-primary.btn-xs.btn', 2);ClickIfExists('#download-btn', 2);
+    SledingByGassruxLeader(/file-upload.com/, function() {ClickIfExists('.mnbt1.btn-primary.btn-xs.btn', 2);ClickIfExists('#download-btn', 2);
       let fu = setInterval(function() {if (Captchacheck()) {clearInterval(fu);ClickIfExists('#downloadbtn');}}, 500);});
-    SledingBySatSetLeader(/bstlar.com/, () => {let xhr = new XMLHttpRequest();
+    SledingByGassruxLeader(/bstlar.com/, () => {let xhr = new XMLHttpRequest();
       xhr.onload = () => redirect(JSON.parse(xhr.responseText).link.destination_url);
       xhr.open("GET", "https://bstlar.com/api/link?url=" + location.pathname.substr(1), true);xhr.send();});
-    SledingBySatSetLeader(/sekilastekno.com|miuiku.com|vebma.com/, async function() {const executor = async () => {let El = window?.livewire?.components?.components()[0];
+    SledingByGassruxLeader(/sekilastekno.com|miuiku.com|vebma.com/, async function() {const executor = async () => {let El = window?.livewire?.components?.components()[0];
         while (!El) {await sleep(100); console.log(1); El = window?.livewire?.components?.components()[0];}
         const payload = {fingerprint: El.fingerprint, serverMemo: El.serverMemo, updates: [{payload: {event: 'getData', id: 'whathappen', params: [],}, type: 'fireEvent',}, ],};
         const response = await fetch(location.origin + '/livewire/message/pages.show', {headers: {'Content-Type': 'application/json', 'X-Livewire': 'true', 'X-CSRF-TOKEN': window.livewire_token,},
@@ -848,177 +849,177 @@
       if (location.host === 'wp.sekilastekno.com') {if (elementExists("form[method='post']")) {const a = bp("form[method='post']"); console.log('addRecord...'); const input = document.createElement('input');
           input.value = window.livewire_token; input.name = '_token'; input.hidden = true; a.appendChild(input); a.submit();}
       if (elementExists("button[x-text]")) { console.log('getLink..'); executor();} return;} if (elementExists("div[class='max-w-5xl mx-auto']")) {console.log('Executing..'); executor();}});
-    SledingBySatSetLeader(/coinsrev.com/, function() {parent.open = BpBlock();
+    SledingByGassruxLeader(/coinsrev.com/, function() {parent.open = BpBlock();
       if (elementExists('.g-recaptcha')) {let csr = setInterval(() => {if (Captchacheck()) {clearInterval(csr);
             ClickIfExists('#wpsafelinkhuman > input');}}, 1 * 1000);} else {ClickIfExists('#wpsafe-generate > a > img', 3);ClickIfExists('input#image3', 13);}});
-    SledingBySatSetLeader(/zubatecno.com/, function() {if (elementExists('#mdncaptcha')) {let zbt = setInterval(() => {
+    SledingByGassruxLeader(/zubatecno.com/, function() {if (elementExists('#mdncaptcha')) {let zbt = setInterval(() => {
           if (Captchacheck()) {clearInterval(zbt);ClickIfExists('#link1s-snp1');}}, 1 * 1000);} else {SubmitIfExists('#link1s-form', 3);}});
-    SledingBySatSetLeader(/wooseotools.com/, function() {if (elementExists('.g-recaptcha')) {let wst = setInterval(() => {
+    SledingByGassruxLeader(/wooseotools.com/, function() {if (elementExists('.g-recaptcha')) {let wst = setInterval(() => {
           if (Captchacheck()) {clearInterval(wst);ClickIfExists('div form button');}}, 500);} else {ClickIfExists('div form button', 3, 'setInterval');}});
-    SledingBySatSetLeader(/adwerty.com/, function() {let adw = setInterval(() => {if (Captchacheck()) {clearInterval(adw);ClickIfExists('#hidden_btn');}}, 500);
+    SledingByGassruxLeader(/adwerty.com/, function() {let adw = setInterval(() => {if (Captchacheck()) {clearInterval(adw);ClickIfExists('#hidden_btn');}}, 500);
       waitForElm('#hidden_btn', adw2 => redirect(strBetween(adw2.onclick.toString(), `window.open('`, `', '_blank')`)));});
-    SledingBySatSetLeader(/mediafire.com/, function() {var bass;var md = function closeWindows() {window.close();clearInterval(bass);};
+    SledingByGassruxLeader(/mediafire.com/, function() {var bass;var md = function closeWindows() {window.close();clearInterval(bass);};
       var mf = bp('.download_link .input').getAttribute('href');console.log(mf);location.replace(mf);bass = setInterval(md, 1000 * 5);});
-    SledingBySatSetLeader(/modebaca.com/, function() {if (elementExists('#recaptcha-element')) {
+    SledingByGassruxLeader(/modebaca.com/, function() {if (elementExists('#recaptcha-element')) {
         let mb = setInterval(function() {if (Captchacheck()) {ClickIfExists('.btn-success.btn');}}, 500);} else {
         ClickIfExists('.btn-success.btn', 2);ClickIfExists('div > div > button', 7);}});
-    SledingBySatSetLeader(/shopforex.online/, function() {bp('#submitBtn').removeAttribute('href');if (elementExists('.g-recaptcha')) {let sfo = setInterval(() => {
+    SledingByGassruxLeader(/shopforex.online/, function() {bp('#submitBtn').removeAttribute('href');if (elementExists('.g-recaptcha')) {let sfo = setInterval(() => {
           if (Captchacheck()) {clearInterval(sfo);ClickIfExists('#submitBtn');}}, 500);} else {
         ClickIfExists('.submitBtn', 2);ClickIfExists('#go_d', 3, 'setInterval');}});
-    SledingBySatSetLeader(/(pernahsukses|alpinecorporate).com|aoutoqw.xyz/, function() {if (elementExists('.g-recaptcha')) {let ps = setInterval(() => {if (Captchacheck()) {clearInterval(ps);
+    SledingByGassruxLeader(/(pernahsukses|alpinecorporate).com|aoutoqw.xyz/, function() {if (elementExists('.g-recaptcha')) {let ps = setInterval(() => {if (Captchacheck()) {clearInterval(ps);
             ClickIfExists('#alf_continue_captcha');}}, 1 * 1000);} else {window.showScrollToGetLinkText(); SubmitIfExists('#alf_continue_form_outer', 3);}});
-    SledingBySatSetLeader(/altechen.com|entutes.com/, function() {parent.open = BpBlock();
+    SledingByGassruxLeader(/altechen.com|entutes.com/, function() {parent.open = BpBlock();
       if (elementExists('.h-captcha')) {let ale = setInterval(() => {if (Captchacheck()) {clearInterval(ale);
             ClickIfExists('#cs-btn');}}, 1 * 1000);} else {ClickIfExists('button#cs-btn', 3, 'setInterval');}});
-    SledingBySatSetLeader(/hitfile.net/, function() {
+    SledingByGassruxLeader(/hitfile.net/, function() {
       let hf = setInterval(() => {if (Captchacheck()) {clearInterval(hf);ClickIfExists('#submit');}}, 1 * 1000);
       waitForElm('a.btn-grey.nopay-btn', hfl => redirect(hfl.href, false));waitForElm('#popunder2', hfl2 => redirect(hfl2.href, false));});
-    SledingBySatSetLeader(/apkmody.fun/, function() {if (elementExists('#download')) {
+    SledingByGassruxLeader(/apkmody.fun/, function() {if (elementExists('#download')) {
         waitForElm('.wp-block-button > a', amo => redirect(amo.href, false));
       } else if (elementExists('.wp-block-table')) {waitForElm('div.wp-block-buttons > div > a', amf => redirect(amf.href, false));}});
-    SledingBySatSetLeader(/freetrx.fun/, function() {if (elementExists('.g-recaptcha')) {let ftx = setInterval(() => {
+    SledingByGassruxLeader(/freetrx.fun/, function() {if (elementExists('.g-recaptcha')) {let ftx = setInterval(() => {
           if (Captchacheck()) {clearInterval(ftx);ClickIfExists("input[id^='abc']");}}, 500);} else {
         setTimeout(() => {("input[id^='abc']").click();}, 5 * 1000);ClickIfExists('#subbutt', 5);}});
-    SledingBySatSetLeader(/socialwolvez.com/, () => {let xhr = new XMLHttpRequest();xhr.onload = () => redirect(JSON.parse(xhr.responseText).link.url);
+    SledingByGassruxLeader(/socialwolvez.com/, () => {let xhr = new XMLHttpRequest();xhr.onload = () => redirect(JSON.parse(xhr.responseText).link.url);
       xhr.open("GET", "https://us-central1-social-infra-prod.cloudfunctions.net/linksService/link/guid/" + location.pathname.substr(7), true);xhr.send();});
-    SledingBySatSetLeader(/(mobi2c|healthy4pepole|healdad|world2our|mobitaak|te-it|businessnews-nigeria|govaf|fahmysport).com|(hightrip|fx-gd|world-trips|otechno|bluetechno|to-travel).net|(newforex|forexit).online/, function() {
+    SledingByGassruxLeader(/(mobi2c|healthy4pepole|healdad|world2our|mobitaak|te-it|businessnews-nigeria|govaf|fahmysport).com|(hightrip|fx-gd|world-trips|otechno|bluetechno|to-travel).net|(newforex|forexit).online/, function() {
       ClickIfExists('.submitBtn', 2);ClickIfExists('#go_d', 3);});
-    SledingBySatSetLeader(/oydisk.com/, function() {ClickIfExists('.free-element', 2);
+    SledingByGassruxLeader(/oydisk.com/, function() {ClickIfExists('.free-element', 2);
       waitForElm('a.btn.btn-success.w-100.py-3', od => redirect(od.href, false));
       let oyd = setInterval(() => {if (Captchacheck()) {clearInterval(oyd);ClickIfExists('button.btn.btn-sm.btn-primary.text-center');}}, 1 * 1000);});
-    SledingBySatSetLeader(/turbobit.net/, () => {if (elementExists('#turbo-table')) {let tb = bp('#nopay-btn').href;redirect(tb, false);}
+    SledingByGassruxLeader(/turbobit.net/, () => {if (elementExists('#turbo-table')) {let tb = bp('#nopay-btn').href;redirect(tb, false);}
       let tbb = setInterval(() => {if (Captchacheck()) {clearInterval(tbb);ClickIfExists('#submit');}}, 500);
       waitForElm('#free-download-file-link', tur => redirect(tur.href, false));});
-    SledingBySatSetLeader(/(blogginglass|arahtekno|mopahealth).com|faucet.work|wildblog.me|jiotech.net|apkupload.in/, function() {
+    SledingByGassruxLeader(/(blogginglass|arahtekno|mopahealth).com|faucet.work|wildblog.me|jiotech.net|apkupload.in/, function() {
       var el = document.querySelector("input[name=newwpsafelink]");redirect(JSON.parse(atob(el.value)).linkr);});
-    SledingBySatSetLeader(/anhdep24.com|nguyenvanbao.com|xemsport.com|byboe.com/, function() {
+    SledingByGassruxLeader(/anhdep24.com|nguyenvanbao.com|xemsport.com|byboe.com/, function() {
       if (elementExists('.g-recaptcha')) {let anh = setInterval(() => {if (Captchacheck()) {clearInterval(anh);
             ClickIfExists('#link1s-captcha');}}, 1 * 1000);} else {ClickIfExists('#link1s', 4, 'setInterval');ClickIfExists('#btn6', 3);}});
-    SledingBySatSetLeader(/traffic1s.com/, () => {let x = '.blog-content > p:nth-child(4) > strong:nth-child(1)';
+    SledingByGassruxLeader(/traffic1s.com/, () => {let x = '.blog-content > p:nth-child(4) > strong:nth-child(1)';
       if (bp(x) && bp(x).innerHTML.includes('://')) {let i = strBetween(bp(x).innerHTML, '');let s = strBetween(i, '://', ' ');
         window.location.assign(`https://${s}?xref=https://google.com/&sl=${location.href}`);}});
-    SledingBySatSetLeader(/web1s.co|web1s.info|app.covemarkets.com/, function() {
+    SledingByGassruxLeader(/web1s.co|web1s.info|app.covemarkets.com/, function() {
       if (elementExists('.col-xxl-9')) {ClickIfExists('#submit', 3, 'setInterval');let webi = setInterval(function() {if (Captchacheck()) {clearInterval(webi);
             ClickIfExists('.fw-bold.btn-danger.btn-lg.btn');}}, 500);} else {SubmitIfExists('form.text-center', 1);}});
-    SledingBySatSetLeader(/suaurl.com/, function() {parent.open = BpBlock();
+    SledingByGassruxLeader(/suaurl.com/, function() {parent.open = BpBlock();
       let su = setInterval(function() {if (Captchacheck()) {bp('#comment_form').removeAttribute('target');clearInterval(su);
           ClickIfExists('#btn-capcha > .b-b', 1);}}, 500);ClickIfExists('#btn > button', 3, 'setInterval');});
-    SledingBySatSetLeader(/web1s.asia/, function() {
+    SledingByGassruxLeader(/web1s.asia/, function() {
       if (location.href.includes('api-mode/') || elementExists('.mb-20')) {SubmitIfExists('.submit-form', 3);ClickIfExists('#submit',3);} else if (!BpParamd.has('code')) {let iKey = '.mb-5.text-center.keyword-image', dWeb='fun88.info.vn';
       if (bp(iKey)) {if (bp(iKey).innerHTML.includes('7TmoFNC')) dWeb = 'hookeaudio.com'; if (bp(iKey).innerHTML.includes('81EoTp9')) dWeb = 'pennbookcenter.com';
       if (bp(iKey).innerHTML.includes('wYfNKAO')) dWeb = 'publicananker.com'; window.location.assign(`https://${dWeb}?xref=https://google.com/&wsa=${location.href}`);}
       if (elementExists('.col-xxl-9 > .text-center')) {let wa1 = setInterval(() => {if (Captchacheck()) {clearInterval(wa1);SubmitIfExists('form.text-center');}}, 1 * 1000);}
       if (elementExists('.col-xxl-9 > .text-center') && !elementExists('.g-recaptcha')) {ClickIfExists('#submit',3);}} else if (BpParamd.has('code')) {ClickIfExists('#submit-button');
       let inp = 'input.form-control:nth-child(2)', btn = 'form.submit-form:nth-child(2) > button:nth-child(16)'; if (bp(inp)) { bp(inp).value = decodeURIComponent(BpParamd.get('code')); ClickIfExists(btn,2); }}});
-    SledingBySatSetLeader(/(hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn/, function() {RemoveRef('https://google.com');
+    SledingByGassruxLeader(/(hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn/, function() {RemoveRef('https://google.com');
       if (BpParams.has('xref') && BpParams.has('wsa')) {let b = '.textwidget button', pLink = `li.menu-item > a:nth-child(1)`, gDiv = 'p > div > div', tCode;
       setTimeout(() => {if (bp(b) && bp(b).innerText.includes('CONTINUE')) {bp(b).click();}}, 3000);
       let pClick = setInterval(() => {if (bp(b) && bp(b).innerHTML.includes(`ANY PAGE TO GET`)) {bp(pLink).href = bp(pLink).href + document.location.search;
             bp(pLink).click();clearInterval(pClick);}}, 2000);
       let gCode = setInterval(() => {if (bp(gDiv) && !bp(gDiv).innerText.includes('ontinue after')) {tCode = strBetween(bp(gDiv).parentElement.innerHTML, `!important;">`, `<svg`, true);
       window.location.assign(`${decodeURIComponent(BpParamd.get('wsa'))}?code=${tCode}`); clearInterval(gCode);}}, 2000);}});
-    SledingBySatSetLeader(/stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque).net/, function() {if (elementExists('.g-recaptcha') || elementExists('.h-captcha')) {
+    SledingByGassruxLeader(/stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque).net/, function() {if (elementExists('.g-recaptcha') || elementExists('.h-captcha')) {
         let stf = setInterval(() => {if (Captchacheck()) {clearInterval(stf);ReadytoClick('.form-send.m-2.btn-captcha.btn-outline-primary.btn');}}, 500);} else {
         ClickIfExists('.form-send.m-2.btn-captcha.btn-outline-primary.btn', 3, 'setInterval');}});
-    SledingBySatSetLeader(/coins-town.com/, function() {ClickIfExists('#claimCoins > button[data-bs-toggle="modal"]', 2);
+    SledingByGassruxLeader(/coins-town.com/, function() {ClickIfExists('#claimCoins > button[data-bs-toggle="modal"]', 2);
       ClickIfExists('a[href*="play.php?"]', 2);if (document.referrer.includes('/?cashando=')) {
         window.location.assign(`https://coins-town.com/play.php?game=20966`);} else if (elementExists('#claimCoins')) {bp('#claimCoins').style.display = '';}});
-    SledingBySatSetLeader(/slinkware.com|aghtas.com|mazen-ve3.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com/, function() {EnableRCF();
+    SledingByGassruxLeader(/slinkware.com|aghtas.com|mazen-ve3.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com/, function() {EnableRCF();
       let sw = setInterval(() => {if (Captchacheck()) {clearInterval(sw); ClickIfExists('.hidden-continue-button');}}, 1 * 1000); waitForElm('#yuidea-btmbtn', swBtn => swBtn.click());});
-    SledingBySatSetLeader(/link.goto.com.np|appkamods.com|mixrootmods.com|bankvacency.com|mealcold.com|otomi-games.com/, () => {
+    SledingByGassruxLeader(/link.goto.com.np|appkamods.com|mixrootmods.com|bankvacency.com|mealcold.com|otomi-games.com/, () => {
       waitForElm('div#wpsafe-link a', bitz => redirect(bitz.href, false));
       waitForElm('#wpsafe-link input', bit2 => redirect(strBetween(bit2.onclick.toString(), `window.open('`, `', '_blank')`), false));});
-    SledingBySatSetLeader(/hamrolekh.com|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org/, function() {
+    SledingByGassruxLeader(/hamrolekh.com|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org/, function() {
       ClickIfExists('#my-btn', 2);ClickIfExists('#wpsafe-link > .btn-secondary.btn', 2);
       waitForElm('#pro-link', nhk => redirect(nhk.href, false));waitForElm('#wpsafe-link a', hrl => redirect(strBetween(hrl.onclick.toString(), `window.open('`, `', '_self')`), false));});
-    SledingBySatSetLeader(/drive.google.com/, function() {var dg = window.location.href.split('/').slice(-2)[0];
+    SledingByGassruxLeader(/drive.google.com/, function() {var dg = window.location.href.split('/').slice(-2)[0];
       if (window.location.href.includes('drive.google.com/file/d/')) {redirect(`https://drive.google.com/u/0/uc?id=${dg}&export=download`).replace('<br />', '');
       } else if (window.location.href.includes('drive.google.com/u/0/uc?id')) {SubmitIfExists('#download-form', 1);} else {}});
-    SledingBySatSetLeader(/4shared.com/, function() {if (elementExists('.d3topTitle')) {
-        $('.premium').text('IMPORTANT TRICKS By SatSetLeader : Updated Feb 2023, Look like now not working ,so Sorry at This Time i Dont have Idea to fix it . Regards...');}
+    SledingByGassruxLeader(/4shared.com/, function() {if (elementExists('.d3topTitle')) {
+        $('.premium').text('IMPORTANT TRICKS By GassruxLeader : Updated Feb 2023, Look like now not working ,so Sorry at This Time i Dont have Idea to fix it . Regards...');}
       ClickIfExists('.jsDownloadButton', 2);if (elementExists('.freeDownloadButton')) {SubmitIfExists("form[name^='redirectToD3Form']", 3);}});
-    SledingBySatSetLeader(/shortit.pw/, function() {if (elementExists('.bg-light.container')) {
-        $('.text-center.text-muted').text('IMPORTANT Note By SatSetLeader : Please Solve the Hcaptcha for Automatically , Dont Solve the Solvemedia . Regards...');}
+    SledingByGassruxLeader(/shortit.pw/, function() {if (elementExists('.bg-light.container')) {
+        $('.text-center.text-muted').text('IMPORTANT Note By GassruxLeader : Please Solve the Hcaptcha for Automatically , Dont Solve the Solvemedia . Regards...');}
       ClickIfExists('.pulse.btn-primary.btn', 3);let sorti = setInterval(function() {if (Captchacheck()) {clearInterval(sorti);ClickIfExists('#btn2');}}, 500);});
-    SledingBySatSetLeader(/gogodl.com/, () => {waitForElm('a.crumina-button.button--green.button--bordered.button--m.w-100', godl => redirect(godl.href, false));
+    SledingByGassruxLeader(/gogodl.com/, () => {waitForElm('a.crumina-button.button--green.button--bordered.button--m.w-100', godl => redirect(godl.href, false));
       ClickIfExists('.w-100.button--m.button--bordered.button--green.crumina-button', 5, 'setInterval');
       let gogo = setInterval(() => {if (Captchacheck()) {clearInterval(gogo);ClickIfExists('.w50.button--m.button--bordered.button--green.crumina-button');}}, 1 * 1000);});
-    SledingBySatSetLeader(/short.croclix.me|adz7short.space/, function() {setInterval(function() {if ($("#link").length > 0) {ReadytoClick("#link");}}, 500);
+    SledingByGassruxLeader(/short.croclix.me|adz7short.space/, function() {setInterval(function() {if ($("#link").length > 0) {ReadytoClick("#link");}}, 500);
       setInterval(function() {if ($("input#continue").length > 0) {ReadytoClick("input#continue");} if ($("a#continue.button").length > 0) {ReadytoClick("a#continue.button");}}, 9000);
       setTimeout(function() {if ($("#btn-main").length < 0) return;ReadytoClick("#btn-main");}, 5000);});
-    SledingBySatSetLeader(/linkvip.io/, async function() {var campId = (await elementReady('input[name="campId"]')).value;
+    SledingByGassruxLeader(/linkvip.io/, async function() {var campId = (await elementReady('input[name="campId"]')).value;
       var linkId = (await elementReady('input[name="linkId"]')).value;console.log(campId, linkId);var frmData = new FormData();
       frmData.append('campId', campId);var res = await fetch('https://linkvip.io/graph/api?action=getCodeCamp', {method: 'POST', body: frmData,});
       var data = await res.json(); if (!data.status) return console.error('getCodeCamp');var codeOTP = data.message;var frmDataf = new FormData();
       frmDataf.append('campId', campId);frmDataf.append('linksId', linkId);frmDataf.append('codeOTP', codeOTP);
       var dataf = await fetch('https://linkvip.io/graph/api?action=confirmCode', {method: 'POST', body: frmDataf,}).then(res => res.json());
       if (!dataf.status) return console.error('confirmCode');redirect(dataf.message);});
-    SledingBySatSetLeader(/adshnk.com|adshrink.it/, () => {let adsh = setInterval(() => {
+    SledingByGassruxLeader(/adshnk.com|adshrink.it/, () => {let adsh = setInterval(() => {
         if (typeof window._sharedData == "object" && 0 in window._sharedData && "destination" in window._sharedData[0]) {clearInterval(adsh);
           document.write(window._sharedData[0].destination);redirect(document.body.textContent);
         } else if (typeof window.___reactjsD != "undefined" && typeof window[window.___reactjsD.o] == "object" && typeof window[window.___reactjsD.o].dest == "string") {clearInterval(adsh);redirect(window[window.___reactjsD.o].dest);}});});
-    SledingBySatSetLeader(/vikashmewada.com|videoslyrics.com|crazysonglyrics.com|videolyrics.in|newsharsh.com|trxking.xyz|crazyblog.in|getdashcoin.io/, () => { parent.open = BpBlock();waitForElm('.py-2.bg-blue-600', tBtn => tBtn.click());
+    SledingByGassruxLeader(/vikashmewada.com|videoslyrics.com|crazysonglyrics.com|videolyrics.in|newsharsh.com|trxking.xyz|crazyblog.in|getdashcoin.io/, () => { parent.open = BpBlock();waitForElm('.py-2.bg-blue-600', tBtn => tBtn.click());
       waitForElm('form:nth-child(1) > a:nth-child(3)', vBtn => vBtn.click());waitForElm('button.py-2:nth-child(3)', bBtn => bBtn.click()); waitForElm('div > a.py-2.bg-blue-600', crb => redirect(crb.href, false));
       let craz = setInterval(() => {if (elementExists('button.py-2')) {clearInterval(craz); SubmitIfExists('div.rounded > div:nth-child(9) > form:nth-child(1)', 2);}}, 500);});
-    SledingBySatSetLeader(/lanza.me/, () => waitForElm('a#botonGo', lz => redirect(lz.href, false)));
-    SledingBySatSetLeader(/lifeezee.com/, () => waitForElm('.get-link', lifz => redirect(lifz.href)));
-    SledingBySatSetLeader(/lolinez.com/, () => waitForElm('p#url a', lol => redirect(lol.href, false)));
-    SledingBySatSetLeader(/sahityt.com/, () => waitForElm('a#tp-snp2', sht => redirect(sht.href, false)));
-    SledingBySatSetLeader(/file-upload.in/, () => waitForElm('#getlink', fui => redirect(fui.href, false)));
-    SledingBySatSetLeader(/upmienphi.com/, function() {waitForElm('.download-link', upBtn => upBtn.click());});
-    SledingBySatSetLeader(/ify.ac/, function() {waitForElm('#mainbutton', ify => redirect(ify.href, false));});
-    SledingBySatSetLeader(/linksly.co/, () => waitForElm('div.col-md-12 a', lsl => redirect(lsl.href, false)));
-    SledingBySatSetLeader(/cashando.me/, () => waitForElm('#goCoinsTown', cash => redirect(cash.href, false)));
-    SledingBySatSetLeader(/appsinsta.com/, function() {waitForElm('.yu-blue.yu-btn', apBtn => apBtn.click());});
-    SledingBySatSetLeader(/apkadmin.com/, () => waitForElm('div.text.text-center a', apk => redirect(apk.href)));
-    SledingBySatSetLeader(/sugarona.com/, function() {waitForElm('a#my-btn', sgr => redirect(sgr.href, false));});
-    SledingBySatSetLeader(/filemoon.sx/, () => waitForElm('div.download2 a.button', fm => redirect(fm.href, false)));
-    SledingBySatSetLeader(/cekip.site/, () => waitForElm('a#aGo.badge.bg-success', cek => redirect(cek.href, false)));
-    SledingBySatSetLeader(/techleets.xyz/, () => waitForElm('#tp-snp2 > center > a', tle => redirect(tle.href, false)));
-    SledingBySatSetLeader(/newsturbovid.com/, () => waitForElm('#start-download > a', ntv => redirect(ntv.href, false)));
-    SledingBySatSetLeader(/amanguides.com/, () => waitForElm('#wpsafe-link > .bt-success', ag => redirect(ag.href, false)));
-    SledingBySatSetLeader(/mirrored.to/, () => waitForElm('div.col-sm.centered.extra-top a', mir => redirect(mir.href, false)));
-    SledingBySatSetLeader(/viralxns.com/, () => waitForElm('div.paras-dev-top.text-center a', vir => redirect(vir.href, false)));
-    SledingBySatSetLeader(/flybid.net/, () => waitForElm('a#continue-button.continue-button', flb => redirect(flb.href, false)));
-    SledingBySatSetLeader(/8tm.net/, () => waitForElm('a.btn.btn-secondary.btn-block.redirect', tm => redirect(tm.href, false)));
-    SledingBySatSetLeader(/cpmlink.net/, () => waitForElm('a#btn-main.btn.btn-warning.btn-lg', cpm => redirect(cpm.href, false)));
-    SledingBySatSetLeader(/noodlemagazine.com/, () => waitForElm('a#downloadLink.downloadBtn', mag => redirect(mag.href, false)));
-    SledingBySatSetLeader(/bestfonts.pro/, () => waitForElm('.download-font-button > a:nth-child(1)', pro => redirect(pro.href)));
-    SledingBySatSetLeader(/huongdanvuotlink123.blogspot.com/, () => waitForElm('a.in-cell-link', hdv => redirect(hdv.href, false)));
-    SledingBySatSetLeader(/forexrw7.com|3rabsports.com|gold-24.net/, () => waitForElm('.oto > a', pro => redirect(pro.href, false)));
-    SledingBySatSetLeader(/maxurlz.com/, () => waitForElm('a.btn.btn-success.btn-lg.flip.animated', maxu => redirect(maxu.href, false)));
-    SledingBySatSetLeader(/gdtot.cfd/, () => waitForElm('#dirdown', gdt => redirect(strBetween(gdt.onclick.toString(), `myDl('`, `')`))));
-    SledingBySatSetLeader(/files.fm/, () => waitForElm('#head_download__all-files > div > div > a:nth-child(1)', flBtn => flBtn.click()));
-    SledingBySatSetLeader(/sama-pro.com|mikl4forex.com|dr-forex.com/, () => waitForElm('a#submitBtn', smpb => redirect(smpb.href, false)));
-    SledingBySatSetLeader(/mohtawaa.com/, () => waitForElm('a.btn.btn-success.btn-lg.get-link.enabled', moht => redirect(moht.href, false)));
-    SledingBySatSetLeader(/linksae.com/, function() {waitForElm('a.btn.btn-success.btn-lg.flip.animated', lsa => redirect(lsa.href, false));});
-    SledingBySatSetLeader(/thebloggerspoint.in|ezeviral.com|fixno.in|technocubes.in/, () => waitForElm('#wpsafe-snp > a', tbs => redirect(tbs.href, false)));
-    SledingBySatSetLeader(/doodjob.com/, () => waitForElm('a.linky.buttonpanel.buttonpanel-block.btn-lg.get-link.disabled', doo => redirect(doo.href, false)));
-    SledingBySatSetLeader(/xonnews.net|toilaquantri.com|share4u.men|camnangvay.com/, () => waitForElm('div#traffic_result a', xon => redirect(xon.href, false)));
-    SledingBySatSetLeader(/yosite.net/, () => waitForElm('.options_layout_container > center:nth-child(17) > a:nth-child(1)', yos => redirect(yos.href, false)));
-    SledingBySatSetLeader(/offrcms.xyz|kooora365.online|tourismtravels4.sbs|5tl.co|mamahawa.com/, () => waitForElm('a#proceed', offr => redirect(offr.href, false)));
-    SledingBySatSetLeader(/geniussolutions.co|pokemonroms.cc|alightmotionlatest.com/, () => waitForElm('a#SecondPageBottomButton', gsc => redirect(gsc.href, false)));
-    SledingBySatSetLeader(/cricketgurupro.com/, function() {SubmitIfExists("form[name='tp']", 3);waitForElm('#page > center > a', cgp => redirect(cgp.href, false));});
-    SledingBySatSetLeader(/bluemedialink.online|bluemediafile\.*/, function() {if (BpParams.has('url')) {waitForElm('input#nut[src]', blum => blum.parentNode.submit());}});
-    SledingBySatSetLeader(/boost.ink/, () => fetch(location.href).then(bo => bo.text()).then(html => redirect(atob(html.split('bufpsvdhmjybvgfncqfa="')[1].split('"')[0]))));
-    SledingBySatSetLeader(/blog.textpage.xyz/, () => waitForElm('#wpsafe-link1 a', bt => redirect(strBetween(bt.onclick.toString(), `window.open('`, `', '_blank')`), false)));
-    SledingBySatSetLeader(/udrop.com/, () => waitForElm('.responsiveMobileMargin > button:nth-child(1)', udr => redirect(strBetween(udr.onclick.toString(), `openUrl('`, `')`), false)));
-    SledingBySatSetLeader(/starxinvestor.com|(iisfvirtual|bookszone|learnmany).in/, function() {SubmitIfExists("form[name='tp']", 3); waitForElm('a#btn6', bkz => redirect(bkz.href, false));});
-    SledingBySatSetLeader(/(financenube|mixrootmods|pastescript|trimorspacks|apklox).com|updrop.link/, () => {waitForElm('#wpsafe-link a', cdr => redirect(strBetween(cdr.onclick.toString(), `window.open('`, `', '_self')`), false));});
-    SledingBySatSetLeader(/ronakfitness.com/, function() {if (elementExists('.containerpanel')){let rft = bp('a.linky.buttonpanel.buttonpanel-block.btn-lg.get-link.disabled').href;setTimeout(() => {redirect(rft,false);}, 2 * 1000);}});
-    SledingBySatSetLeader(/mboost.me/, function() {if (elementExists('#firstsection')){let mbo = bp('#__NEXT_DATA__');let mbm = JSON.parse(mbo.textContent).props.pageProps.data.targeturl;setTimeout(() => {redirect(mbm,false);}, 2 * 1000);}});
-    SledingBySatSetLeader(/(disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo|adcrypto|daycash).net|(sportweb|ecq|mgame|oncoin).info|savego.org|hbz.us|djqunjab.in|datacheap.io/, () => waitForElm('#wpsafelink-landing > input', dis => redirect(JSON.parse(atob(dis.value)).linkr, false)));
-    SledingBySatSetLeader(/nulledlist.info|earnash.com|oscut.space|oscut.fun|my-coins.xyz|earn-bitcoin.online|zimabadko.com|vidoza.xyz|every-crypto.info/, () => waitForElm('div#getlinkbtn center a', kalv => redirect(kalv.href, false)));
-    SledingBySatSetLeader(/revcut.net|urlcut.pro|faho.us|bitad.org|cutlink.xyz|c2g.at|go.bitcosite/, function() {window.jQuery = false;SetCookie('ab','1',1);});
-    SledingBySatSetLeader(/(aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `window.open('`, `', '_self')`), false));});
-    SledingBySatSetLeader(/readi.online|mbantul.my.id|blog.qnix.me|videoclip.info|moddingzone.in|crypto-fi.net|claimcrypto.cc|xtrabits.click|(cempakajaya|web9academy|onlineincoms|allsoftdrivers|tribuncrypto|poketoonworld|bioinflu|pubgquotes|bico8).com|(techleets|ourcoincash|studyis|healthysamy).xyz/, function() {
+    SledingByGassruxLeader(/lanza.me/, () => waitForElm('a#botonGo', lz => redirect(lz.href, false)));
+    SledingByGassruxLeader(/lifeezee.com/, () => waitForElm('.get-link', lifz => redirect(lifz.href)));
+    SledingByGassruxLeader(/lolinez.com/, () => waitForElm('p#url a', lol => redirect(lol.href, false)));
+    SledingByGassruxLeader(/sahityt.com/, () => waitForElm('a#tp-snp2', sht => redirect(sht.href, false)));
+    SledingByGassruxLeader(/file-upload.in/, () => waitForElm('#getlink', fui => redirect(fui.href, false)));
+    SledingByGassruxLeader(/upmienphi.com/, function() {waitForElm('.download-link', upBtn => upBtn.click());});
+    SledingByGassruxLeader(/ify.ac/, function() {waitForElm('#mainbutton', ify => redirect(ify.href, false));});
+    SledingByGassruxLeader(/linksly.co/, () => waitForElm('div.col-md-12 a', lsl => redirect(lsl.href, false)));
+    SledingByGassruxLeader(/cashando.me/, () => waitForElm('#goCoinsTown', cash => redirect(cash.href, false)));
+    SledingByGassruxLeader(/appsinsta.com/, function() {waitForElm('.yu-blue.yu-btn', apBtn => apBtn.click());});
+    SledingByGassruxLeader(/apkadmin.com/, () => waitForElm('div.text.text-center a', apk => redirect(apk.href)));
+    SledingByGassruxLeader(/sugarona.com/, function() {waitForElm('a#my-btn', sgr => redirect(sgr.href, false));});
+    SledingByGassruxLeader(/filemoon.sx/, () => waitForElm('div.download2 a.button', fm => redirect(fm.href, false)));
+    SledingByGassruxLeader(/cekip.site/, () => waitForElm('a#aGo.badge.bg-success', cek => redirect(cek.href, false)));
+    SledingByGassruxLeader(/techleets.xyz/, () => waitForElm('#tp-snp2 > center > a', tle => redirect(tle.href, false)));
+    SledingByGassruxLeader(/newsturbovid.com/, () => waitForElm('#start-download > a', ntv => redirect(ntv.href, false)));
+    SledingByGassruxLeader(/amanguides.com/, () => waitForElm('#wpsafe-link > .bt-success', ag => redirect(ag.href, false)));
+    SledingByGassruxLeader(/mirrored.to/, () => waitForElm('div.col-sm.centered.extra-top a', mir => redirect(mir.href, false)));
+    SledingByGassruxLeader(/viralxns.com/, () => waitForElm('div.paras-dev-top.text-center a', vir => redirect(vir.href, false)));
+    SledingByGassruxLeader(/flybid.net/, () => waitForElm('a#continue-button.continue-button', flb => redirect(flb.href, false)));
+    SledingByGassruxLeader(/8tm.net/, () => waitForElm('a.btn.btn-secondary.btn-block.redirect', tm => redirect(tm.href, false)));
+    SledingByGassruxLeader(/cpmlink.net/, () => waitForElm('a#btn-main.btn.btn-warning.btn-lg', cpm => redirect(cpm.href, false)));
+    SledingByGassruxLeader(/noodlemagazine.com/, () => waitForElm('a#downloadLink.downloadBtn', mag => redirect(mag.href, false)));
+    SledingByGassruxLeader(/bestfonts.pro/, () => waitForElm('.download-font-button > a:nth-child(1)', pro => redirect(pro.href)));
+    SledingByGassruxLeader(/huongdanvuotlink123.blogspot.com/, () => waitForElm('a.in-cell-link', hdv => redirect(hdv.href, false)));
+    SledingByGassruxLeader(/forexrw7.com|3rabsports.com|gold-24.net/, () => waitForElm('.oto > a', pro => redirect(pro.href, false)));
+    SledingByGassruxLeader(/maxurlz.com/, () => waitForElm('a.btn.btn-success.btn-lg.flip.animated', maxu => redirect(maxu.href, false)));
+    SledingByGassruxLeader(/gdtot.cfd/, () => waitForElm('#dirdown', gdt => redirect(strBetween(gdt.onclick.toString(), `myDl('`, `')`))));
+    SledingByGassruxLeader(/files.fm/, () => waitForElm('#head_download__all-files > div > div > a:nth-child(1)', flBtn => flBtn.click()));
+    SledingByGassruxLeader(/sama-pro.com|mikl4forex.com|dr-forex.com/, () => waitForElm('a#submitBtn', smpb => redirect(smpb.href, false)));
+    SledingByGassruxLeader(/mohtawaa.com/, () => waitForElm('a.btn.btn-success.btn-lg.get-link.enabled', moht => redirect(moht.href, false)));
+    SledingByGassruxLeader(/linksae.com/, function() {waitForElm('a.btn.btn-success.btn-lg.flip.animated', lsa => redirect(lsa.href, false));});
+    SledingByGassruxLeader(/thebloggerspoint.in|ezeviral.com|fixno.in|technocubes.in/, () => waitForElm('#wpsafe-snp > a', tbs => redirect(tbs.href, false)));
+    SledingByGassruxLeader(/doodjob.com/, () => waitForElm('a.linky.buttonpanel.buttonpanel-block.btn-lg.get-link.disabled', doo => redirect(doo.href, false)));
+    SledingByGassruxLeader(/xonnews.net|toilaquantri.com|share4u.men|camnangvay.com/, () => waitForElm('div#traffic_result a', xon => redirect(xon.href, false)));
+    SledingByGassruxLeader(/yosite.net/, () => waitForElm('.options_layout_container > center:nth-child(17) > a:nth-child(1)', yos => redirect(yos.href, false)));
+    SledingByGassruxLeader(/offrcms.xyz|kooora365.online|tourismtravels4.sbs|5tl.co|mamahawa.com/, () => waitForElm('a#proceed', offr => redirect(offr.href, false)));
+    SledingByGassruxLeader(/geniussolutions.co|pokemonroms.cc|alightmotionlatest.com/, () => waitForElm('a#SecondPageBottomButton', gsc => redirect(gsc.href, false)));
+    SledingByGassruxLeader(/cricketgurupro.com/, function() {SubmitIfExists("form[name='tp']", 3);waitForElm('#page > center > a', cgp => redirect(cgp.href, false));});
+    SledingByGassruxLeader(/bluemedialink.online|bluemediafile\.*/, function() {if (BpParams.has('url')) {waitForElm('input#nut[src]', blum => blum.parentNode.submit());}});
+    SledingByGassruxLeader(/boost.ink/, () => fetch(location.href).then(bo => bo.text()).then(html => redirect(atob(html.split('bufpsvdhmjybvgfncqfa="')[1].split('"')[0]))));
+    SledingByGassruxLeader(/blog.textpage.xyz/, () => waitForElm('#wpsafe-link1 a', bt => redirect(strBetween(bt.onclick.toString(), `window.open('`, `', '_blank')`), false)));
+    SledingByGassruxLeader(/udrop.com/, () => waitForElm('.responsiveMobileMargin > button:nth-child(1)', udr => redirect(strBetween(udr.onclick.toString(), `openUrl('`, `')`), false)));
+    SledingByGassruxLeader(/starxinvestor.com|(iisfvirtual|bookszone|learnmany).in/, function() {SubmitIfExists("form[name='tp']", 3); waitForElm('a#btn6', bkz => redirect(bkz.href, false));});
+    SledingByGassruxLeader(/(financenube|mixrootmods|pastescript|trimorspacks|apklox).com|updrop.link/, () => {waitForElm('#wpsafe-link a', cdr => redirect(strBetween(cdr.onclick.toString(), `window.open('`, `', '_self')`), false));});
+    SledingByGassruxLeader(/ronakfitness.com/, function() {if (elementExists('.containerpanel')){let rft = bp('a.linky.buttonpanel.buttonpanel-block.btn-lg.get-link.disabled').href;setTimeout(() => {redirect(rft,false);}, 2 * 1000);}});
+    SledingByGassruxLeader(/mboost.me/, function() {if (elementExists('#firstsection')){let mbo = bp('#__NEXT_DATA__');let mbm = JSON.parse(mbo.textContent).props.pageProps.data.targeturl;setTimeout(() => {redirect(mbm,false);}, 2 * 1000);}});
+    SledingByGassruxLeader(/(disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo|adcrypto|daycash).net|(sportweb|ecq|mgame|oncoin).info|savego.org|hbz.us|djqunjab.in|datacheap.io/, () => waitForElm('#wpsafelink-landing > input', dis => redirect(JSON.parse(atob(dis.value)).linkr, false)));
+    SledingByGassruxLeader(/nulledlist.info|earnash.com|oscut.space|oscut.fun|my-coins.xyz|earn-bitcoin.online|zimabadko.com|vidoza.xyz|every-crypto.info/, () => waitForElm('div#getlinkbtn center a', kalv => redirect(kalv.href, false)));
+    SledingByGassruxLeader(/revcut.net|urlcut.pro|faho.us|bitad.org|cutlink.xyz|c2g.at|go.bitcosite/, function() {window.jQuery = false;SetCookie('ab','1',1);});
+    SledingByGassruxLeader(/(aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `window.open('`, `', '_self')`), false));});
+    SledingByGassruxLeader(/readi.online|mbantul.my.id|blog.qnix.me|videoclip.info|moddingzone.in|crypto-fi.net|claimcrypto.cc|xtrabits.click|(cempakajaya|web9academy|onlineincoms|allsoftdrivers|tribuncrypto|poketoonworld|bioinflu|pubgquotes|bico8).com|(techleets|ourcoincash|studyis|healthysamy).xyz/, function() {
       var bypasslink = atob(`aH${bp("#landing [name='go']").value.split("aH").slice(1).join("aH")}`); redirect(bypasslink, false);});
-    SledingBySatSetLeader(/dutchycorp.space|dutchycorp.ovh|gtlink.co|seulink.digital|oii.io|hamody.pro|fileku.net|metasafelink.site|(beingtek|fc-lc).com|(zagl|shrinkforearn).in|(kiiw|wordcounter).icu|pwrpa.cc|shurt.pw|flyad.vip|antonimos.de|seulink.online/, function() {
+    SledingByGassruxLeader(/dutchycorp.space|dutchycorp.ovh|gtlink.co|seulink.digital|oii.io|hamody.pro|fileku.net|metasafelink.site|(beingtek|fc-lc).com|(zagl|shrinkforearn).in|(kiiw|wordcounter).icu|pwrpa.cc|shurt.pw|flyad.vip|antonimos.de|seulink.online/, function() {
       if (elementExists('.grecaptcha-badge') || elementExists('#captchaShortlink')) {var ticker = setInterval(function() {try {clearInterval(ticker); window.grecaptcha.execute();} catch (e) {}}, 3000);}});
-    SledingBySatSetLeader(/dutchycorp.ovh|beast.ink|ckk.ai|onelinks.nl|finish.addurl.biz|(viewfr|shortzon|techsamir|tinycmd|ufacw|gawbne|bitcoinwinco|liinkat|links.apksvip|namaidani|cutpaid|link1s|postazap|yeifly|kiddyshort|atglinks|shtfly|tinybc|cortaly|makemoneywithurl|mtraffics|dz4link|dz-linkk).com|(tmearn|namaidani|cutearn|ccurl|link3s|youshort|illink).net|(s2fly|pglink|snaply|megaurl|megafly|linksbanao).in|(wez|shortlinks).info|(shrink|flyzu).icu|(oko|aii).sh|(24payu|vielink).top|(terafly|hatelink|cashando|zumpa|tlin|weezo|adnews|botfly|linkdam|ar-goal).me|(jameeltips|mitly).us|(forexly|goldly|insurancly).cc|(beycoin|aku2x|moinsider|satoshi-win).xyz|(wedocrypto|yourtechnology|clickmais|flylinks).online|(short1|urlcash|dglinks).site|(shrinkme|tfly).link|(playstore|adsy|clik|shurt).pw|short.express|cryptosh.pro|goo.st|tinygo.co|pndx.live|payskip.org|cryptotracker.space|shortearn.eu|clicklink.fun|lootcash.vip/, function() {parent.open = BpBlock();
-    SledingBySatSetLeader(/hosty.uprwssp.org|helpowi.com|hosty.webseriesreel.in|hosty.tipsloanusa.com|remixone.in/, BoostTimers);
+    SledingByGassruxLeader(/dutchycorp.ovh|beast.ink|ckk.ai|onelinks.nl|finish.addurl.biz|(viewfr|shortzon|techsamir|tinycmd|ufacw|gawbne|bitcoinwinco|liinkat|links.apksvip|namaidani|cutpaid|link1s|postazap|yeifly|kiddyshort|atglinks|shtfly|tinybc|cortaly|makemoneywithurl|mtraffics|dz4link|dz-linkk).com|(tmearn|namaidani|cutearn|ccurl|link3s|youshort|illink).net|(s2fly|pglink|snaply|megaurl|megafly|linksbanao).in|(wez|shortlinks).info|(shrink|flyzu).icu|(oko|aii).sh|(24payu|vielink).top|(terafly|hatelink|cashando|zumpa|tlin|weezo|adnews|botfly|linkdam|ar-goal).me|(jameeltips|mitly).us|(forexly|goldly|insurancly).cc|(beycoin|aku2x|moinsider|satoshi-win).xyz|(wedocrypto|yourtechnology|clickmais|flylinks).online|(short1|urlcash|dglinks).site|(shrinkme|tfly).link|(playstore|adsy|clik|shurt).pw|short.express|cryptosh.pro|goo.st|tinygo.co|pndx.live|payskip.org|cryptotracker.space|shortearn.eu|clicklink.fun|lootcash.vip/, function() {parent.open = BpBlock();
+    SledingByGassruxLeader(/hosty.uprwssp.org|helpowi.com|hosty.webseriesreel.in|hosty.tipsloanusa.com|remixone.in/, BoostTimers);
       if (elementExists('.g-recaptcha') || elementExists('#captchaShortlink')) {let frm = setInterval(() => {if (Captchacheck()) {clearInterval(frm);SubmitIfExists('#link-view');}}, 1 * 1000);} else {let FMode = ['#link-view', '#form-continue', '.col-md- > form', '#nextstepform', '#submit-form', '.text-center.row > form', 'div.col-md-6 form', 'div.col-md-12 form', 'div.text-center form', '#before-captcha', '#yuidea', '#exfoary-form', '#submit_first_page', '#hidden form', '#test', 'form.text-center'];for (let i = 0; i < FMode.length; i++) {SubmitIfExists(FMode[i],2);}}});
-    SledingBySatSetLeader(/autofaucet.dutchycorp.space/, function() {let autoRoll = false; if (window.location.href.includes('/roll.php')) {window.scrollTo(0, 9999);
+    SledingByGassruxLeader(/autofaucet.dutchycorp.space/, function() {let autoRoll = false; if (window.location.href.includes('/roll.php')) {window.scrollTo(0, 9999);
       if (!bp('#timer')) {setInterval(() => {if (Captchacheck()) {if (bp('.boost-btn.unlockbutton') && autoRoll === false) {bp('.boost-btn.unlockbutton').click();autoRoll = true;}
       if (Checkvisibility(bp('#claim_boosted'))) {bp('#claim_boosted').click();}}}, 3 * 1000);} else { setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/coin_roll.php');}, 3 * 1000);}}
       if (window.location.href.includes('/coin_roll.php')) {window.scrollTo(0, 9999);if (!bp("#timer")) {setInterval(() => {if (Captchacheck()) {
