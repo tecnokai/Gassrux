@@ -7,12 +7,13 @@
 // @match       *://rseducationinfo.com/*
 // @match       *://rsadnetworkinfo.com/*
 // @match       *://rshostinginfo.com/*
+// @require     https://unpkg.com/jimp@0.5.2/browser/lib/jimp.min.js
 // @grant       none
-// @version     0.2
+// @version     0.3
 // @icon        https://i.ibb.co/jGTQw0p/RS.png
 // @author      GassruxLeader
 // @description Pass for Shortner Rsshrt
-// @run-at      document-end
+// @run-at      document-start
 // ==/UserScript==
 (function() { 'use strict';
 
