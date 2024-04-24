@@ -449,20 +449,46 @@ petsguide.net,plantsguide.net,coinscap.info,carsmania.net,carstopia.net,coinsval
 @@||cdn.bmcdn6.com^$script,xhr,image,domain=petsguide.net|plantsguide.net|coinscap.info|cryptowidgets.net|insurancegold.in|wiki-topia.com|carsmania.net|carstopia.net|coinsvalue.net|cookinguide.net|freeoseocheck.com|makeupguide.net
 @@||surfe.pro^$script,xhr,image,domain=petsguide.net|plantsguide.net|coinscap.info|cryptowidgets.net|insurancegold.in|wiki-topia.com|carsmania.net|carstopia.net|coinsvalue.net|cookinguide.net|freeoseocheck.com|makeupguide.net
 @@||cdn.bmcdn6.com/js/*d0.js^$domain=petsguide.net|plantsguide.net|coinscap.info|cryptowidgets.net|insurancegold.in|wiki-topia.com|carsmania.net|carstopia.net|coinsvalue.net|cookinguide.net|freeoseocheck.com|makeupguide.net
-cryptednews.space,tiktokcounter.net##[src="https://www.youtube.com/embed/sgKSR6l1D7k"]
+tpayr.xyz,starkroboticsfrc.com,cryptednews.space,tiktokcounter.net##[src="https://www.youtube.com/embed/sgKSR6l1D7k"]
 @@||/*/adpartner.min.js
-cryptednews.space,tiktokcounter.net##li
-cryptednews.space,tiktokcounter.net##.modal-sh > p
-cryptednews.space,tiktokcounter.net##h1
-cryptednews.space,tiktokcounter.net##.mobile-hidden
-tiktokcounter.net##.modal-sh > h2
-tiktokcounter.net##.wp-block-heading
-tiktokcounter.net###videoGuide > h2
-tiktokcounter.net##+js(no-fetch-if, googlesyndication)
-tiktokcounter.net##+js(set, isFirstClickDone, true)
-tiktokcounter.net##+js(set, isHoverDone, true)
+tpayr.xyz,starkroboticsfrc.com,cryptednews.space,tiktokcounter.net##li
+tpayr.xyz,starkroboticsfrc.com,cryptednews.space,tiktokcounter.net##.modal-sh > p
+tpayr.xyz,starkroboticsfrc.com,cryptednews.space,tiktokcounter.net##h1
+tpayr.xyz,starkroboticsfrc.com,cryptednews.space,tiktokcounter.net##.mobile-hidden
+tpayr.xyz,starkroboticsfrc.com,tiktokcounter.net##.modal-sh > h2
+tpayr.xyz,starkroboticsfrc.com,tiktokcounter.net##.wp-block-heading
+tpayr.xyz,starkroboticsfrc.com,tiktokcounter.net###videoGuide > h2
+lifgam.online,tpayr.xyz,starkroboticsfrc.com,tiktokcounter.net##+js(no-fetch-if, googlesyndication)
+lifgam.online,tpayr.xyz,starkroboticsfrc.com,tiktokcounter.net##+js(set, isFirstClickDone, true)
+lifgam.online,tpayr.xyz,starkroboticsfrc.com,tiktokcounter.net##+js(set, isHoverDone, true)
 @@||/log?format=
-/log?format=$domain=~tiktokcounter.net
+/log?format=$domain=~tiktokcounter.net|starkroboticsfrc.com|tpayr.xyz|lifgam.online
+lifgam.online,tpayr.xyz,sinonimos.de,tiktokcounter.net,tiktokrealtime.com##+js(rc, is-hidden)
+@@||sinonimos.de^$script,1p
+@@||profitsfly.com^$script,domain=sinonimos.de
+*$script,3p,redirect-rule=noopjs,domain=sinonimos.de
+@@||antonimos.de^$script,1p
+@@||profitsfly.com^$script,domain=quesignifi.ca
+@@||profitsfly.com^$script,domain=tiktokcounter.net|starkroboticsfrc.com|lifgam.online
+@@/adpartner.min.js$script,domain=tiktokcounter.net|starkroboticsfrc.com|lifgam.online
+@@||tiktokcounter.net^$script,1p
+@@||starkroboticsfrc.com^$script,1p
+starkroboticsfrc.com,antonimos.de,tiktokcounter.net,tiktokrealtime.com,tpayr.xyz,quesignifi.ca#@#+js(set, isAdClickDone, true)
+lifgam.online,starkroboticsfrc.com,antonimos.de,tiktokcounter.net,tiktokrealtime.com,tpayr.xyz,quesignifi.ca##+js(set, isClownClickDone, true)
+lifgam.online,tpayr.xyz,starkroboticsfrc.com,tiktokcounter.net##+js(no-fetch-if, googlesyndication)
+lifgam.online,tpayr.xyz,starkroboticsfrc.com##.modal-sh > .wp-block-image
+lifgam.online,tpayr.xyz,starkroboticsfrc.com##.modal-sh > div.internal-linking-related-contents-pro > .template-5
+lifgam.online,tpayr.xyz,starkroboticsfrc.com##.site-header > .wrap
+lifgam.online,tpayr.xyz,starkroboticsfrc.com##.wp-image-1432
+lifgam.online,tpayr.xyz,starkroboticsfrc.com##.wp-element-caption
+tiktokcounter.net##.adv-8de70ae506e21184ba2ce46fc3240ae9
+tpayr.xyz###allrecipes-article_1-0
+tpayr.xyz##div:nth-of-type(13)
+lifgam.online##p
+lifgam.online##h3.wp-block-heading
+lifgam.online##h2.wp-block-heading
+lifgam.online###videoGuide
+lifgam.online###scrolltocbt > h1
 werbum.eu,auntmanny.com,bitsusdt.com,ineedskin.com,fadedfeet.com,homeculina.com,alightmotionlatest.com,awgrow.com,rsstore.in,kenzo-flowertag.com,lawyex.co,worldtanr.xyz,mdn.lol,yexolo.net#@#+js(no-fetch-if, //)
 werbum.eu,auntmanny.com,bitsusdt.com,ineedskin.com,fadedfeet.com,homeculina.com,alightmotionlatest.com,awgrow.com,rsstore.in,kenzo-flowertag.com,lawyex.co,worldtanr.xyz,mdn.lol,yexolo.net###click
 werbum.eu,auntmanny.com,bitsusdt.com,ineedskin.com,fadedfeet.com,homeculina.com,alightmotionlatest.com,awgrow.com,rsstore.in,kenzo-flowertag.com,lawyex.co,worldtanr.xyz,mdn.lol,yexolo.net##+js(rmnt, script, /bypass.php)
