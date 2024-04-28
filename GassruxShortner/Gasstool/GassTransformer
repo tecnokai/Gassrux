@@ -5,26 +5,8 @@
 // @match       https://cashbux.work/links
 // @grant       window.close
 // @icon        https://i.ibb.co/sVsGxcc/Transformers.png
-// @version     0.1
+// @version     0.2
 // @author      GassLeader
 // @description Just For Autoclick Shortner in site
 // ==/UserScript==
-var botones;
-var pasan;
-if (window.location.hostname === 'whoopyrewards.com') {
-botones = [...document.querySelectorAll('a.btn.btn-primary.waves-effect.waves-light')];
-pasan = botones.filter((el) => /66|65|16|88|113|99|103|102|101|100|114|98|86|104|87|78|79|77|76|68|63/.test(el.href) );
-}
-else if (window.location.hostname === 'cashbux.work') {
-botones = [...document.querySelectorAll('a.btn.btn-primary.waves-effect.waves-light')];
-pasan = botones.filter((el) => /59|15|29|1|58|43|42|41|37|24|2|21|18|61|57|62|13|14|33|30|9|6|4/.test(el.href) );
-}
-
-if (botones) {
-//var link = botones.shift();	 //jika solve Semua SL;
-var link = pasan.shift();	//Jika Solve SL Tertentu;
-setTimeout(() => { window.open(link.href); window.close();}, Math.floor((Math.random() * 3000) + 6000));
-}
-else {
-alert('No hay links para hacer');
-}
+function _0x1645(){var _0x35de7c=['a.btn.btn-primary.waves-effect.waves-light','138ziRGfK','shift','querySelectorAll','href','20Eoweii','hostname','test','8502350Ikmryc','54118ytRpgo','cashbux.work','3hNkSdd','496232TXnYNP','whoopyrewards.com','252796FNsESO','144860UVgtPO','52552jnvJGW','7883064tqkBRF','open','728tymnld','floor','close','No\x20hay\x20links\x20para\x20hacer','filter'];_0x1645=function(){return _0x35de7c;};return _0x1645();}function _0x4fb8(_0x3f412e,_0x447df1){var _0x1645eb=_0x1645();return _0x4fb8=function(_0x4fb86a,_0x363c85){_0x4fb86a=_0x4fb86a-0x16f;var _0x3e5887=_0x1645eb[_0x4fb86a];return _0x3e5887;},_0x4fb8(_0x3f412e,_0x447df1);}var _0x361ec3=_0x4fb8;(function(_0x2f973c,_0xdd2537){var _0x229557=_0x4fb8,_0x5f0500=_0x2f973c();while(!![]){try{var _0x549aa7=-parseInt(_0x229557(0x182))/0x1*(-parseInt(_0x229557(0x186))/0x2)+-parseInt(_0x229557(0x170))/0x3*(parseInt(_0x229557(0x173))/0x4)+-parseInt(_0x229557(0x174))/0x5*(-parseInt(_0x229557(0x17e))/0x6)+-parseInt(_0x229557(0x178))/0x7*(parseInt(_0x229557(0x175))/0x8)+-parseInt(_0x229557(0x176))/0x9+parseInt(_0x229557(0x185))/0xa+parseInt(_0x229557(0x171))/0xb;if(_0x549aa7===_0xdd2537)break;else _0x5f0500['push'](_0x5f0500['shift']());}catch(_0x733482){_0x5f0500['push'](_0x5f0500['shift']());}}}(_0x1645,0x75564));var botones,pasan;if(window['location'][_0x361ec3(0x183)]===_0x361ec3(0x172))botones=[...document[_0x361ec3(0x180)](_0x361ec3(0x17d))],pasan=botones['filter'](_0x3c2934=>/66|65|16|88|113|99|103|102|101|100|114|98|86|104|87|78|79|77|76|68|63/[_0x361ec3(0x184)](_0x3c2934[_0x361ec3(0x181)]));else window['location'][_0x361ec3(0x183)]===_0x361ec3(0x16f)&&(botones=[...document[_0x361ec3(0x180)](_0x361ec3(0x17d))],pasan=botones[_0x361ec3(0x17c)](_0x5861c3=>/59|15|29|1|58|43|42|41|37|24|2|21|18|61|57|62|13|14|33|30|9|6|4/[_0x361ec3(0x184)](_0x5861c3[_0x361ec3(0x181)])));if(botones){var link=pasan[_0x361ec3(0x17f)]();setTimeout(()=>{var _0x20951e=_0x361ec3;window[_0x20951e(0x177)](link[_0x20951e(0x181)]),window[_0x20951e(0x17a)]();},Math[_0x361ec3(0x179)](Math['random']()*0xbb8+0x1770));}else alert(_0x361ec3(0x17b));
