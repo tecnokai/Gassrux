@@ -4,43 +4,11 @@
 // @match       https://tiktokcounter.net/*
 // @match       https://cryptednews.space/*
 // @grant       none
-// @version     0.2
+// @version     0.3
 // @author      GassruxLeader
 // @icon        https://i.ibb.co/z5zsjMq/Profit.png
 // @description Pass for Tiktoker
 // @run-at document-start
 // ==/UserScript==
 
-document.addEventListener('DOMContentLoaded', function() {
-
-  var btn = document.querySelector('#cbt');
-
-  var h = document.querySelector('.h-captcha');
-  if (h) {
-    document.title ='hcaptcha';
-    h.setAttribute('data-callback', 'myFunction');
-    var s = document.createElement('script');
-    s.innerHTML = `
-    function myFunction() {
-    var captchaDivElement = document.querySelector('.h-captcha');
-    captchaDivElement.classList.add('myclass');
-    }
-    `;
-    document.body.appendChild(s);
-
-    var t = window.setInterval(()=>{
-      if (h.classList.contains("myclass") && btn.hasAttribute('type')) {
-        clearInterval(t);
-       window.setTimeout(()=> { btn.click(); }, 3000);
-      }
-    }, 1000);
-  }
-  else {
-        var tt = window.setInterval(()=> {
-      if (btn.hasAttribute('type')) {
-          clearInterval(tt);
-       window.setTimeout(()=> { btn.click(); }, 3000);
-    }
-        }, 1000);
-     }
-});
+var _0x2312ff=_0x14dc;function _0x14dc(_0x15004a,_0x1e8bf8){var _0x544754=_0x5447();return _0x14dc=function(_0x14dc3f,_0x16e38b){_0x14dc3f=_0x14dc3f-0xfc;var _0x41f1f5=_0x544754[_0x14dc3f];return _0x41f1f5;},_0x14dc(_0x15004a,_0x1e8bf8);}(function(_0x153590,_0x1938fc){var _0x416fc5=_0x14dc,_0x35dd8d=_0x153590();while(!![]){try{var _0x103de9=parseInt(_0x416fc5(0x114))/0x1+parseInt(_0x416fc5(0x100))/0x2+-parseInt(_0x416fc5(0x105))/0x3+parseInt(_0x416fc5(0x10d))/0x4+-parseInt(_0x416fc5(0x115))/0x5+parseInt(_0x416fc5(0x10c))/0x6*(-parseInt(_0x416fc5(0xfd))/0x7)+parseInt(_0x416fc5(0x116))/0x8*(parseInt(_0x416fc5(0x111))/0x9);if(_0x103de9===_0x1938fc)break;else _0x35dd8d['push'](_0x35dd8d['shift']());}catch(_0x43f8a2){_0x35dd8d['push'](_0x35dd8d['shift']());}}}(_0x5447,0x348a2),document[_0x2312ff(0x108)](_0x2312ff(0x101),function(){var _0x155bcb=_0x2312ff,_0x2c426c=document[_0x155bcb(0x112)](_0x155bcb(0x102)),_0x42c3ef=document[_0x155bcb(0x112)](_0x155bcb(0x103));if(_0x42c3ef){document[_0x155bcb(0x10e)]=_0x155bcb(0x117),_0x42c3ef['setAttribute'](_0x155bcb(0x106),_0x155bcb(0x110));var _0x33ae81=document[_0x155bcb(0xfe)]('script');_0x33ae81['innerHTML']=_0x155bcb(0x109),document[_0x155bcb(0x118)][_0x155bcb(0xfc)](_0x33ae81);var _0x5e07f5=window[_0x155bcb(0x10a)](()=>{var _0x32ada2=_0x155bcb;_0x42c3ef['classList'][_0x32ada2(0x107)](_0x32ada2(0x104))&&_0x2c426c[_0x32ada2(0x113)](_0x32ada2(0x10b))&&(clearInterval(_0x5e07f5),window[_0x32ada2(0xff)](()=>{var _0x33353d=_0x32ada2;_0x2c426c[_0x33353d(0x10f)]();},0xbb8));},0x3e8);}else var _0x52a91f=window[_0x155bcb(0x10a)](()=>{var _0x52a781=_0x155bcb;_0x2c426c[_0x52a781(0x113)]('type')&&(clearInterval(_0x52a91f),window[_0x52a781(0xff)](()=>{var _0x590acf=_0x52a781;_0x2c426c[_0x590acf(0x10f)]();},0xbb8));},0x3e8);}));function _0x5447(){var _0x5a5bcb=['title','click','myFunction','117nEeZbC','querySelector','hasAttribute','156632MMzRCo','827800DVfixX','258248zKgpKl','hcaptcha','body','appendChild','130312nToQES','createElement','setTimeout','622366ImiZql','DOMContentLoaded','#cbt','.h-captcha','myclass','1027323Ektmtw','data-callback','contains','addEventListener','\x0a\x20\x20\x20\x20function\x20myFunction()\x20{\x0a\x20\x20\x20\x20var\x20captchaDivElement\x20=\x20document.querySelector(\x27.h-captcha\x27);\x0a\x20\x20\x20\x20captchaDivElement.classList.add(\x27myclass\x27);\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20','setInterval','type','60sBJprf','87580pVQefm'];_0x5447=function(){return _0x5a5bcb;};return _0x5447();}
